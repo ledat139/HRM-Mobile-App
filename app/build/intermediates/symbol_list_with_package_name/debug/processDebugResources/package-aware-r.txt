@@ -1377,6 +1377,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color dark_blue
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1427,6 +1428,7 @@ color gray
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_gray
 color light_green
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
@@ -3482,7 +3484,6 @@ id imageView8
 id imageView9
 id imageView_Detail
 id imgSidebar
-id img_searchbox
 id immediateStop
 id included
 id indeterminate
@@ -3879,8 +3880,8 @@ id tv_account_name
 id tv_employee_id
 id tv_employee_name
 id tv_manager_type
-id tv_requests
 id tv_requests2
+id tv_requests3
 id tvtime
 id tvtimeCheckIn
 id tvtimeCheckOut

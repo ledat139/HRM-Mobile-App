@@ -72,7 +72,13 @@ public class RequestManagementClient extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Request selectedRequest = requests.get(position);
                 int maYC = selectedRequest.getId();
-                showConfirmationDialog(position, maYC);
+//                showConfirmationDialog(position, maYC);
+                if(dbHandler.getRequestsByRqId(maYC).isApproved() == 0) {
+                    showConfirmationDialog(position, maYC);
+                }
+                else{
+                    Toast.makeText(RequestManagementClient.this, "Request handled.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

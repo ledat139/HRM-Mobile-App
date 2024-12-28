@@ -10,4 +10,6 @@
     <color name="text_yellow">#8C7E23</color>
     <color name="text_blue">#262FAD</color>
     <color name="text_red">#AD263F</color>
+    <color name="light_gray">#D3D3D3</color> <!-- Light gray color -->
+    <color name="dark_blue">#003366</color>  <!-- Dark blue color -->
 </resources>
