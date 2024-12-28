@@ -73,6 +73,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="f844a18b-19ac-44fd-aac1-f5b96bcbe25b" name="Changes" comment="" />
+=======
     <list default="true" id="f844a18b-19ac-44fd-aac1-f5b96bcbe25b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.9/executionHistory/executionHistory.lock" afterDir="false" />
@@ -241,6 +244,7 @@
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/compileTransaction/stash-dir/HomepageAdmin.class.uniqueId2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
     </list>
+>>>>>>> f38b79604df84815160f9a3fd73310c1d2f9c31d
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,6 +297,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Android App.app.executor&quot;: &quot;Run&quot;,
@@ -308,6 +313,30 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/thucHanhMobi/HRM-Mobile-App/app/src/main/res/layout&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "PROJECT_TRUSTED_KEY": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
+    "last_opened_file_path": "D:/Android/TENPM_HRM-mobile/app/src/main/res/drawable",
+    "project.structure.last.edited": "SDK Location",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.0"
+=======
+    "last_opened_file_path": "D:/thucHanhMobi/HRM-Mobile-App/app/src/main/res/layout"
+>>>>>>> f38b79604df84815160f9a3fd73310c1d2f9c31d
+>>>>>>> 26144a3d60ee0da8345eacad511f0827638b460b
   }
 }</component>
   <component name="RecentsManager">
