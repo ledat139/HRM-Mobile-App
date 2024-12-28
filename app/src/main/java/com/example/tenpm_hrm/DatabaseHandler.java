@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import models.Facility;
+import models.NhanVien;
 import models.Project;
 import models.Project_NhanVien;
 import models.Request;
@@ -561,7 +562,136 @@ public void addProject(Project project) {
         return rowsAffected > 0; // Return true if the update was successful, false otherwise
     }
 
+    // =====================Toan lam NHANVIEN ====================
+    public int getMaxMaNV() {
+        int maxMaNV = 0;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT MAX(maNV) FROM NHANVIEN", null);
+        if (cursor.moveToFirst()) {
+            maxMaNV = cursor.getInt(0);
+        }
+        cursor.close();
+        return maxMaNV;
+    }
+    public void addNhanVien(NhanVien nhanVien) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("HOTEN", nhanVien.getHoTen());
+        values.put("GIOITINH", nhanVien.getGioiTinh());
+        values.put("NGSINH", nhanVien.getNgSinh());
+        values.put("SDT", nhanVien.getSdt());
+        values.put("EMAIL", nhanVien.getEmail());
+        values.put("DIACHI", nhanVien.getDiaChi());
+        values.put("CCCD", nhanVien.getCccd());
+        values.put("CAPBAC", nhanVien.getCapBac());
+        values.put("MAPB", nhanVien.getMaPB());
+        db.insert("NHANVIEN", null, values);
+        db.close();
+    }
+    public Cursor getAllEmployees() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM NHANVIEN", null);
+    }
+    // Define column names
+    public static final String COLUMN_NAME = "HOTEN";
+    public static final String COLUMN_DEPARTMENT = "MAPB";
+    public static final String COLUMN_POSITION = "CAPBAC";
+    public static final String COLUMN_EMPLOYEE_ID = "MANV";
 
+
+    public boolean deleteEmployee(String employeeId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String whereClause = "MANV = ?";
+        String[] whereArgs = { employeeId };
+
+        int rowsAffected = db.delete("NHANVIEN", whereClause, whereArgs);
+        db.close();
+
+        return rowsAffected > 0;
+    }
+    public NhanVien getEmployeeById(int employeeId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query("NHANVIEN", null, "MANV = ?", new String[]{String.valueOf(employeeId)}, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            NhanVien nhanVien = new NhanVien();
+            nhanVien.setMaNV(cursor.getInt(cursor.getColumnIndex("MANV")));
+            nhanVien.setHoTen(cursor.getString(cursor.getColumnIndex("HOTEN")));
+            nhanVien.setGioiTinh(cursor.getString(cursor.getColumnIndex("GIOITINH")));
+            nhanVien.setNgSinh(cursor.getString(cursor.getColumnIndex("NGSINH")));
+            nhanVien.setSdt(cursor.getString(cursor.getColumnIndex("SDT")));
+            nhanVien.setEmail(cursor.getString(cursor.getColumnIndex("EMAIL")));
+            nhanVien.setDiaChi(cursor.getString(cursor.getColumnIndex("DIACHI")));
+            nhanVien.setCccd(cursor.getString(cursor.getColumnIndex("CCCD")));
+            nhanVien.setCapBac(cursor.getString(cursor.getColumnIndex("CAPBAC")));
+            nhanVien.setMaPB(cursor.getInt(cursor.getColumnIndex("MAPB")));
+            cursor.close();
+            return nhanVien;
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+        return null;
+    }
+
+    public boolean updateEmployee(NhanVien nhanVien) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("HOTEN", nhanVien.getHoTen());
+        values.put("GIOITINH", nhanVien.getGioiTinh());
+        values.put("NGSINH", nhanVien.getNgSinh());
+        values.put("SDT", nhanVien.getSdt());
+        values.put("EMAIL", nhanVien.getEmail());
+        values.put("DIACHI", nhanVien.getDiaChi());
+        values.put("CCCD", nhanVien.getCccd());
+        values.put("CAPBAC", nhanVien.getCapBac());
+        values.put("MAPB", nhanVien.getMaPB());
+
+        int rowsUpdated = db.update("NHANVIEN", values, "MANV = ?", new String[]{String.valueOf(nhanVien.getMaNV())});
+        return rowsUpdated > 0;
+    }
+    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String capBac, String phongBan) {
+        List<NhanVien> employeeList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM NHANVIEN WHERE 1=1");
+
+        if (maNV != null && !maNV.isEmpty()) queryBuilder.append(" AND MANV = ").append(maNV);
+        if (hoTen != null && !hoTen.isEmpty()) queryBuilder.append(" AND HOTEN LIKE '%").append(hoTen).append("%'");
+        if (gioiTinh != null && !gioiTinh.isEmpty()) queryBuilder.append(" AND GIOITINH LIKE '%").append(gioiTinh).append("%'");
+        if (ngSinh != null && !ngSinh.isEmpty()) queryBuilder.append(" AND NGSINH LIKE '%").append(ngSinh).append("%'");
+        if (sdt != null && !sdt.isEmpty()) queryBuilder.append(" AND SDT LIKE '%").append(sdt).append("%'");
+        if (email != null && !email.isEmpty()) queryBuilder.append(" AND EMAIL LIKE '%").append(email).append("%'");
+        if (diaChi != null && !diaChi.isEmpty()) queryBuilder.append(" AND DIACHI LIKE '%").append(diaChi).append("%'");
+        if (capBac != null && !capBac.isEmpty()) queryBuilder.append(" AND CAPBAC LIKE '%").append(capBac).append("%'");
+        if (phongBan != null && !phongBan.isEmpty()) queryBuilder.append(" AND MAPB LIKE '%").append(phongBan).append("%'");
+
+        queryBuilder.append(" ORDER BY MANV ASC");
+
+        Cursor cursor = db.rawQuery(queryBuilder.toString(), null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                NhanVien employee = new NhanVien(
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MANV")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("HOTEN")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("GIOITINH")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("NGSINH")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("SDT")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("EMAIL")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("DIACHI")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("CCCD")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("CAPBAC")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MAPB"))
+                );
+                employeeList.add(employee);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return employeeList;
+    }
 
 
 
