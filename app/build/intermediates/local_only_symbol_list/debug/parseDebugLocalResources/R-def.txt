@@ -157,7 +157,6 @@ id genderGroup
 id halfCircleView
 id header_requests
 id idDepartment
-id imageButton
 id imageView
 id imageView10
 id imageView16
