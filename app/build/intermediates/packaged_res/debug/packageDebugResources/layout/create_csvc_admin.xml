@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rlHeaderContainer"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="52dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg">
+
+        <TextView
+            android:id="@+id/tvHeaderDescription"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Thêm mới một CSVC"
+            android:layout_alignStart="@+id/tvHeaderTitle"
+            android:layout_below="@+id/tvHeaderTitle"
+            android:layout_marginTop="10dp"
+            android:textColor="#545454"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Thêm CSVC"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@id/rlHeaderContainer"
+        android:layout_alignEnd="@id/rlHeaderContainer"
+        app:srcCompat="@drawable/rb_739" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm mới CSVC"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/rlHeaderContainer"
+        android:layout_alignStart="@+id/rlHeaderContainer" />
+
+    <RelativeLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tvLabel"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner_background">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddFacilityNameLayout"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:cursorColor="#000000"
+            app:hintEnabled="false"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddFacilityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="#020202"
+                android:textColorLink="#070707"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/labelAddFacilityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/inputAddFacilityNameLayout"
+            android:background="@color/white"
+            android:text="Tên CSVC"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddFacilityQuantityLayout"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAddFacilityNameLayout"
+            android:layout_marginTop="-15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:cursorColor="#000000"
+            app:hintEnabled="false"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddFacilityQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="#020202"
+                android:textColorLink="#070707"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/labelAddFacilityQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/inputAddFacilityQuantityLayout"
+            android:background="@color/white"
+            android:text="Số lượng CSVC"
+            android:textColor="@color/black" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddBuyingDateLayout"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAddFacilityQuantityLayout"
+            android:layout_marginTop="-15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:cursorColor="#000000"
+            app:hintEnabled="false"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddBuyingDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="#020202"
+                android:textColorLink="#070707"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/labelAddBuyingDateLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/inputAddBuyingDateLayout"
+            android:background="@color/white"
+            android:text="Ngày mua"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddDepartmentIDLayout"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAddBuyingDateLayout"
+            android:layout_marginTop="-15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:cursorColor="#000000"
+            app:hintEnabled="false"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddDepartmentID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="#020202"
+                android:textColorLink="#070707"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/labelAddDepartmentIDLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/inputAddDepartmentIDLayout"
+            android:background="@color/white"
+            android:text="Mã phòng ban"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonAddFacility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#5C63D6"
+        android:paddingVertical="12dp"
+        android:text="Thêm CSVC"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

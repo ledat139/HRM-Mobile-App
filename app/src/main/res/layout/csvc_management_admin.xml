@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rlHeaderContainer"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="52dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner_background">
+
+        <TextView
+            android:id="@+id/tvHeaderDescription"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Quản lý cơ sở vật chất"
+            android:layout_alignStart="@+id/tvHeaderTitle"
+            android:layout_below="@+id/tvHeaderTitle"
+            android:layout_marginTop="10dp"
+            android:textColor="#545454"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Cơ sở vật chất"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivHeaderImage"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@id/rlHeaderContainer"
+        android:layout_alignEnd="@id/rlHeaderContainer"
+        app:srcCompat="@drawable/rb_739" />
+
+    <Button
+        android:id="@+id/btnAddCSVC"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="176dp"
+        android:backgroundTint="#5C63D6"
+        android:paddingVertical="15dp"
+        android:text="Thêm CSVC"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSearchCSVC"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/rlHeaderContainer"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignStart="@id/rlHeaderContainer"
+        android:src="@android:drawable/ic_menu_search" />
+
+    <ListView
+        android:id="@+id/FacilityContainer"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivSearchCSVC"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner_background">
+    </ListView>
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    android:layout_gravity="center"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- FrameLayout chứa hình đại diện -->
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/departmentImageView"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+/>
+        </FrameLayout>
+
+        <!-- TextView hiển thị tên phòng ban nằm dưới FrameLayout -->
+        <TextView
+            android:id="@+id/departmentNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Tên Phòng Ban"
+            android:textColor="@android:color/black"
+             />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

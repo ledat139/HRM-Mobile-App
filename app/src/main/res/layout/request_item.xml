@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_employee_ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_employee_tv_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/item_employee_tv_infor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/item_employee_iv_manager_pending"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sand_clock"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/item_employee_iv_manager_reject"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/x_img"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/item_employee_iv_manager_approved"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/check"
+            android:visibility="invisible"/>
+    </FrameLayout>
+</LinearLayout>

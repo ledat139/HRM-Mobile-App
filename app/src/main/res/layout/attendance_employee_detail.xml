@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/back"
+                android:textColor="@color/black"
+                android:backgroundTint="#D9D7D7"
+                android:textStyle="bold"
+                android:onClick="prevMonthAction"
+                />
+
+            <TextView
+                android:id="@+id/tvMonthYear"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Feb 2021"
+                android:textAlignment="center"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/forward"
+                android:textColor="@color/black"
+                android:backgroundTint="#D9D7D7"
+                android:textStyle="bold"
+                android:onClick="nextMonthAction"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SUN"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MON"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+               />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TUE"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WED"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="THUR"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FRI"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SAT"
+                android:textColor="@color/gray"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCalendar"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_corner_background"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/item_account"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/workDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Ngày: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/workDaysValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/workDays"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/workDays"
+                    android:text=""
+                    android:textColor="@color/black"
+                     />
+
+                <TextView
+                    android:id="@+id/checkInTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/workDays"
+                    android:layout_marginTop="7dp"
+                    android:text="Giờ checkin: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/checkInTimeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/checkInTime"
+                    android:layout_toEndOf="@+id/checkInTime"
+                    android:text=""
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/checkOutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkInTime"
+                    android:layout_marginTop="7dp"
+                    android:text="Giờ checkout: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/checkOutTimeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/checkOutTime"
+                    android:layout_toEndOf="@id/checkOutTime"
+                    android:text="17:00"
+                    android:textColor="@color/black"
+                  />
+
+                <TextView
+                    android:id="@+id/status"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkOutTime"
+                    android:layout_marginTop="7dp"
+                    android:text="Trạng thái: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/statusValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/status"
+                    android:layout_toEndOf="@+id/status"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/checkInBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_below="@+id/linearContent"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#1E5BE9"
+        android:layout_centerHorizontal="true"
+        android:text="Check In"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp"
+        />
+<!--    <Button-->
+<!--        android:id="@+id/checkOutBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_below="@+id/linearContent"-->
+<!--        android:layout_marginStart="220dp"-->
+<!--        android:backgroundTint="#1E58E9"-->
+<!--        android:text="Check Out"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:cornerRadius="5dp" />-->
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/csvcContainerInformation"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/item_account"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/tvCSVCName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:text="Máy Chiếu"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tvCSVCID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Mã CSVC: 01"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tvCSVCName" />
+
+    <ImageView
+        android:id="@+id/ivCSVCDetail"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ivCSVCDelete"
+        android:src="@drawable/account_detail" />
+
+    <TextView
+        android:id="@+id/tvCSVCQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCSVCName"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:text="Số lượng: 69"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tvCSVCStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/tvCSVCQuantity"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/manager_type_shape"
+        android:text="Cần bảo trì"
+        android:textColor="#F47271"/>
+
+    <ImageView
+        android:id="@+id/ivCSVCDelete"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/tvCSVCStatus"
+        android:layout_toStartOf="@+id/ivCSVCDetail"
+        android:src="@android:drawable/ic_menu_delete" />
+</RelativeLayout>
+
