@@ -175,5 +175,4 @@ public class NhanVien implements Parcelable {
     public int describeContents() {
         return 0;
     }
-
 }
