@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-29:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-30:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\2b6bbd7ce52c90bbccd242ae6ed855a4\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "C:\\Users\\DUY\\.gradle\\caches\\8.9\\transforms\\c5d9ae676efa07bb35310bf3010a48fb\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

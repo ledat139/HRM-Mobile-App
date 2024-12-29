@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-29:/values-land/values-land.xml",
+            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-30:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\2b6bbd7ce52c90bbccd242ae6ed855a4\\transformed\\material-1.12.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\DUY\\.gradle\\caches\\8.9\\transforms\\c5d9ae676efa07bb35310bf3010a48fb\\transformed\\material-1.12.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,26,35,40",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\8.9\\transforms\\be6655495889b465870569bab3c00274\\transformed\\appcompat-1.7.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\DUY\\.gradle\\caches\\8.9\\transforms\\69bde913a68ae158e3a66cfdf5dd1cc5\\transformed\\appcompat-1.7.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
