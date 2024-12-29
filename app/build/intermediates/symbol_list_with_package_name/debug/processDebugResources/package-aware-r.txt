@@ -1394,6 +1394,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_blue
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1444,6 +1445,7 @@ color gray
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_gray
 color light_green
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
@@ -3060,6 +3062,7 @@ drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable content_bg
+drawable copyright
 drawable delete
 drawable depart
 drawable design_fab_background
@@ -3328,8 +3331,11 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnAddCSVC
+id btnChangePassword
+id btnConfirm
 id btnLogin
 id btnLogout
+id btnPersonalInfo
 id btnProjectAdd
 id btn_approve_all
 id btn_new_request
@@ -3463,6 +3469,7 @@ id etDepartment
 id etEmail
 id etId
 id etName
+id etOTP
 id etPassword
 id etPhone
 id etPosition
@@ -3525,8 +3532,9 @@ id imageView7
 id imageView8
 id imageView9
 id imageView_Detail
+id imgCopyright
+id imgLogo
 id imgSidebar
-id img_searchbox
 id immediateStop
 id included
 id indeterminate
@@ -3924,11 +3932,14 @@ id tv_account_name
 id tv_employee_id
 id tv_employee_name
 id tv_manager_type
-id tv_requests
 id tv_requests2
+id tv_requests3
 id tvtime
 id tvtimeCheckIn
 id tvtimeCheckOut
+id txtCopyright
+id txtFullName
+id txtPosition
 id unchecked
 id uniform
 id unlabeled
@@ -4072,7 +4083,9 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout account_item
 layout account_management_admin
+layout activity_forgot_password
 layout activity_main
+layout activity_otp
 layout attendance_employee_detail
 layout attendance_management_view
 layout change_infomation_employee

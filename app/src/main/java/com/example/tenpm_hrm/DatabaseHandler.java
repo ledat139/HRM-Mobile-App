@@ -694,5 +694,45 @@ public void addProject(Project project) {
     }
 
 
+//    update mk taikhoan
+public boolean updatePassword(String email, String newPassword) {
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues contentValues = new ContentValues();
+    contentValues.put("MATKHAU", newPassword);
+
+    // Câu lệnh SQL cập nhật MATKHAU trong bảng TAIKHOAN kết hợp với NHANVIEN
+    String query = "UPDATE TAIKHOAN " +
+            "SET MATKHAU = ? " +
+            "WHERE MANV IN (SELECT MANV FROM NHANVIEN WHERE EMAIL = ?)";
+    try {
+        db.execSQL(query, new Object[]{newPassword, email});
+        return true; // Trả về true nếu câu lệnh thực thi thành công
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false; // Trả về false nếu xảy ra lỗi
+    }
+}
+
+    public boolean isEmailExists(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = null;
+        try {
+            String query = "SELECT * FROM NHANVIEN WHERE email = ?";
+            cursor = db.rawQuery(query, new String[]{email});
+
+            // Check if the cursor contains any data
+            if (cursor != null && cursor.moveToFirst()) {
+                return true; // Email exists
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+            db.close();
+        }
+        return false; // Email does not exist
+    }
 
 }

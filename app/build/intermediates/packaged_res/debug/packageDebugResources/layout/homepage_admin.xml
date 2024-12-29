@@ -309,22 +309,131 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Sidebar -->
     <LinearLayout
         android:id="@+id/sidebar"
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:orientation="vertical"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:gravity="start"> <!-- Căn giữa theo chiều dọc -->
 
-        <Button
-            android:id="@+id/btnLogout"
+        <!-- Thêm ImageView cho logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="TENPM HRM" />
+
+        <!-- Trường hiển thị "Họ Và Tên" -->
+        <TextView
+            android:id="@+id/txtFullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_marginTop="50dp"
-            />
+            android:text="Họ Và Tên"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Trường hiển thị "Chức Vụ" -->
+        <TextView
+            android:id="@+id/txtPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chức Vụ"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="40dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif" />
+
+        <!-- LinearLayout chứa các nút -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"> <!-- Căn giữa các nút -->
+
+            <!-- Nút "Thông Tin Cá Nhân" -->
+            <Button
+                android:id="@+id/btnPersonalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="5dp"
+                android:backgroundTint="@color/primary_color"
+                android:text="Thông Tin Cá Nhân"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginVertical="5dp" />
+
+            <!-- Đường cắt ngang -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC" />
+
+            <!-- Nút "Đổi Mật Khẩu" -->
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="5dp"
+                android:backgroundTint="@color/primary_color"
+                android:text="Đổi Mật Khẩu"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginVertical="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC" />
+
+            <!-- Nút "Logout" -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="5dp"
+                android:backgroundTint="@color/primary_color"
+                android:text="Đăng Xuất"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:layout_marginVertical="5dp" />
+        </LinearLayout>
+
+        <!-- Thêm hàng mới ở cuối cùng -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="180dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imgCopyright"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/copyright"
+                android:contentDescription="Copyright" />
+
+            <TextView
+                android:id="@+id/txtCopyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sản phẩm thuộc về 10PM"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginStart="15dp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
     </LinearLayout>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

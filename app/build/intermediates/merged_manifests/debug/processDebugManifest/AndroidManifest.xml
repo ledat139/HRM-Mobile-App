@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
         android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -30,6 +31,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.TENPM_HRM" >
+        <activity
+            android:name="com.example.tenpm_hrm.OTP"
+            android:exported="false" />
+        <activity
+            android:name="com.example.tenpm_hrm.forgotPassword"
+            android:exported="false" />
         <activity
             android:name="com.example.tenpm_hrm.UpdateFacility"
             android:exported="false" />
