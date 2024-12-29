@@ -764,7 +764,6 @@ public void addProject(Project project) {
             db.close();
             return account;
         }
-
         // Nếu không tìm thấy tài khoản, trả về null
         cursor.close();
         db.close();
