@@ -93,6 +93,7 @@ id Name
 id Phone
 id Position
 id RectangleView
+id absentBtn
 id accountDetailIcon
 id addAccountBtn
 id addEmployeeButton
@@ -132,6 +133,7 @@ id coPhepBtn
 id constraintLayout
 id content
 id csvcContainerInformation
+id danhDauBtn
 id dateValue
 id deleteAccountIcon
 id departmentGridView

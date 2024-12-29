@@ -13,47 +13,115 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bg" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="212dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/attendance" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="104dp"
+                android:text="Nhân viên thực hiện chấm công"
+                android:textColor="#545454"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="72dp"
+                android:text="Chấm công"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/dateValue"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thứ sáu, ngày 27 tháng 12 năm 2024"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+        </TextView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp">
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/calendar_header"
+            android:orientation="horizontal">
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:onClick="prevMonthAction"
                 android:text="@string/back"
                 android:textColor="@color/black"
-                android:backgroundTint="#D9D7D7"
-                android:textStyle="bold"
-                android:onClick="prevMonthAction"
-                />
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvMonthYear"
                 android:layout_width="0dp"
-                android:layout_weight="2"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:text="Feb 2021"
                 android:textAlignment="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                />
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/forward"
-                android:textColor="@color/black"
-                android:backgroundTint="#D9D7D7"
-                android:textStyle="bold"
+                android:backgroundTint="#00FFFFFF"
                 android:onClick="nextMonthAction"
-                />
+                android:text="@string/forward"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="#F4F4F4"
+            android:paddingTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -62,70 +130,82 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SUN"
-                android:textColor="@color/gray"
+                android:text="CN"
+                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/gray"
                 />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="MON"
-                android:textColor="@color/gray"
+                android:text="Th 2"
+                android:textStyle="bold"
                 android:textAlignment="center"
-               />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TUE"
                 android:textColor="@color/gray"
-                android:textAlignment="center"
                 />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="WED"
-                android:textColor="@color/gray"
+                android:text="Th 3"
+                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/gray"
                 />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="THUR"
-                android:textColor="@color/gray"
+                android:text="Th 4"
+                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/gray"
                 />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="FRI"
-                android:textColor="@color/gray"
+                android:text="Th 5"
+                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/gray"
                 />
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SAT"
-                android:textColor="@color/gray"
+                android:text="Th 6"
+                android:textStyle="bold"
                 android:textAlignment="center"
+                android:textColor="@color/gray"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Th 7"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/gray"
                 />
         </LinearLayout>
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCalendar"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
             android:layout_width="match_parent"
-            android:layout_height="300dp"/>
+            android:background="#F4F4F4"
+            android:layout_height="150dp" />
+
 
         <RelativeLayout
             android:id="@+id/content"
@@ -235,21 +315,20 @@
         android:layout_below="@+id/linearContent"
         android:layout_marginTop="20dp"
         android:backgroundTint="#1E5BE9"
-        android:layout_centerHorizontal="true"
         android:text="Check In"
         android:textColor="@color/black"
         app:cornerRadius="5dp"
         />
-<!--    <Button-->
-<!--        android:id="@+id/checkOutBtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:layout_below="@+id/linearContent"-->
-<!--        android:layout_marginStart="220dp"-->
-<!--        android:backgroundTint="#1E58E9"-->
-<!--        android:text="Check Out"-->
-<!--        android:textColor="@color/black"-->
-<!--        app:cornerRadius="5dp" />-->
+    <Button
+        android:id="@+id/absentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/linearContent"
+        android:layout_marginStart="220dp"
+        android:backgroundTint="#1EE976"
+        android:text="Xin nghỉ"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp" />
 
 </RelativeLayout>
