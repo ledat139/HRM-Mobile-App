@@ -33,6 +33,7 @@ drawable circle_background
 drawable clock
 drawable clock_out
 drawable content_bg
+drawable copyright
 drawable delete
 drawable depart
 drawable edit
@@ -99,8 +100,11 @@ id accountDetailIcon
 id addAccountBtn
 id addEmployeeButton
 id btnAddCSVC
+id btnChangePassword
+id btnConfirm
 id btnLogin
 id btnLogout
+id btnPersonalInfo
 id btnProjectAdd
 id btn_approve_all
 id btn_new_request
@@ -151,6 +155,7 @@ id etDepartment
 id etEmail
 id etId
 id etName
+id etOTP
 id etPassword
 id etPhone
 id etPosition
@@ -171,6 +176,8 @@ id imageView7
 id imageView8
 id imageView9
 id imageView_Detail
+id imgCopyright
+id imgLogo
 id imgSidebar
 id inputAccType
 id inputAddBuyingDate
@@ -317,11 +324,16 @@ id tv_requests3
 id tvtime
 id tvtimeCheckIn
 id tvtimeCheckOut
+id txtCopyright
+id txtFullName
+id txtPosition
 id workDays
 id workDaysValue
 layout account_item
 layout account_management_admin
+layout activity_forgot_password
 layout activity_main
+layout activity_otp
 layout attendance_employee_detail
 layout attendance_management_view
 layout change_infomation_employee
