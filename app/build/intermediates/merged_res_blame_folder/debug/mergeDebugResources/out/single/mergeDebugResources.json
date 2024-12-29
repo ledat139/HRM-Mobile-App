@@ -76,20 +76,20 @@
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\item_department.xml"
     },
     {
-        "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_item_project_employee.xml.flat",
+        "source": "com.example.tenpm_hrm.app-main-36:/layout/item_project_employee.xml"
     },
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_list.png.flat",
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\drawable\\list.png"
     },
     {
-        "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_add_participant_temp.xml.flat",
-        "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\add_participant_temp.xml"
+        "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_project.xml.flat",
-        "source": "com.example.tenpm_hrm.app-main-36:/layout/project.xml"
+        "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_add_participant_temp.xml.flat",
+        "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\add_participant_temp.xml"
     },
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_clock_out.png.flat",
@@ -132,10 +132,6 @@
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\drawable\\rb_2148823073.png"
     },
     {
-        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_update_facility.xml.flat",
-        "source": "com.example.tenpm_hrm.app-main-36:/layout/update_facility.xml"
-    },
-    {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_rb_37486.png.flat",
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\drawable\\rb_37486.png"
     },
@@ -146,6 +142,10 @@
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_account_item.xml.flat",
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\account_item.xml"
+    },
+    {
+        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_project_employee.xml.flat",
+        "source": "com.example.tenpm_hrm.app-main-36:/layout/project_employee.xml"
     },
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_item_facility.xml.flat",
@@ -162,10 +162,6 @@
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_bell.png.flat",
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\drawable\\bell.png"
-    },
-    {
-        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_create_csvc_admin.xml.flat",
-        "source": "com.example.tenpm_hrm.app-main-36:/layout/create_csvc_admin.xml"
     },
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_copyright.png.flat",
@@ -300,6 +296,10 @@
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\homepage_client.xml"
     },
     {
+        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_project_detail.xml.flat",
+        "source": "com.example.tenpm_hrm.app-main-36:/layout/project_detail.xml"
+    },
+    {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_blue_circle.xml.flat",
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\drawable\\blue_circle.xml"
     },
@@ -406,6 +406,10 @@
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_update_department.xml.flat",
+        "source": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\update_department.xml"
     },
     {
         "merged": "C:\\Users\\DUY\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_item_emp_attendance.xml.flat",

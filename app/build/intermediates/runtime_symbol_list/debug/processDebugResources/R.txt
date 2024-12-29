@@ -3303,7 +3303,6 @@ int id actions 0x7f09004f
 int id activity_chooser_view_content 0x7f090050
 int id add 0x7f090051
 int id addAccountBtn 0x7f090052
-int id addEmployeeButton 0x7f090053
 int id addInputDepartmentAvatarContainer 0x7f090054
 int id adjust_height 0x7f090055
 int id adjust_width 0x7f090056
@@ -3343,6 +3342,7 @@ int id btnLogin 0x7f090077
 int id btnLogout 0x7f090078
 int id btnPersonalInfo 0x7f090079
 int id btnProjectAdd 0x7f09007a
+int id btnUpdateDepartment 0x7f090322
 int id btnUpdateProject 0x7f09007b
 int id btn_approve_all 0x7f09007c
 int id btn_new_request 0x7f09007d
@@ -3426,6 +3426,7 @@ int id decor_content_parent 0x7f0900ca
 int id default_activity_button 0x7f0900cb
 int id deleteAccountIcon 0x7f0900cc
 int id deltaRelative 0x7f0900cd
+int id departmentContainerItem 0x7f090323
 int id departmentGridView 0x7f0900ce
 int id departmentImageView 0x7f0900cf
 int id departmentNameTextView 0x7f0900d0
@@ -3465,7 +3466,6 @@ int id edtChuDe 0x7f0900f1
 int id edtNoiDung 0x7f0900f2
 int id elastic 0x7f0900f3
 int id embed 0x7f0900f4
-int id employeeManagementLayout 0x7f0900f5
 int id end 0x7f0900f6
 int id endToStart 0x7f0900f7
 int id enterAlways 0x7f0900f8
@@ -3600,6 +3600,7 @@ int id inputUpdateFacilityName 0x7f090178
 int id inputUpdateFacilityNameLayout 0x7f090179
 int id inputUpdateFacilityQuantity 0x7f09017a
 int id inputUpdateFacilityQuantityLayout 0x7f09017b
+int id inputUpdateManagerID 0x7f090324
 int id inputUpdateProjectDesc 0x7f09017c
 int id inputUpdateProjectDescContainer 0x7f09017d
 int id inputUpdateProjectName 0x7f09017e
@@ -3673,7 +3674,6 @@ int id line3 0x7f0901c1
 int id linear 0x7f0901c2
 int id linearContent 0x7f0901c3
 int id linearLayout 0x7f0901c4
-int id listButton 0x7f0901c5
 int id listMode 0x7f0901c6
 int id listView 0x7f0901c7
 int id listViewContainer 0x7f0901c8
@@ -3803,6 +3803,18 @@ int id progress_circular 0x7f090243
 int id progress_horizontal 0x7f090244
 int id projectContainer 0x7f090245
 int id projectContainerInformation 0x7f090246
+int id projectDepartmentIDLayout 0x7f090327
+int id projectDepartmentName 0x7f090328
+int id projectDesc 0x7f090329
+int id projectDescContainer 0x7f09032a
+int id projectName 0x7f09032b
+int id projectNameContainer 0x7f09032c
+int id projectSEndingDate 0x7f09032d
+int id projectSEndingDateContainer 0x7f09032e
+int id projectSInitialDate 0x7f09032f
+int id projectSInitialDateContainer 0x7f090330
+int id projectStatus 0x7f090331
+int id projectStatusLayout 0x7f090332
 int id radio 0x7f090247
 int id radioFemale 0x7f090248
 int id radioMale 0x7f090249
@@ -3829,7 +3841,6 @@ int id scrollIndicatorUp 0x7f09025d
 int id scrollView 0x7f09025e
 int id scrollView2 0x7f09025f
 int id scrollable 0x7f090260
-int id searchView 0x7f090261
 int id search_badge 0x7f090262
 int id search_bar 0x7f090263
 int id search_button 0x7f090264
@@ -3961,6 +3972,8 @@ int id tvCSVCName 0x7f0902e1
 int id tvCSVCQuantity 0x7f0902e2
 int id tvCSVCStatus 0x7f0902e3
 int id tvDepartment 0x7f0902e4
+int id tvDepartmentID 0x7f090325
+int id tvEmployeeNumber 0x7f090326
 int id tvEmployeeType 0x7f0902e5
 int id tvForgotPassword 0x7f0902e6
 int id tvHeaderDescription 0x7f0902e7
@@ -4187,6 +4200,7 @@ int layout item_employee 0x7f0c004a
 int layout item_facility 0x7f0c004b
 int layout item_participant 0x7f0c004c
 int layout item_project 0x7f0c004d
+int layout item_project_employee 0x7f0c0097
 int layout login 0x7f0c004e
 int layout m3_alert_dialog 0x7f0c004f
 int layout m3_alert_dialog_actions 0x7f0c0050
@@ -4246,6 +4260,8 @@ int layout notification_template_icon_group 0x7f0c0085
 int layout notification_template_part_chronometer 0x7f0c0086
 int layout notification_template_part_time 0x7f0c0087
 int layout project 0x7f0c0088
+int layout project_detail 0x7f0c0098
+int layout project_employee 0x7f0c0099
 int layout request_item 0x7f0c0089
 int layout request_management_admin 0x7f0c008a
 int layout request_management_client 0x7f0c008b
@@ -4256,6 +4272,7 @@ int layout select_dialog_item_material 0x7f0c008f
 int layout select_dialog_multichoice_material 0x7f0c0090
 int layout select_dialog_singlechoice_material 0x7f0c0091
 int layout support_simple_spinner_dropdown_item 0x7f0c0092
+int layout update_department 0x7f0c0096
 int layout update_facility 0x7f0c0093
 int layout update_participant 0x7f0c0094
 int layout update_project 0x7f0c0095

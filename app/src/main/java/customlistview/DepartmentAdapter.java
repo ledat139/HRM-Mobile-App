@@ -1,17 +1,22 @@
 package customlistview;
 
 import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.tenpm_hrm.DatabaseHandler;
+import androidx.activity.result.contract.ActivityResultContracts;
+
+import com.example.tenpm_hrm.ProjectManagement;
 import com.example.tenpm_hrm.R;
+import com.example.tenpm_hrm.SearchProject;
+import com.example.tenpm_hrm.UpdateDepartment;
 
 import java.util.List;
 
@@ -19,13 +24,14 @@ import models.Department;
 
 public class DepartmentAdapter extends BaseAdapter {
     private List<Department> departmentList;
+    private LinearLayout departmentContainerItem;
     private LayoutInflater inflater;
-    DatabaseHandler dbHandler;
+    private Context context;
 
     public DepartmentAdapter(Context context, List<Department> departmentList) {
-        dbHandler = new DatabaseHandler(context);
-        this.departmentList = dbHandler.getAllDepartment();
+        this.departmentList = departmentList;
         this.inflater = LayoutInflater.from(context);
+        this.context = context;
     }
 
     @Override
@@ -46,35 +52,35 @@ public class DepartmentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.item_department, parent, false);
+            convertView = inflater.inflate(com.example.tenpm_hrm.R.layout.item_department, parent, false);
         }
 
         Department department = departmentList.get(position);
+        Log.d("DepartmentAdapter", "Position: " + position + ", Department: " + department);
 
-        ImageView departmentImageView = convertView.findViewById(R.id.departmentImageView);
-        TextView departmentNameTextView = convertView.findViewById(R.id.departmentNameTextView);
+        departmentContainerItem = convertView.findViewById(R.id.departmentContainerItem);
+        ImageView avatarImageView = convertView.findViewById(R.id.departmentImageView);
+        TextView nameTextView = convertView.findViewById(R.id.departmentNameTextView);
 
         String avatarPath = department.getAvatarPath();
-        Log.d("DepartmentAdapter", "Avatar path: " + avatarPath);
+        int avatarResId = convertView.getContext().getResources().getIdentifier(
+                avatarPath,
+                "drawable",
+                convertView.getContext().getPackageName()
+        );
 
-        if (avatarPath != null && !avatarPath.isEmpty()) {
-            try {
-                Uri avatarUri = Uri.parse(avatarPath);
-                departmentImageView.setImageURI(avatarUri);
-            } catch (Exception e) {
-                Log.e("DepartmentAdapter", "Failed to set image URI: " + e.getMessage());
-                // Set a default placeholder image if URI loading fails
-                departmentImageView.setImageResource(R.drawable.arrow);
+        avatarImageView.setImageResource(avatarResId);
+        nameTextView.setText(department.getDepartmentName());
+
+        departmentContainerItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, UpdateDepartment.class);
+                intent.putExtra("departmentID", department.getDepartmentId());
+                context.startActivity(intent);
             }
-        } else {
-            // Set a default placeholder image when `avatarPath` is null or empty
-            departmentImageView.setImageResource(R.drawable.arrow);
-            Log.e("DepartmentAdapter", "Avatar path is null or empty for department: " + department.getDepartmentName());
-        }
-
-        departmentNameTextView.setText(department.getDepartmentName());
+        });
 
         return convertView;
     }
-
 }
