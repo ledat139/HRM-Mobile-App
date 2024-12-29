@@ -35,7 +35,6 @@ public class AttendanceDbAdapter {
         values.put("GIOBATDAU", attendance.getCheckinTime());
         values.put("TRANGTHAI", attendance.getStatus());
         long id = db.insert(TABLE_ATTENDANCE, null, values);
-        db.close();
         return id;
     }
 
@@ -75,6 +74,33 @@ public class AttendanceDbAdapter {
             attendance.setPhone(cursor.getString(2));
             attendance.setDepartment(cursor.getString(3));
             attendance.setStatus(cursor.getString(4));
+            attendancesList.add(attendance);
+        }
+        return attendancesList;
+    }
+
+    public List<CustomAttendance> getAbsenseList(String workDate){
+        dbHelper = new DatabaseHandler(context);
+        db = dbHelper.getWritableDatabase();
+        String queryString = "SELECT NHANVIEN.MANV, HOTEN, SDT, TENPB \n" +
+                "FROM NHANVIEN, PHONGBAN\n"+
+                "WHERE PHONGBAN.MAPB = NHANVIEN.MAPB\n"+
+                "AND NHANVIEN.MANV NOT IN\n" +
+                "(SELECT CHAMCONG.MANV\n" +
+                "FROM CHAMCONG, NHANVIEN, PHONGBAN\n" +
+                "WHERE CHAMCONG.MANV = NHANVIEN.MANV\n" +
+                "AND PHONGBAN.MAPB = NHANVIEN.MAPB\n" +
+                "AND NGAYLAMVIEC = ?)";
+        String[] whereArgs  = {workDate};
+        Cursor cursor = db.rawQuery(queryString, whereArgs);
+        List<CustomAttendance> attendancesList = new ArrayList<>();
+        while (cursor.moveToNext()){
+            CustomAttendance attendance = new CustomAttendance();
+            attendance.setEmployeeId(Integer.parseInt(cursor.getString(0)));
+            attendance.setName(cursor.getString(1));
+            attendance.setPhone(cursor.getString(2));
+            attendance.setDepartment(cursor.getString(3));
+            attendance.setStatus("Không phép");
             attendancesList.add(attendance);
         }
         return attendancesList;

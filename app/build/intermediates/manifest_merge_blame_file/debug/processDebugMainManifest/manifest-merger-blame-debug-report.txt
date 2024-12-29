@@ -8,493 +8,558 @@
 8        android:minSdkVersion="26"
 9        android:targetSdkVersion="34" />
 10
-11    <permission
-11-->[androidx.core:core:1.13.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.13.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.13.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:5-67
+13-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:22-64
 14
-15    <uses-permission android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.13.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.13.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:5:5-222:19
-18        android:allowBackup="true"
-18-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.13.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\28ed2e0627fe848260f1c07273d53cd3\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:extractNativeLibs="false"
-23        android:fullBackupContent="@xml/backup_rules"
-23-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:8:9-54
-24        android:icon="@mipmap/ic_launcher"
-24-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:9-43
-25        android:label="@string/app_name"
-25-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:10:9-41
-26        android:roundIcon="@mipmap/ic_launcher_round"
-26-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:11:9-54
-27        android:supportsRtl="true"
-27-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:12:9-35
-28        android:testOnly="true"
-29        android:theme="@style/Theme.TENPM_HRM" >
-29-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:13:9-47
-30        <activity
-30-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:15:9-17:40
-31            android:name="com.example.tenpm_hrm.UpdateFacility"
-31-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:16:13-43
-32            android:exported="false" />
-32-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:17:13-37
-33        <activity
-33-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:18:9-23:20
-34            android:name="com.example.tenpm_hrm.AccountDetail"
-34-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:19:13-42
-35            android:exported="true" >
-35-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:20:13-36
-36        </activity>
+15    <permission
+15-->[androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+16        android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-246:19
+22        android:allowBackup="true"
+22-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:10:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+24        android:dataExtractionRules="@xml/data_extraction_rules"
+24-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:11:9-65
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:fullBackupContent="@xml/backup_rules"
+27-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:12:9-54
+28        android:icon="@mipmap/ic_launcher"
+28-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:13:9-43
+29        android:label="@string/app_name"
+29-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:14:9-41
+30        android:roundIcon="@mipmap/ic_launcher_round"
+30-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:15:9-54
+31        android:supportsRtl="true"
+31-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:16:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.TENPM_HRM" >
+33-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:17:9-47
+34        <activity
+34-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:19:9-21:40
+35            android:name="com.example.tenpm_hrm.OTP"
+35-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:20:13-32
+36            android:exported="false" />
+36-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:21:13-37
 37        <activity
-37-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:24:9-32:20
-38            android:name="com.example.tenpm_hrm.MainActivity"
-38-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:25:13-41
-39            android:exported="true" >
-39-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:26:13-36
-40            <intent-filter>
-40-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-41-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-43-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-44            </intent-filter>
-45        </activity> <!-- yeucau -->
-46        <activity
-46-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:33:9-41:20
-47            android:name="com.example.tenpm_hrm.RequestManagementClient"
-47-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:13-52
-48            android:exported="true" >
-48-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:35:13-36
-49            <intent-filter>
-49-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-50-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-52-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-53            </intent-filter>
-54        </activity>
-55        <activity
-55-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:42:9-50:20
-56            android:name="com.example.tenpm_hrm.NewRequest"
-56-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:43:13-39
-57            android:exported="true" >
-57-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:44:13-36
-58            <intent-filter>
-58-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-59                <action android:name="android.intent.action.MAIN" />
-59-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-59-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-60
-61                <category android:name="android.intent.category.LAUNCHER" />
-61-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-61-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-62            </intent-filter>
-63        </activity>
-64        <activity
-64-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:51:9-59:20
-65            android:name="com.example.tenpm_hrm.RequestManagementAdmin"
-65-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:52:13-51
-66            android:exported="true" >
-66-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:53:13-36
-67            <intent-filter>
-67-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-68-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-69
-70                <category android:name="android.intent.category.LAUNCHER" />
-70-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-70-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-71            </intent-filter>
-72        </activity> <!-- chamcong -->
-73        <activity
-73-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:60:9-68:20
-74            android:name="com.example.tenpm_hrm.attendance.AttendanceDetails"
-74-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:61:13-57
-75            android:exported="true" >
-75-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:62:13-36
-76            <intent-filter>
-76-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-77                <action android:name="android.intent.action.MAIN" />
-77-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-77-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-78
-79                <category android:name="android.intent.category.LAUNCHER" />
-79-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-79-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-80            </intent-filter>
-81        </activity>
-82        <activity
-82-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:69:9-77:20
-83            android:name="com.example.tenpm_hrm.attendance.Checkinout"
-83-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:70:13-50
-84            android:exported="true" >
-84-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:71:13-36
-85            <intent-filter>
-85-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-86                <action android:name="android.intent.action.MAIN" />
-86-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-86-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-87
-88                <category android:name="android.intent.category.LAUNCHER" />
-88-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-88-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-89            </intent-filter>
-90        </activity>
-91        <activity
-91-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:78:9-86:20
-92            android:name="com.example.tenpm_hrm.attendance.AttendanceManagement"
-92-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:79:13-60
-93            android:exported="true" >
-93-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:80:13-36
-94            <intent-filter>
-94-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-95                <action android:name="android.intent.action.MAIN" />
-95-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-95-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-96
-97                <category android:name="android.intent.category.LAUNCHER" />
-97-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-97-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-98            </intent-filter>
-99        </activity> <!-- phongban -->
-100        <activity
-100-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:87:9-95:20
-101            android:name="com.example.tenpm_hrm.DepartmentManagement"
-101-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:88:13-49
-102            android:exported="true" >
-102-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:89:13-36
-103            <intent-filter>
-103-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-104                <action android:name="android.intent.action.MAIN" />
-104-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-104-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-105
-106                <category android:name="android.intent.category.LAUNCHER" />
-106-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-106-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-107            </intent-filter>
-108        </activity>
-109        <activity
-109-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:96:9-104:20
-110            android:name="com.example.tenpm_hrm.NewDepartment"
-110-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:97:13-42
-111            android:exported="true" >
-111-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:98:13-36
-112            <intent-filter>
-112-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-113                <action android:name="android.intent.action.MAIN" />
-113-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-113-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-114
-115                <category android:name="android.intent.category.LAUNCHER" />
-115-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-115-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-116            </intent-filter>
-117        </activity> <!-- csvc -->
-118        <activity
-118-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:105:9-113:20
-119            android:name="com.example.tenpm_hrm.CSVCManagement"
-119-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:106:13-43
-120            android:exported="true" >
-120-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:107:13-36
-121            <intent-filter>
-121-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-122                <action android:name="android.intent.action.MAIN" />
-122-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-122-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-123
-124                <category android:name="android.intent.category.LAUNCHER" />
-124-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-124-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-125            </intent-filter>
-126        </activity>
-127        <activity
-127-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:114:9-122:20
-128            android:name="com.example.tenpm_hrm.NewCSVC"
-128-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:115:13-36
-129            android:exported="true" >
-129-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:116:13-36
-130            <intent-filter>
-130-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-131                <action android:name="android.intent.action.MAIN" />
-131-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-131-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-132
-133                <category android:name="android.intent.category.LAUNCHER" />
-133-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-133-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-134            </intent-filter>
-135        </activity> <!-- taikhoan -->
-136        <activity
-136-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:123:9-131:20
-137            android:name="com.example.tenpm_hrm.AccountManagement"
-137-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:124:13-46
-138            android:exported="true" >
-138-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:125:13-36
-139            <intent-filter>
-139-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-140                <action android:name="android.intent.action.MAIN" />
-140-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-140-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-141
-142                <category android:name="android.intent.category.LAUNCHER" />
-142-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-142-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-143            </intent-filter>
-144        </activity>
-145        <activity
-145-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:132:9-140:20
-146            android:name="com.example.tenpm_hrm.NewAccount"
-146-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:133:13-39
-147            android:exported="true" >
-147-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:134:13-36
-148            <intent-filter>
-148-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-149                <action android:name="android.intent.action.MAIN" />
-149-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-149-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-150
-151                <category android:name="android.intent.category.LAUNCHER" />
-151-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-151-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-152            </intent-filter>
-153        </activity> <!-- nhanvien -->
-154        <activity
-154-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:141:9-149:20
-155            android:name="com.example.tenpm_hrm.EmployeeManagement"
-155-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:142:13-47
-156            android:exported="true" >
-156-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:143:13-36
-157            <intent-filter>
-157-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-158                <action android:name="android.intent.action.MAIN" />
-158-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-158-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-159
-160                <category android:name="android.intent.category.LAUNCHER" />
-160-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-160-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-161            </intent-filter>
-162        </activity>
-163        <activity
-163-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:150:9-158:20
-164            android:name="com.example.tenpm_hrm.NewEmployee"
-164-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:151:13-40
-165            android:exported="true" >
-165-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:152:13-36
-166            <intent-filter>
-166-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-167                <action android:name="android.intent.action.MAIN" />
-167-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-167-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-168
-169                <category android:name="android.intent.category.LAUNCHER" />
-169-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-169-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-170            </intent-filter>
-171        </activity> <!-- homepage -->
-172        <activity
-172-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:159:9-167:20
-173            android:name="com.example.tenpm_hrm.HomePageClient"
-173-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:160:13-43
-174            android:exported="true" >
-174-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:161:13-36
-175            <intent-filter>
-175-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-176                <action android:name="android.intent.action.MAIN" />
-176-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-176-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-177
-178                <category android:name="android.intent.category.LAUNCHER" />
-178-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-178-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-179            </intent-filter>
-180        </activity>
-181        <activity
-181-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:168:9-176:20
-182            android:name="com.example.tenpm_hrm.HomepageAdmin"
-182-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:169:13-42
-183            android:exported="true" >
-183-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:170:13-36
-184            <intent-filter>
-184-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-185                <action android:name="android.intent.action.MAIN" />
-185-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-185-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-186
-187                <category android:name="android.intent.category.LAUNCHER" />
-187-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-187-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-188            </intent-filter>
-189        </activity> <!-- project -->
-190        <activity
-190-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:177:9-185:20
-191            android:name="com.example.tenpm_hrm.ProjectManagement"
-191-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:178:13-46
-192            android:exported="true" >
-192-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:179:13-36
-193            <intent-filter>
-193-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-194                <action android:name="android.intent.action.MAIN" />
-194-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-194-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-195
-196                <category android:name="android.intent.category.LAUNCHER" />
-196-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-196-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-197            </intent-filter>
-198        </activity>
-199        <activity
-199-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:186:9-194:20
-200            android:name="com.example.tenpm_hrm.NewProject"
-200-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:187:13-39
-201            android:exported="true" >
-201-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:188:13-36
-202            <intent-filter>
-202-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-203                <action android:name="android.intent.action.MAIN" />
-203-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-203-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-204
-205                <category android:name="android.intent.category.LAUNCHER" />
-205-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-205-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-206            </intent-filter>
-207        </activity>
-208        <activity
-208-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:195:9-203:20
-209            android:name="com.example.tenpm_hrm.UpdateProject"
-209-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:196:13-42
-210            android:exported="true" >
-210-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:197:13-36
-211            <intent-filter>
-211-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-212                <action android:name="android.intent.action.MAIN" />
-212-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-212-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-213
-214                <category android:name="android.intent.category.LAUNCHER" />
-214-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-214-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-215            </intent-filter>
-216        </activity> <!-- employee info -->
-217        <activity
-217-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:204:9-212:20
-218            android:name="com.example.tenpm_hrm.EmployeeInfo"
-218-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:205:13-41
-219            android:exported="true" >
-219-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:206:13-36
-220            <intent-filter>
-220-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-221                <action android:name="android.intent.action.MAIN" />
-221-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-221-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-222
-223                <category android:name="android.intent.category.LAUNCHER" />
-223-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-223-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-224            </intent-filter>
-225        </activity> <!-- login -->
-226        <activity
-226-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:213:9-221:20
-227            android:name="com.example.tenpm_hrm.Login"
-227-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:214:13-34
-228            android:exported="true" >
-228-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:215:13-36
-229            <intent-filter>
-229-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-31:29
-230                <action android:name="android.intent.action.MAIN" />
-230-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:17-69
-230-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:25-66
-231
-232                <category android:name="android.intent.category.LAUNCHER" />
-232-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:17-77
-232-->D:\Nam3\Mobile\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:27-74
-233            </intent-filter>
-234        </activity>
-235
-236        <provider
-236-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-237            android:name="androidx.startup.InitializationProvider"
-237-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-238            android:authorities="com.example.tenpm_hrm.androidx-startup"
-238-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-239            android:exported="false" >
-239-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-240            <meta-data
-240-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-241                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-241-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-242                android:value="androidx.startup" />
-242-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ngvan\.gradle\caches\8.9\transforms\d090f98c7f7400fbb2276d576a132930\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-243            <meta-data
-243-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ngvan\.gradle\caches\8.9\transforms\f805c075234d995bb21171b6dbc7141c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-244                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-244-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ngvan\.gradle\caches\8.9\transforms\f805c075234d995bb21171b6dbc7141c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-245                android:value="androidx.startup" />
-245-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ngvan\.gradle\caches\8.9\transforms\f805c075234d995bb21171b6dbc7141c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-246            <meta-data
-246-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-247                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-247-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-248                android:value="androidx.startup" />
-248-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-249        </provider>
-250
-251        <receiver
-251-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-252            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-252-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-253            android:directBootAware="false"
-253-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-254            android:enabled="true"
-254-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-255            android:exported="true"
-255-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-256            android:permission="android.permission.DUMP" >
-256-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-257            <intent-filter>
-257-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-258                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-258-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-258-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-259            </intent-filter>
-260            <intent-filter>
-260-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-261                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-261-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-261-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-262            </intent-filter>
-263            <intent-filter>
-263-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-264                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-264-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-264-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-265            </intent-filter>
-266            <intent-filter>
-266-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-267                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-267-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-267-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ngvan\.gradle\caches\8.9\transforms\e8d66ec5cca75fa35083a5f1353555d6\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-268            </intent-filter>
-269        </receiver>
-270    </application>
-271
-272</manifest>
+37-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:22:9-24:40
+38            android:name="com.example.tenpm_hrm.forgotPassword"
+38-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:23:13-43
+39            android:exported="false" />
+39-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:24:13-37
+40        <activity
+40-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:25:9-27:40
+41            android:name="com.example.tenpm_hrm.UpdateFacility"
+41-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:26:13-43
+42            android:exported="false" />
+42-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-37
+43        <activity
+43-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:9-36:20
+44            android:name="com.example.tenpm_hrm.MainActivity"
+44-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:29:13-41
+45            android:exported="true" >
+45-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:13-36
+46            <intent-filter>
+46-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+47-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+49-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+50            </intent-filter>
+51        </activity> <!-- yeucau -->
+52        <activity
+52-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:37:9-45:20
+53            android:name="com.example.tenpm_hrm.RequestManagementClient"
+53-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:38:13-52
+54            android:exported="true" >
+54-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:39:13-36
+55            <intent-filter>
+55-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+56-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+58-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+59            </intent-filter>
+60        </activity>
+61        <activity
+61-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:46:9-54:20
+62            android:name="com.example.tenpm_hrm.NewRequest"
+62-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:47:13-39
+63            android:exported="true" >
+63-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:48:13-36
+64            <intent-filter>
+64-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+65-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+67-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+68            </intent-filter>
+69        </activity>
+70        <activity
+70-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:55:9-63:20
+71            android:name="com.example.tenpm_hrm.RequestManagementAdmin"
+71-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:56:13-51
+72            android:exported="true" >
+72-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:57:13-36
+73            <intent-filter>
+73-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+74                <action android:name="android.intent.action.MAIN" />
+74-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+74-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+75
+76                <category android:name="android.intent.category.LAUNCHER" />
+76-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+76-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+77            </intent-filter>
+78        </activity> <!-- chamcong -->
+79        <activity
+79-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:64:9-72:20
+80            android:name="com.example.tenpm_hrm.attendance.AttendanceDetails"
+80-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:65:13-57
+81            android:exported="true" >
+81-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:66:13-36
+82            <intent-filter>
+82-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+83-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+85-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+86            </intent-filter>
+87        </activity>
+88        <activity
+88-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:73:9-81:20
+89            android:name="com.example.tenpm_hrm.attendance.AttendanceManagement"
+89-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:74:13-60
+90            android:exported="true" >
+90-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:75:13-36
+91            <intent-filter>
+91-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+92                <action android:name="android.intent.action.MAIN" />
+92-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+92-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+93
+94                <category android:name="android.intent.category.LAUNCHER" />
+94-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+94-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+95            </intent-filter>
+96        </activity> <!-- phongban -->
+97        <activity
+97-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:82:9-90:20
+98            android:name="com.example.tenpm_hrm.DepartmentManagement"
+98-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:83:13-49
+99            android:exported="true" >
+99-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:84:13-36
+100            <intent-filter>
+100-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+101                <action android:name="android.intent.action.MAIN" />
+101-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+101-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+102
+103                <category android:name="android.intent.category.LAUNCHER" />
+103-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+103-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+104            </intent-filter>
+105        </activity>
+106        <activity
+106-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:91:9-99:20
+107            android:name="com.example.tenpm_hrm.NewDepartment"
+107-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:92:13-42
+108            android:exported="true" >
+108-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:93:13-36
+109            <intent-filter>
+109-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+110                <action android:name="android.intent.action.MAIN" />
+110-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+110-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+111
+112                <category android:name="android.intent.category.LAUNCHER" />
+112-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+112-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+113            </intent-filter>
+114        </activity> <!-- csvc -->
+115        <activity
+115-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:100:9-108:20
+116            android:name="com.example.tenpm_hrm.CSVCManagement"
+116-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:101:13-43
+117            android:exported="true" >
+117-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:102:13-36
+118            <intent-filter>
+118-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+119                <action android:name="android.intent.action.MAIN" />
+119-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+119-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+120
+121                <category android:name="android.intent.category.LAUNCHER" />
+121-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+121-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+122            </intent-filter>
+123        </activity>
+124        <activity
+124-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:109:9-117:20
+125            android:name="com.example.tenpm_hrm.NewCSVC"
+125-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:110:13-36
+126            android:exported="true" >
+126-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:111:13-36
+127            <intent-filter>
+127-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+128                <action android:name="android.intent.action.MAIN" />
+128-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+128-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+129
+130                <category android:name="android.intent.category.LAUNCHER" />
+130-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+130-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+131            </intent-filter>
+132        </activity>
+133        <activity
+133-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:118:9-126:20
+134            android:name="com.example.tenpm_hrm.SearchFacilities"
+134-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:119:13-45
+135            android:exported="true" >
+135-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:120:13-36
+136            <intent-filter>
+136-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+137                <action android:name="android.intent.action.MAIN" />
+137-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+137-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+138
+139                <category android:name="android.intent.category.LAUNCHER" />
+139-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+139-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+140            </intent-filter>
+141        </activity>
+142        <!-- taikhoan -->
+143        <activity
+143-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:128:9-136:20
+144            android:name="com.example.tenpm_hrm.AccountManagement"
+144-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:129:13-46
+145            android:exported="true" >
+145-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:130:13-36
+146            <intent-filter>
+146-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+147                <action android:name="android.intent.action.MAIN" />
+147-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+147-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+148
+149                <category android:name="android.intent.category.LAUNCHER" />
+149-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+149-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+150            </intent-filter>
+151        </activity>
+152        <activity
+152-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:137:9-145:20
+153            android:name="com.example.tenpm_hrm.NewAccount"
+153-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:138:13-39
+154            android:exported="true" >
+154-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:139:13-36
+155            <intent-filter>
+155-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+156                <action android:name="android.intent.action.MAIN" />
+156-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+156-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+157
+158                <category android:name="android.intent.category.LAUNCHER" />
+158-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+158-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+159            </intent-filter>
+160        </activity> <!-- nhanvien -->
+161        <activity
+161-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:146:9-154:20
+162            android:name="com.example.tenpm_hrm.EmployeeManagement"
+162-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:147:13-47
+163            android:exported="true" >
+163-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:148:13-36
+164            <intent-filter>
+164-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+165                <action android:name="android.intent.action.MAIN" />
+165-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+165-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+166
+167                <category android:name="android.intent.category.LAUNCHER" />
+167-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+167-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+168            </intent-filter>
+169        </activity>
+170        <activity
+170-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:155:9-163:20
+171            android:name="com.example.tenpm_hrm.NewEmployee"
+171-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:156:13-40
+172            android:exported="true" >
+172-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:157:13-36
+173            <intent-filter>
+173-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+174                <action android:name="android.intent.action.MAIN" />
+174-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+174-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+175
+176                <category android:name="android.intent.category.LAUNCHER" />
+176-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+176-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+177            </intent-filter>
+178        </activity> <!-- homepage -->
+179        <activity
+179-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:164:9-172:20
+180            android:name="com.example.tenpm_hrm.HomePageClient"
+180-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:165:13-43
+181            android:exported="true" >
+181-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:166:13-36
+182            <intent-filter>
+182-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+183                <action android:name="android.intent.action.MAIN" />
+183-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+183-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+184
+185                <category android:name="android.intent.category.LAUNCHER" />
+185-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+185-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+186            </intent-filter>
+187        </activity>
+188        <activity
+188-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:173:9-181:20
+189            android:name="com.example.tenpm_hrm.HomepageAdmin"
+189-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:174:13-42
+190            android:exported="true" >
+190-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:175:13-36
+191            <intent-filter>
+191-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+192                <action android:name="android.intent.action.MAIN" />
+192-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+192-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+193
+194                <category android:name="android.intent.category.LAUNCHER" />
+194-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+194-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+195            </intent-filter>
+196        </activity> <!-- project -->
+197        <activity
+197-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:182:9-190:20
+198            android:name="com.example.tenpm_hrm.ProjectManagement"
+198-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:183:13-46
+199            android:exported="true" >
+199-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:184:13-36
+200            <intent-filter>
+200-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+201                <action android:name="android.intent.action.MAIN" />
+201-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+201-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+202
+203                <category android:name="android.intent.category.LAUNCHER" />
+203-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+203-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+204            </intent-filter>
+205        </activity>
+206        <activity
+206-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:191:9-199:20
+207            android:name="com.example.tenpm_hrm.NewProject"
+207-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:192:13-39
+208            android:exported="true" >
+208-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:193:13-36
+209            <intent-filter>
+209-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+210                <action android:name="android.intent.action.MAIN" />
+210-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+210-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+211
+212                <category android:name="android.intent.category.LAUNCHER" />
+212-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+212-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+213            </intent-filter>
+214        </activity>
+215        <activity
+215-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:200:9-208:20
+216            android:name="com.example.tenpm_hrm.UpdateProject"
+216-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:201:13-42
+217            android:exported="true" >
+217-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:202:13-36
+218            <intent-filter>
+218-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+219                <action android:name="android.intent.action.MAIN" />
+219-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+219-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+220
+221                <category android:name="android.intent.category.LAUNCHER" />
+221-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+221-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+222            </intent-filter>
+223        </activity>
+224        <activity
+224-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:209:9-217:20
+225            android:name="com.example.tenpm_hrm.SearchProject"
+225-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:210:13-42
+226            android:exported="true" >
+226-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:211:13-36
+227            <intent-filter>
+227-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+228                <action android:name="android.intent.action.MAIN" />
+228-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+228-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+229
+230                <category android:name="android.intent.category.LAUNCHER" />
+230-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+230-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+231            </intent-filter>
+232        </activity> <!-- employee info -->
+233        <activity
+233-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:218:9-226:20
+234            android:name="com.example.tenpm_hrm.EmployeeInfo"
+234-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:219:13-41
+235            android:exported="true" >
+235-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:220:13-36
+236            <intent-filter>
+236-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+237                <action android:name="android.intent.action.MAIN" />
+237-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+237-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+238
+239                <category android:name="android.intent.category.LAUNCHER" />
+239-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+239-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+240            </intent-filter>
+241        </activity> <!-- login -->
+242        <activity
+242-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:227:9-235:20
+243            android:name="com.example.tenpm_hrm.Login"
+243-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:228:13-34
+244            android:exported="true" >
+244-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:229:13-36
+245            <intent-filter>
+245-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+246                <action android:name="android.intent.action.MAIN" />
+246-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+246-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+247
+248                <category android:name="android.intent.category.LAUNCHER" />
+248-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+248-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+249            </intent-filter>
+250        </activity>
+251        <activity
+251-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:237:9-244:20
+252            android:name="com.example.tenpm_hrm.ChangeEmployeeInformation"
+252-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:237:19-60
+253            android:exported="true" >
+253-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:238:13-36
+254            <intent-filter>
+254-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+255                <action android:name="android.intent.action.MAIN" />
+255-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+255-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+256
+257                <category android:name="android.intent.category.LAUNCHER" />
+257-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+257-->C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+258            </intent-filter>
+259        </activity>
+260        <activity
+260-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+261            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+261-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+262            android:exported="false"
+262-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+263            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+263-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+264
+265        <meta-data
+265-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+266            android:name="com.google.android.gms.version"
+266-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+267            android:value="@integer/google_play_services_version" />
+267-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+268
+269        <provider
+269-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+270            android:name="androidx.startup.InitializationProvider"
+270-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+271            android:authorities="com.example.tenpm_hrm.androidx-startup"
+271-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+272            android:exported="false" >
+272-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+273            <meta-data
+273-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+274                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+274-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+275                android:value="androidx.startup" />
+275-->[androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+276            <meta-data
+276-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+277                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+277-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+278                android:value="androidx.startup" />
+278-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+279            <meta-data
+279-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+280                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+280-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+281                android:value="androidx.startup" />
+281-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+282        </provider>
+283
+284        <receiver
+284-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+285            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+285-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+286            android:directBootAware="false"
+286-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+287            android:enabled="true"
+287-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+288            android:exported="true"
+288-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+289            android:permission="android.permission.DUMP" >
+289-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+290            <intent-filter>
+290-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+291                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+291-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+291-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+292            </intent-filter>
+293            <intent-filter>
+293-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+294                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+294-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+294-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+295            </intent-filter>
+296            <intent-filter>
+296-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+297                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+297-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+297-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+298            </intent-filter>
+299            <intent-filter>
+299-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+300                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+300-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+300-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+301            </intent-filter>
+302        </receiver>
+303    </application>
+304
+305</manifest>

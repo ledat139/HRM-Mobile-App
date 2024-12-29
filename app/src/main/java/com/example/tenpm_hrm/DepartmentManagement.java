@@ -6,10 +6,8 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import customlistview.DepartmentAdapter;
@@ -28,13 +26,13 @@ private ImageButton addEmployeeButton;
 
         addEmployeeButton = findViewById(R.id.addEmployeeButton);
 
-        // Create sample department list
-        List<Department> departmentList = new ArrayList<>();
+        DatabaseHandler dbHandler = new DatabaseHandler(this);
+        List<Department> departmentList = dbHandler.getAllDepartment();
 
-        departmentList.add(new Department("001", "IT", "001", "Nguyen Van A", 10, R.drawable.it));
-        departmentList.add(new Department("002", "HR", "002", "Tran Thi B", 5, R.drawable.hr));
-        departmentList.add(new Department("003", "Sales", "003", "Le Van C", 8, R.drawable.sale));
-        departmentList.add(new Department("004", "Marketing", "004", "Pham Thi D", 6, R.drawable.marketing));
+//        departmentList.add(new Department(1, "IT", "2020-01-01", 1, "2020-02-15", "path_to_it_avatar"));
+//        departmentList.add(new Department(2, "HR", "2019-05-15", 2, "2019-06-10", "path_to_hr_avatar"));
+//        departmentList.add(new Department(3, "Sales", "2018-03-20", 3, "2018-04-05", "path_to_sales_avatar"));
+//        departmentList.add(new Department(4, "Marketing", "2021-06-10", 4, "2021-07-01", "path_to_marketing_avatar"));
 
         // Initialize adapter and set to GridView
         DepartmentAdapter adapter = new DepartmentAdapter(this, departmentList);

@@ -5,9 +5,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#5AA572</color>
+    <color name="blue">#5A72A5</color>
+    <color name="red">#E57373</color>
     <color name="light_green">#B5F4D1</color>
     <color name="text_green">#26AD48</color>
     <color name="text_yellow">#8C7E23</color>
     <color name="text_blue">#262FAD</color>
     <color name="text_red">#AD263F</color>
+    <color name="light_gray">#D3D3D3</color> <!-- Light gray color -->
+    <color name="dark_blue">#003366</color>  <!-- Dark blue color -->
 </resources>

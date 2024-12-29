@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-29:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-32:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ngvan\\.gradle\\caches\\8.9\\transforms\\be6655495889b465870569bab3c00274\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\DUY\\.gradle\\caches\\8.9\\transforms\\55ed41026fbaf6ac5437acee9d592c12\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

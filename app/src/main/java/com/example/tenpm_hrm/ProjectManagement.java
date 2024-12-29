@@ -1,84 +1,91 @@
 package com.example.tenpm_hrm;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import androidx.appcompat.app.AlertDialog;
+import android.widget.ListView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
+import customlistview.ProjectAdapter;
 import models.Project;
 
 public class ProjectManagement extends AppCompatActivity {
+
+    private ListView projectContainer;
+    private ImageView ivProjectSearch;
+    private Button btnProjectAdd;
+    private DatabaseHandler dbHandler;
+    private ProjectAdapter projectAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.project);
 
-        LinearLayout projectContainer = findViewById(R.id.projectContainer);
-        Button btnProjectAdd = findViewById(R.id.btnProjectAdd);
+        btnProjectAdd = findViewById(R.id.btnProjectAdd);
+        ivProjectSearch = findViewById(R.id.ivProjectSearch);
+        projectContainer = findViewById(R.id.projectContainer);
+
+        dbHandler = new DatabaseHandler(this);
+        List<Project> projectList = dbHandler.getAllProjects();
+
+        projectAdapter = new ProjectAdapter(this, projectList);
+        projectContainer.setAdapter(projectAdapter);
 
         btnProjectAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProjectManagement.this, NewProject.class);
-                startActivity(intent);
+                startActivityForResult(intent, 2);
             }
         });
 
-
-
-        // Create and add three project items
-//        Project project1 = new Project("1", "Phát triển web TENPM", "Huỳnh Nhật Duy", "Chưa hoàn thành");
-//        Project project2 = new Project("2", "Phát triển web bán hàng", "Huỳnh Nhật Duy", "Hoàn thành");
-//        Project project3 = new Project("3", "Phát triển web bán hàng", "Huỳnh Nhật Duy", "Hoàn thành");
-//
-//        addProjectToContainer(projectContainer, project1);
-//        addProjectToContainer(projectContainer, project2);
-//        addProjectToContainer(projectContainer, project3);
-    }
-
-    private void addProjectToContainer(ViewGroup container, Project project) {
-        View projectItem = LayoutInflater.from(this).inflate(R.layout.item_project, container, false);
-
-        TextView tvProjectName = projectItem.findViewById(R.id.tvProjectName);
-        TextView tvProjectParticipant = projectItem.findViewById(R.id.tvProjectParticipant);
-        TextView tvProjectStatus = projectItem.findViewById(R.id.tvProjectStatus);
-        ImageView ivProjectDelete = projectItem.findViewById(R.id.ivProjectDelete);
-
-//        tvProjectName.setText(project.getName());
-//        tvProjectParticipant.setText(project.getParticipant());
-//        tvProjectStatus.setText(project.getStatus());
-//        if (project.getStatus() == "Hoàn thành") {
-//            tvProjectStatus.setBackgroundResource(R.drawable.employee_type_shape);
-//            tvProjectStatus.setTextColor(getResources().getColor(R.color.green));
-//        }
-
-        ivProjectDelete.setOnClickListener(new View.OnClickListener() {
+        ivProjectSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new AlertDialog.Builder(ProjectManagement.this)
-                        .setTitle("Xóa dự án")
-                        .setMessage("Bạn có chắc chắn muốn xóa dự án này không?")
-                        .setPositiveButton("Có", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // Code to delete the project
-                                container.removeView(projectItem);
-                            }
-                        })
-                        .setNegativeButton("Không", null)
-                        .setIcon(android.R.drawable.ic_dialog_alert)
-                        .show();
+                Intent intent = new Intent(ProjectManagement.this, SearchProject.class);
+                startActivityForResult(intent, 1);
             }
         });
 
-        container.addView(projectItem);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            String id = data.getStringExtra("id");
+            String name = data.getStringExtra("name");
+            String startingDate = data.getStringExtra("startingDate");
+            String endingDate = data.getStringExtra("endingDate");
+            String departmentId = data.getStringExtra("departmentId");
+            String status = data.getStringExtra("status");
+
+            if (requestCode == 1) {
+                List<Project> newProjectList = dbHandler.searchProject(id, name, startingDate, endingDate, status, departmentId);
+
+                if (newProjectList.isEmpty()) {
+                    Toast.makeText(this, "Không có dự án có thông tin đang tìm kiếm.", Toast.LENGTH_SHORT).show();
+                }else {
+                    projectAdapter.updateProjectList(newProjectList);
+                }
+            }
+        }
+
+        if (requestCode == 2 || requestCode == 3) {
+            dbHandler = new DatabaseHandler(this);
+            List<Project> newProjectList = dbHandler.getAllProjects();
+
+            projectAdapter.updateProjectList(newProjectList);
+        }
     }
 }

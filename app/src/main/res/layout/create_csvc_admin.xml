@@ -163,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textColorHint="#020202"
+                android:focusable="false"
                 android:textColorLink="#070707"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -179,41 +180,24 @@
             android:text="Ngày mua"
             android:textColor="@color/black" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputAddDepartmentIDLayout"
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/inputAddBuyingDateLayout"
-            android:layout_marginTop="-15dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="2dp"
-            app:cursorColor="#000000"
-            app:hintEnabled="false"
-            app:hintTextColor="#000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputAddDepartmentID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textColorHint="#020202"
-                android:textColorLink="#070707"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <TextView
-            android:id="@+id/labelAddDepartmentIDLayout"
+            android:id="@+id/labelAddDepartmentID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignTop="@id/inputAddDepartmentIDLayout"
+            android:layout_below="@+id/inputAddBuyingDateLayout"
             android:background="@color/white"
             android:text="Mã phòng ban"
             android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/inputAddDepartmentID"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_below="@id/labelAddDepartmentID"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
     </RelativeLayout>
 
     <Button
@@ -227,6 +211,7 @@
         android:backgroundTint="#5C63D6"
         android:paddingVertical="12dp"
         android:text="Thêm CSVC"
+        app:cornerRadius="5dp"
         android:textStyle="bold"
         android:textSize="18dp"
         android:textColor="@color/white"

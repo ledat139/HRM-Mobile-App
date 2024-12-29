@@ -6,22 +6,25 @@ public class Project {
     private String ngayBD;
     private String ngayKT;
     private String trangThai;
+    private String moTa;
     private int maPB;
 
-    public Project(int maDA, String tenDA, String ngayBD, String ngayKT, String trangThai, int maPB) {
+    public Project(int maDA, String tenDA, String ngayBD, String ngayKT, String trangThai, String moTa, int maPB) {
         this.maDA = maDA;
         this.tenDA = tenDA;
         this.ngayBD = ngayBD;
         this.ngayKT = ngayKT;
         this.trangThai = trangThai;
+        this.moTa = moTa;
         this.maPB = maPB;
     }
 
-    public Project(String tenDA, String ngayBD, String ngayKT, int maPB) {
+    public Project(String tenDA, String ngayBD, String ngayKT, String moTa, int maPB) {
         this.tenDA = tenDA;
         this.ngayBD = ngayBD;
         this.ngayKT = ngayKT;
         this.trangThai = "Đang thực hiện";
+        this.moTa = moTa;
         this.maPB = maPB;
     }
 
@@ -50,4 +53,6 @@ public class Project {
     public int getMaPB() {
         return maPB;
     }
+
+    public String getMoTa() { return moTa;}
 }

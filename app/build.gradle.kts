@@ -32,12 +32,16 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.volley)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.play.services.location)
+    implementation("com.sun.mail:android-activation:1.6.2")
+    implementation("com.sun.mail:android-mail:1.6.2")
 }

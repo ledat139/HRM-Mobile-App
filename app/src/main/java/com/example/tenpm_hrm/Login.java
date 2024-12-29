@@ -50,7 +50,9 @@ public class Login extends AppCompatActivity {
         tvForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Login.this, "Chức năng quên mật khẩu chưa được triển khai", Toast.LENGTH_SHORT).show();
+                // Bắt đầu Activity mới
+                Intent newActivityIntent = new Intent(Login.this, forgotPassword.class);
+                startActivity(newActivityIntent);
             }
         });
     }

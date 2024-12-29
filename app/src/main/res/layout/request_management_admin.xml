@@ -13,30 +13,49 @@
     <RelativeLayout
         android:id="@+id/header_requests"
         android:layout_width="wrap_content"
-        android:layout_height="110dp">
+        android:layout_height="250dp">
 
 
         <TextView
-            android:id="@+id/tv_requests"
-            android:layout_width="200dp"
-            android:layout_height="25dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:id="@+id/tv_requests2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_row"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="80dp"
+            android:layout_toStartOf="@+id/imageView2"
             android:text="Quản Lý Yêu Cầu"
-            android:textSize="18sp" />
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_requests3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_requests2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-75dp"
+            android:text="Danh Sách Yêu Cầu Của Nhân Viên"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/img_searchbox"
-            android:layout_width="25dp"
-            android:layout_height="35dp"
-            android:layout_alignParentTop="true"
+            android:id="@+id/imageView2"
+            android:layout_width="184dp"
+            android:layout_height="165dp"
+            android:layout_above="@+id/button_row"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="17dp"
-            android:layout_toEndOf="@+id/tv_requests"
-            app:srcCompat="@drawable/search" />
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/request_img" />
 
         <LinearLayout
             android:id="@+id/button_row"
@@ -65,7 +84,8 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:layout_height="475dp"
         android:layout_below="@+id/header_requests"
         >
 

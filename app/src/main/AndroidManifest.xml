@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TENPM_HRM"
         tools:targetApi="31">
+        <activity
+            android:name=".OTP"
+            android:exported="false" />
+        <activity
+            android:name=".forgotPassword"
+            android:exported="false" />
         <activity
             android:name=".UpdateFacility"
             android:exported="false" />
@@ -67,15 +77,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".attendance.Checkinout"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".attendance.AttendanceManagement"
             android:exported="true">
             <intent-filter>
@@ -119,7 +120,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- taikhoan -->
+        </activity>
+        <activity
+            android:name=".SearchFacilities"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- taikhoan -->
         <activity
             android:name=".AccountManagement"
             android:exported="true">
@@ -200,7 +211,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- employee info -->
+        </activity>
+        <activity
+            android:name=".SearchProject"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><!-- employee info -->
         <activity
             android:name=".EmployeeInfo"
             android:exported="true">
@@ -219,6 +239,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ChangeEmployeeInformation"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

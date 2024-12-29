@@ -57,6 +57,7 @@
         android:paddingVertical="15dp"
         android:layout_alignTop="@+id/ivProjectSearch"
         android:text="Thêm dự án"
+        app:cornerRadius="5dp"
         android:layout_marginEnd="10dp"
         android:textColor="@color/white"
         android:layout_alignEnd="@id/rlHeaderContainer" />
@@ -71,18 +72,30 @@
         android:layout_alignStart="@id/rlHeaderContainer"
         android:src="@android:drawable/ic_menu_search" />
 
-    <LinearLayout
-        android:id="@+id/projectContainer"
+
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:layout_below="@id/ivProjectSearch"
-        android:padding="15dp"
         android:layout_centerHorizontal="true"
+        android:padding="15dp"
         android:background="@drawable/rounded_corner_background"
-        android:orientation="vertical"
-        android:showDividers="none"
-        android:divider="@android:color/transparent"
-        android:dividerPadding="10dp">
-    </LinearLayout>
+        android:fillViewport="true">
 
+        <LinearLayout
+            android:id="@+id/listViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/projectContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
