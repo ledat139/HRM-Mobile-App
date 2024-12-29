@@ -58,6 +58,10 @@ public class SearchFacilities extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         inputSearchDepartmentID.setAdapter(adapter);
 
+        ArrayAdapter<String> statusAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, statusList);
+        statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerFacilityStatus.setAdapter(statusAdapter);
+
         inputSearchBuyingDate.setOnClickListener(view -> showDatePickerDialog(inputSearchBuyingDate));
 
         buttonCancel.setOnClickListener(v -> finish());

@@ -231,6 +231,7 @@
         android:paddingVertical="12dp"
         android:text="Cập nhật CSVC"
         android:textStyle="bold"
+        app:cornerRadius="5dp"
         android:textSize="18dp"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
