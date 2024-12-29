@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-29:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.example.tenpm_hrm.app-mergeDebugResources-30:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Acer\\.gradle\\caches\\8.9\\transforms\\2b6bbd7ce52c90bbccd242ae6ed855a4\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\DUY\\.gradle\\caches\\8.9\\transforms\\c5d9ae676efa07bb35310bf3010a48fb\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

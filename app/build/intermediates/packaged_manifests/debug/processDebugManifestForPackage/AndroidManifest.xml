@@ -128,7 +128,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- taikhoan -->
+        </activity>
+        <activity
+            android:name="com.example.tenpm_hrm.SearchFacilities"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- taikhoan -->
         <activity
             android:name="com.example.tenpm_hrm.AccountManagement"
             android:exported="true" >
@@ -203,6 +213,15 @@
         </activity>
         <activity
             android:name="com.example.tenpm_hrm.UpdateProject"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tenpm_hrm.SearchProject"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

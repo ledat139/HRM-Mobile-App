@@ -1,334 +1,263 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="16dp">
+    android:fillViewport="true">
 
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/depart" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="104dp"
-        android:text="Thêm một phòng ban mới để quản lý"
-        android:textColor="#545454"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="72dp"
-        android:text="Phòng ban"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="208dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="368dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="448dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="528dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="608dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+    <RelativeLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="240dp"
-        android:gravity="center_vertical"
+        android:background="#f8f8f8"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
 
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
+        <RelativeLayout
+            android:id="@+id/rlHeaderContainer"
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="52dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg">
+            <TextView
+                android:id="@+id/tvHeaderDescription"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Thêm một phòng ban mới để quản lý"
+                android:layout_alignStart="@+id/tvHeaderTitle"
+                android:layout_below="@+id/tvHeaderTitle"
+                android:layout_marginTop="10dp"
+                android:textColor="#545454"
+                android:textSize="12sp" />
 
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:boxStrokeColor="@color/black"
-        app:boxStrokeWidth="2dp"
-        app:cursorColor="#000000"
-        app:hintEnabled="false"
-        app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Phòng ban"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignBottom="@id/rlHeaderContainer"
+            android:layout_alignEnd="@id/rlHeaderContainer"
+            app:srcCompat="@drawable/depart" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm phòng ban mới"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/rlHeaderContainer"
+            android:layout_alignStart="@+id/rlHeaderContainer" />
+
+        <RelativeLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tvLabel"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_corner_background">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddDepartmentNameContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddDepartmentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="257dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/inputAddDepartmentNameContainer"
+                android:background="@color/white"
+                android:text="Tên phòng ban"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddDepartmentEstablishmentDateContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/inputAddDepartmentNameContainer"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddDepartmentEstablishmentDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="257dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/inputAddDepartmentEstablishmentDateContainer"
+                android:background="@color/white"
+                android:text="Ngày thành lập"
+                android:textColor="@color/black" />
 
 
-        <com.google.android.material.textfield.TextInputEditText
+            <TextView
+                android:id="@+id/labelAddAddManagerID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_below="@+id/inputAddDepartmentEstablishmentDateContainer"
+                android:background="@color/white"
+                android:text="Mã người quản lý"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/inputAddManagerID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_below="@+id/labelAddAddManagerID"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddManagerAppointmentDateContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/inputAddManagerID"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddManagerAppointmentDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="257dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/inputAddManagerAppointmentDateContainer"
+                android:background="@color/white"
+                android:text="Ngày nhậm chức"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:id="@+id/addInputDepartmentAvatarContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:layout_below="@id/inputAddManagerAppointmentDateContainer"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <ImageView
+                    android:id="@+id/ibAddDepartmentAvatar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/img_upload"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/addInputDepartmentAvatarContainer"
+                android:background="@color/white"
+                android:text="Ảnh đại diện"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnAddProject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:textColor="@color/black"
-            android:textColorHint="#020202"
-            android:textColorLink="#070707"
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="257dp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="248dp"
-        android:background="@color/white"
-        android:text="Tên phòng ban"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="316dp"
-        android:gravity="center_vertical"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:boxStrokeColor="@color/black"
-        app:boxStrokeWidth="2dp"
-        app:cursorColor="#000000"
-        app:hintEnabled="false"
-        app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="#020202"
-            android:textColorLink="#070707"
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="353dp">
-
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="324dp"
-        android:background="@color/white"
-        android:text="Ngày thành lập"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="392dp"
-        android:gravity="center_vertical"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:boxStrokeColor="@color/black"
-        app:boxStrokeWidth="2dp"
-        app:cursorColor="#000000"
-        app:hintEnabled="false"
-        app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="#020202"
-            android:textColorLink="#070707"
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="449dp">
-
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="396dp"
-        android:background="@color/white"
-        android:text="Mã trưởng phòng"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="468dp"
-        android:gravity="center_vertical"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        app:boxStrokeColor="@color/black"
-        app:boxStrokeWidth="2dp"
-        app:cursorColor="#000000"
-        app:hintEnabled="false"
-        app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="#020202"
-            android:textColorLink="#070707"
-
-            android:textSize="14sp"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="545dp">
-
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="472dp"
-        android:background="@color/white"
-        android:text="Ngày nhận chức"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginTop="572dp"
-        android:backgroundTint="#5C63D6"
-        android:paddingVertical="15dp"
-        android:text="Thêm phòng ban"
-        android:textColor="@color/white"
-        app:cornerRadius="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="176dp"
-        android:text="Thêm phòng ban mới"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#5C63D6"
+            android:paddingVertical="12dp"
+            android:text="Thêm phòng ban"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:cornerRadius="5dp" />
+    </RelativeLayout>
+</ScrollView>
