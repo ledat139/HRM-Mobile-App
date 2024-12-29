@@ -3290,6 +3290,7 @@ id btnAddCSVC
 id btnLogin
 id btnLogout
 id btnProjectAdd
+id btnUpdateAccount
 id btn_approve_all
 id btn_new_request
 id btn_pending_requests
@@ -3469,7 +3470,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageButton
 id imageView
 id imageView10
 id imageView16
@@ -3488,7 +3488,6 @@ id immediateStop
 id included
 id indeterminate
 id info
-id inputAccType
 id inputAddBuyingDate
 id inputAddBuyingDateLayout
 id inputAddDepartmentID
@@ -3577,6 +3576,7 @@ id listButton
 id listMode
 id listView
 id list_item
+id lvAccount
 id lvAttendace
 id lvRQ
 id m3_side_sheet
@@ -3700,8 +3700,11 @@ id progress_horizontal
 id projectContainer
 id projectContainerInformation
 id radio
+id radioEmployee
 id radioFemale
+id radioGroupAccountType
 id radioMale
+id radioManager
 id ratio
 id rectangles
 id report_drawn
@@ -3801,6 +3804,9 @@ id text2
 id textEnd
 id textInputLayout
 id textInputLayout2
+id textInputLayout3
+id textInputLayout4
+id textInputLayout5
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -4024,6 +4030,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout account_detail
 layout account_item
 layout account_management_admin
 layout activity_main

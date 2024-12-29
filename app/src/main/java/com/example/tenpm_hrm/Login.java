@@ -1,6 +1,5 @@
 package com.example.tenpm_hrm;
 
-import android.accounts.Account;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,7 +15,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import models.NhanVien;
-import models.TaiKhoan;
+import models.Account;
 
 public class Login extends AppCompatActivity {
 
@@ -99,7 +98,7 @@ public class Login extends AppCompatActivity {
             NhanVien nhanVien = new NhanVien(maNV, hoTen, gioiTinh, ngSinh, sdt,email, diaChi, cccd, capBac, maPB);
 
             //them account
-            TaiKhoan taiKhoan= new TaiKhoan(maTK, maNVTK, tenTK, matKhau, loaiTK);
+            Account taiKhoan= new Account(maTK, maNVTK, tenTK, matKhau, loaiTK);
             cursor.close();
             db.close();
             // Chuyển đến Activity tương ứng dựa trên loại tài khoản

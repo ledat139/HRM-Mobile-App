@@ -100,6 +100,7 @@ id btnAddCSVC
 id btnLogin
 id btnLogout
 id btnProjectAdd
+id btnUpdateAccount
 id btn_approve_all
 id btn_new_request
 id btn_pending_requests
@@ -157,7 +158,6 @@ id genderGroup
 id halfCircleView
 id header_requests
 id idDepartment
-id imageButton
 id imageView
 id imageView10
 id imageView16
@@ -172,7 +172,6 @@ id imageView9
 id imageView_Detail
 id imgSidebar
 id img_searchbox
-id inputAccType
 id inputAddBuyingDate
 id inputAddBuyingDateLayout
 id inputAddDepartmentID
@@ -245,6 +244,7 @@ id linearContent
 id linearLayout
 id listButton
 id listView
+id lvAccount
 id lvAttendace
 id lvRQ
 id main
@@ -252,8 +252,11 @@ id profile_image
 id progressBar
 id projectContainer
 id projectContainerInformation
+id radioEmployee
 id radioFemale
+id radioGroupAccountType
 id radioMale
+id radioManager
 id rlHeaderContainer
 id rvCalendar
 id scrollView2
@@ -265,6 +268,9 @@ id status
 id statusValue
 id textInputLayout
 id textInputLayout2
+id textInputLayout3
+id textInputLayout4
+id textInputLayout5
 id textView
 id textView10
 id textView13
@@ -319,6 +325,7 @@ id tvtimeCheckIn
 id tvtimeCheckOut
 id workDays
 id workDaysValue
+layout account_detail
 layout account_item
 layout account_management_admin
 layout activity_main

@@ -1,5 +1,6 @@
 package com.example.tenpm_hrm;
 
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -13,6 +14,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Account;
 import models.Facility;
 import models.NhanVien;
 import models.Project;
@@ -692,7 +694,80 @@ public void addProject(Project project) {
         db.close();
         return employeeList;
     }
+    public boolean addAccount(int employeeId, String username, String password, String accountType) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", employeeId);
+        values.put("TENTK", username);
+        values.put("MATKHAU", password);
+        values.put("LOAITAIKHOAN", accountType);
+        long result = db.insert("TAIKHOAN", null, values);
+        return result != -1;
+    }
+    public List<Account> getAllAccounts() {
+        List<Account> accountList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        Cursor cursor = db.rawQuery("SELECT * FROM TAIKHOAN", null);
+        if (cursor.moveToFirst()) {
+            do {
+                int accountId = cursor.getInt(0);
+                int employeeId = cursor.getInt(1);
+                String username = cursor.getString(2);
+                String password = cursor.getString(3);
+                String accountType = cursor.getString(4);
 
+                accountList.add(new Account( employeeId, accountId, username, password, accountType));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return accountList;
+    }
+    public boolean updateAccount(Account account) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", account.getMaNV());
+        values.put("TENTK", account.getTenTK());
+        values.put("MATKHAU", account.getMatKhau());
+        values.put("LOAITAIKHOAN", account.getLoaiTK());
 
+        // Cập nhật thông tin dựa trên ID
+        int rowsAffected = db.update("TAIKHOAN", values, "MATK" + " = ?", new String[]{String.valueOf(account.getMaTK())});
+        db.close();
+        return rowsAffected > 0; // Trả về true nếu có ít nhất 1 dòng được cập nhật
+    }
+    public boolean deleteAccount(Account account) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int rowsDeleted = db.delete("TAIKHOAN", "MATK" + " = ?", new String[]{String.valueOf(account.getMaTK())});
+        db.close();
+        return rowsDeleted > 0; // Trả về true nếu có ít nhất 1 dòng bị xóa
+    }
+    public Account getAccountById(int accountId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Câu lệnh SQL để truy vấn tài khoản theo ID
+        String query = "SELECT * FROM TAIKHOAN WHERE MATK = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(accountId)});
+
+        // Nếu tìm thấy tài khoản
+        if (cursor != null && cursor.moveToFirst()) {
+            // Khởi tạo đối tượng Account từ dữ liệu truy vấn
+            Account account = new Account();
+            account.setMaTK(cursor.getInt(0));  // Cột "id"
+            account.setMaNV(cursor.getInt(1));  // Cột "maNV"
+            account.setTenTK(cursor.getString(2));  // Cột "tenTK"
+            account.setMatKhau(cursor.getString(3));
+            account.setLoaiTK(cursor.getString(4));  // Cột "loaiTK"
+
+            // Đóng con trỏ và trả về tài khoản
+            cursor.close();
+            db.close();
+            return account;
+        }
+
+        // Nếu không tìm thấy tài khoản, trả về null
+        cursor.close();
+        db.close();
+        return null;
+    }
 }
