@@ -1,24 +1,35 @@
 package models;
 
 public class Department {
-    private String departmentId;
+    private int departmentId;
     private String departmentName;
-    private String managerId;
-    private String managerName;
+    private String establishmentDate;
+    private int managerId;
+    private String managerAppointmentDate;
+    private String avatarPath;
     private int employeeCount;
-    private int avatarResId;
 
-    public Department(String departmentId, String departmentName, String managerId, String managerName, int employeeCount, int avatarResId) {
+
+    public Department(int departmentId, String departmentName, String establishmentDate, int managerId, String managerAppointmentDate, String avatarPath) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
+        this.establishmentDate = establishmentDate;
         this.managerId = managerId;
-        this.managerName = managerName;
-        this.employeeCount = employeeCount;
-        this.avatarResId = avatarResId;
+        this.managerAppointmentDate = managerAppointmentDate;
+        this.avatarPath = avatarPath;
     }
 
-    // Getter methods
-    public String getDepartmentId() {
+    public Department(String departmentName, String establishmentDate, int managerId, String managerAppointmentDate, String avatarPath) {
+        this.departmentName = departmentName;
+        this.establishmentDate = establishmentDate;
+        this.managerId = managerId;
+        this.managerAppointmentDate = managerAppointmentDate;
+        this.avatarPath = avatarPath;
+    }
+
+
+
+    public int getDepartmentId() {
         return departmentId;
     }
 
@@ -26,19 +37,23 @@ public class Department {
         return departmentName;
     }
 
-    public String getManagerId() {
+    public String getEstablishmentDate() {
+        return establishmentDate;
+    }
+
+    public int getManagerId() {
         return managerId;
     }
 
-    public String getManagerName() {
-        return managerName;
+    public String getManagerAppointmentDate() {
+        return managerAppointmentDate;
+    }
+
+    public String getAvatarPath() {
+        return avatarPath;
     }
 
     public int getEmployeeCount() {
         return employeeCount;
-    }
-
-    public int getAvatarResId() {
-        return avatarResId;
     }
 }

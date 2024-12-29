@@ -1,5 +1,6 @@
 package customlistview;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -7,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.util.Log;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
-import com.example.tenpm_hrm.CSVCManagement;
 import com.example.tenpm_hrm.DatabaseHandler;
-import com.example.tenpm_hrm.NewCSVC;
 import com.example.tenpm_hrm.R;
 import com.example.tenpm_hrm.UpdateFacility;
 
@@ -29,12 +31,18 @@ public class FacilityAdapter extends BaseAdapter {
 
     TextView tvCSVCName, tvCSVCID, tvCSVCQuantity, tvCSVCStatus;
     ImageView ivCSVCDetail, ivCSVCDelete;
+    private RelativeLayout csvcContainerInformation;
 
     public FacilityAdapter(Context context, List<Facility> facilityList) {
         this.context = context;
         this.facilityList = facilityList;
         this.inflater = LayoutInflater.from(context);
         dbHandler = new DatabaseHandler(context);
+    }
+
+    public void updateFacilityList(List<Facility> newFacilityList) {
+        this.facilityList = newFacilityList;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -60,6 +68,7 @@ public class FacilityAdapter extends BaseAdapter {
 
         Facility facility = facilityList.get(position);
 
+        csvcContainerInformation = convertView.findViewById(R.id.csvcContainerInformation);
         TextView tvCSVCName = convertView.findViewById(R.id.tvCSVCName);
         TextView tvCSVCID = convertView.findViewById(R.id.tvCSVCID);
         TextView tvCSVCQuantity = convertView.findViewById(R.id.tvCSVCQuantity);
@@ -74,31 +83,45 @@ public class FacilityAdapter extends BaseAdapter {
         tvCSVCStatus.setText(facilityStatus);
 
         if (facilityStatus.equals("Sử dụng")) {
-            tvCSVCStatus.setTextColor(R.color.green);
+            tvCSVCStatus.setTextColor(ContextCompat.getColor(context, R.color.green));
             tvCSVCStatus.setBackgroundResource(R.drawable.employee_type_shape);
         } else if (facilityStatus.equals("Hư hỏng")) {
+            tvCSVCStatus.setTextColor(ContextCompat.getColor(context, R.color.red));
             tvCSVCStatus.setBackgroundResource(R.drawable.manager_type_shape);
+        } else if (facilityStatus.equals("Bảo trì")) {
+            tvCSVCStatus.setTextColor(ContextCompat.getColor(context, R.color.blue));
+            tvCSVCStatus.setBackgroundResource(R.drawable.blue_type_shape);
         }
 
         ivCSVCDetail = convertView.findViewById(R.id.ivCSVCDetail);
         ivCSVCDelete = convertView.findViewById(R.id.ivCSVCDelete);
 
-        ivCSVCDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent updateFacilityIntent = new Intent(context, UpdateFacility.class);
-                updateFacilityIntent.putExtra("facilityID", facility.getFacilityID());
-                context.startActivity(updateFacilityIntent);
+        ivCSVCDetail.setOnClickListener(view -> {
+            Intent updateFacilityIntent = new Intent(context, UpdateFacility.class);
+            updateFacilityIntent.putExtra("facilityID", facility.getFacilityID());
+            if (context instanceof AppCompatActivity) {
+                ((AppCompatActivity) context).startActivityForResult(updateFacilityIntent, 3);
             }
         });
 
-        ivCSVCDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbHandler.deleteFacility(facility);
-            }
-        });
+        ivCSVCDelete.setOnClickListener(view -> {
+                new AlertDialog.Builder(context)
+                        .setTitle("Xác nhận")
+                        .setMessage("Bạn có muốn xóa cơ sở vật chất: " + facilityList.get(position).getFacilityID() + " không?")
+                        .setPositiveButton("Xóa", (dialog, which) -> {
+                            try {
+                                dbHandler.deleteFacility(facility);
+                                facilityList.remove(position);
+                                notifyDataSetChanged();
+                                Toast.makeText(context, "Đã xóa cơ sở vật chất", Toast.LENGTH_SHORT).show();
+                            }catch (Exception e) {
+                                Toast.makeText(context, "Xóa cơ sở vật chất không thành công", Toast.LENGTH_SHORT).show();
+                            }
 
+                        })
+                        .setNegativeButton("Hủy", (dialog, which) -> dialog.dismiss())
+                        .show();
+        });
         return convertView;
     }
 

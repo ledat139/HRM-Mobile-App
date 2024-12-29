@@ -1,245 +1,342 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f8f8f8"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="16dp">
+    android:fillViewport="true">
 
     <RelativeLayout
-        android:id="@+id/rlHeaderContainer"
-        android:layout_width="360dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="52dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bg">
-        <TextView
-            android:id="@+id/tvHeaderDescription"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="Quản lý các dự án của công ty"
-            android:layout_alignStart="@+id/tvHeaderTitle"
-            android:layout_below="@+id/tvHeaderTitle"
-            android:layout_marginTop="10dp"
-            android:textColor="#545454"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/tvHeaderTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:text="Dự án"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <ImageView
-        android:id="@+id/ivHeader"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginRight="20dp"
-        android:layout_alignBottom="@id/rlHeaderContainer"
-        android:layout_alignEnd="@id/rlHeaderContainer"
-        app:srcCompat="@drawable/project" />
-
-    <TextView
-        android:id="@+id/tvLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Thêm dự án mới"
-        android:textSize="18dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="5dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/rlHeaderContainer"
-        android:layout_alignStart="@+id/rlHeaderContainer" />
-
-    <RelativeLayout
-        android:id="@+id/inputContainer"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/tvLabel"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_corner_background">
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputAddProjectID"
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="2dp"
-            app:cursorColor="#000000"
-            app:hintEnabled="false"
-            app:hintTextColor="#000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textColorHint="#020202"
-                android:textColorLink="#070707"
-                android:textSize="14sp"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="257dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/labelAddIdProject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignTop="@id/inputAddProjectID"
-            android:background="@color/white"
-            android:text="Mã dự án"
-            android:textColor="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputAddProjectName"
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/inputAddProjectID"
-            android:layout_marginTop="-15dp"
-            android:gravity="center_vertical"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="2dp"
-            app:cursorColor="#000000"
-            app:hintEnabled="false"
-            app:hintTextColor="#000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textColorHint="#020202"
-                android:textColorLink="#070707"
-                android:textSize="14sp"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="353dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/labelAddProjectName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignTop="@id/inputAddProjectName"
-            android:background="@color/white"
-            android:text="Tên dự án"
-            android:textColor="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputAddProjectParticipant"
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputAddProjectName"
-            android:layout_marginTop="-15dp"
-            android:gravity="center_vertical"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="2dp"
-            app:cursorColor="#000000"
-            app:hintEnabled="false"
-            app:hintTextColor="#000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textColorHint="#020202"
-                android:textColorLink="#070707"
-                android:textSize="14sp"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="353dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/labelAddProjectParticipant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignTop="@+id/inputAddProjectParticipant"
-            android:background="@color/white"
-            android:text="Tên tham gia"
-            android:textColor="@color/black" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputAddProjectDesc"
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/inputAddProjectParticipant"
-            android:layout_marginTop="-15dp"
-            android:gravity="center_vertical"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="2dp"
-            app:cursorColor="#000000"
-            app:hintEnabled="false"
-            app:hintTextColor="#000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:textColor="@color/black"
-                android:textColorHint="#020202"
-                android:textColorLink="#070707"
-                android:textSize="14sp"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="353dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/labelAddProjectDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignTop="@+id/inputAddProjectDesc"
-            android:background="@color/white"
-            android:text="Mô tả"
-            android:textColor="@color/black" />
-
-
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/buttonAddProject"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#5C63D6"
-        android:paddingVertical="12dp"
-        android:text="Thêm dự án"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:textColor="@color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        app:cornerRadius="5dp" />
-</RelativeLayout>
+        android:background="#f8f8f8"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <RelativeLayout
+            android:id="@+id/rlHeaderContainer"
+            android:layout_width="360dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="52dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg">
+            <TextView
+                android:id="@+id/tvHeaderDescription"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Quản lý các dự án của công ty"
+                android:layout_alignStart="@+id/tvHeaderTitle"
+                android:layout_below="@+id/tvHeaderTitle"
+                android:layout_marginTop="10dp"
+                android:textColor="#545454"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvHeaderTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Dự án"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivHeader"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignBottom="@id/rlHeaderContainer"
+            android:layout_alignEnd="@id/rlHeaderContainer"
+            app:srcCompat="@drawable/project" />
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm dự án mới"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/rlHeaderContainer"
+            android:layout_alignStart="@+id/rlHeaderContainer" />
+
+        <RelativeLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tvLabel"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_corner_background">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddProjectNameContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddProjectName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="257dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelAddIdProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/inputAddProjectNameContainer"
+                android:background="@color/white"
+                android:text="Tên dự án"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddProjectSInitialDateContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/inputAddProjectNameContainer"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddProjectSInitialDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="257dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelAddProjectSInitialDateContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/inputAddProjectSInitialDateContainer"
+                android:background="@color/white"
+                android:text="Ngày bắt đầu dự án"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddProjectSEndingDateContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/inputAddProjectSInitialDateContainer"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddProjectSEndingDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    android:focusable="false"
+                    android:inputType="none"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="257dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelAddProjectSEndingDateContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@id/inputAddProjectSEndingDateContainer"
+                android:background="@color/white"
+                android:text="Ngày kết thúc dự án"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/labelAddDepartmentID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/inputAddProjectSEndingDateContainer"
+                android:background="@color/white"
+                android:text="Mã phòng ban"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:id="@+id/inputAddProjectSDepartmentID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:layout_below="@+id/labelAddDepartmentID"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputAddProjectDescContainer"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputAddProjectSDepartmentID"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidth="2dp"
+                app:cursorColor="#000000"
+                app:hintEnabled="false"
+                app:hintTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAddProjectDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#020202"
+                    android:textColorLink="#070707"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="25dp"
+                    tools:layout_editor_absoluteY="353dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/labelAddProjectDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@+id/inputAddProjectDescContainer"
+                android:background="@color/white"
+                android:text="Mô tả"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLabelParticipant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Người tham gia"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/inputContainer"
+            android:layout_alignStart="@+id/rlHeaderContainer" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAddParticipant"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#5C63D6"
+            android:paddingVertical="12dp"
+            android:text="Thêm người tham gia"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:layout_alignBaseline="@id/tvLabelParticipant"
+            android:layout_alignParentEnd="true"
+            app:cornerRadius="5dp" />
+
+        <LinearLayout
+            android:id="@+id/participantListHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonAddParticipant">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Mã NV"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Vai trò"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvJoiningDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Ngày tham gia"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/participantContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/participantListHeader"
+            android:layout_marginBottom="100dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnAddProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#5C63D6"
+            android:paddingVertical="12dp"
+            android:text="Thêm dự án"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:cornerRadius="5dp" />
+    </RelativeLayout>
+</ScrollView>

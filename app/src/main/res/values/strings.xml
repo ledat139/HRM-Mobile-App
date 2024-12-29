@@ -7,4 +7,9 @@
         <item>Bảo trì</item>
         <item>Hư hỏng</item>
     </string-array>
+    <string-array name="project_status_options">
+        <item>Hoàn thành</item>
+        <item>Bị hủy</item>
+        <item>Đang thực hiện</item>
+    </string-array>
 </resources>
