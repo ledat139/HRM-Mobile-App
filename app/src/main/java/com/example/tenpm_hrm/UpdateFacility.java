@@ -1,10 +1,11 @@
 package com.example.tenpm_hrm;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -13,17 +14,21 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+
+import models.Department;
 import models.Facility;
 
 public class UpdateFacility extends AppCompatActivity {
 
     private TextView tvLabelUpdateFacility;
-    private EditText inputUpdateFacilityName, inputUpdateFacilityQuantity, inputUpdateBuyingDate, inputUpdateDepartmentID;
+    private EditText inputUpdateFacilityName, inputUpdateFacilityQuantity, inputUpdateBuyingDate;
     private Button buttonUpdateFacility;
     private DatabaseHandler dbHandler;
     private int facilityID;
     private Facility facility;
-    private Spinner spinnerFacilityStatus;
+    private Spinner spinnerFacilityStatus, inputUpdateDepartmentID;
     private String updatedStatus;
 
     @Override
@@ -37,59 +42,102 @@ public class UpdateFacility extends AppCompatActivity {
         inputUpdateFacilityName = findViewById(R.id.inputUpdateFacilityName);
         inputUpdateFacilityQuantity = findViewById(R.id.inputUpdateFacilityQuantity);
         inputUpdateBuyingDate = findViewById(R.id.inputUpdateBuyingDate);
+//        inputUpdateDepartmentID = findViewById(R.id.inputUpdateDepartmentID);
         inputUpdateDepartmentID = findViewById(R.id.inputUpdateDepartmentID);
         tvLabelUpdateFacility = findViewById(R.id.tvLabelUpdateFacility);
         buttonUpdateFacility = findViewById(R.id.buttonUpdateFacility);
         spinnerFacilityStatus = findViewById(R.id.spinnerFacilityStatus);
 
-        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this,
-                R.array.facility_status_options, android.R.layout.simple_spinner_item);
+        facilityID = getIntent().getIntExtra("facilityID", -1);
+        facility = dbHandler.getFacility(facilityID);
 
+        ArrayList<Department> phongBanList = new ArrayList<>();
+        phongBanList.add(new Department(1, "Phòng Kỹ Thuật", "2020-01-01", 1, "Nguyễn Văn A", "path_to_it_avatar"));
+        phongBanList.add(new Department(2, "Phòng Kinh Doanh", "2019-05-15", 2, "Trần Thị B", "path_to_sale_avatar"));
+        phongBanList.add(new Department(3, "Phòng Nhân Sự", "2018-03-20", 3, "Lê Thị C", "path_to_hr_avatar"));
+        phongBanList.add(new Department(4, "Phòng Marketing", "2021-06-10", 4, "Phạm Minh D", "path_to_marketing_avatar"));
+
+        ArrayList<String> tenPhongBanList = new ArrayList<>();
+        for (Department phongBan : phongBanList) {
+            tenPhongBanList.add(phongBan.getDepartmentName() + " (ID: " + phongBan.getDepartmentId() + ")");
+        }
+
+        int selectedStatusPosition = 0;
+        int selectedDepartmentPosition = facility.getDepartmentID() - 1;
+
+        for (int i = 0; i < getResources().getStringArray(R.array.facility_status_options).length; i++) {
+            if (getResources().getStringArray(R.array.facility_status_options)[i].equals(facility.getFacilityStatus())) {
+                selectedStatusPosition = i;
+                break;
+            }
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tenPhongBanList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        inputUpdateDepartmentID.setAdapter(adapter);
+        inputUpdateDepartmentID.setSelection(selectedDepartmentPosition);
+
+        ArrayAdapter<CharSequence> spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.facility_status_options, android.R.layout.simple_spinner_item);
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFacilityStatus.setAdapter(spinnerAdapter);
+        spinnerFacilityStatus.setSelection(selectedStatusPosition);
 
-        facilityID = getIntent().getIntExtra("facilityID", -1);
-
-        facility = dbHandler.getFacility(facilityID);
-        updatedStatus = facility.getFacilityStatus();
 
         inputUpdateFacilityName.setText(facility.getFacilityName());
         inputUpdateFacilityQuantity.setText(String.valueOf(facility.getFacilityQuantity()));
         inputUpdateBuyingDate.setText(facility.getFacilityBuyingDate());
-        inputUpdateDepartmentID.setText(String.valueOf(facility.getDepartmentID()));
+
+        inputUpdateBuyingDate.setOnClickListener(view -> showDatePickerDialog(inputUpdateBuyingDate, facility.getFacilityBuyingDate()));
 
 
         tvLabelUpdateFacility.setText("Cập nhật CSVC: " + String.valueOf(facilityID));
 
-        spinnerFacilityStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                updatedStatus = parentView.getItemAtPosition(position).toString();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-                updatedStatus = updatedStatus;
-            }
-        });
 
         buttonUpdateFacility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String updatedName = inputUpdateFacilityName.getText().toString();
-                int updatedQuantity = Integer.parseInt(inputUpdateFacilityQuantity.getText().toString());
+                String facilityQuantityStr = inputUpdateFacilityQuantity.getText().toString();
                 String updatedBuyingDate = inputUpdateBuyingDate.getText().toString();
-                int updatedDepartmentID = Integer.parseInt(inputUpdateDepartmentID.getText().toString());
 
-                Facility updatedFacility = new Facility(facilityID, updatedName, updatedQuantity, updatedBuyingDate, updatedStatus, updatedDepartmentID);
-                boolean isUpdated = dbHandler.updateFacility(updatedFacility);
-                if (isUpdated) {
-                    Toast.makeText(UpdateFacility.this, "Cập nhật thành công", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(UpdateFacility.this, "Cập nhật không thành công", Toast.LENGTH_SHORT).show();
+                int selectedDepartmentPosition = inputUpdateDepartmentID.getSelectedItemPosition();
+                Department selectedPhongBan = phongBanList.get(selectedDepartmentPosition);
+
+                int selectedStatusPosition = spinnerFacilityStatus.getSelectedItemPosition();
+                String facilityStatus = getResources().getStringArray(R.array.facility_status_options)[selectedStatusPosition];
+
+                if (updatedName.isEmpty() || facilityQuantityStr.isEmpty() || !facilityQuantityStr.matches("\\d+") || Integer.parseInt(facilityQuantityStr) <= 0 || updatedBuyingDate.isEmpty() || selectedPhongBan == null || facilityStatus.isEmpty()) {
+                    Toast.makeText(UpdateFacility.this, "Thông tin cơ sở vật chất không hợp lệ", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
+                try {
+                    int facilityQuantity = Integer.parseInt(facilityQuantityStr);
+                    Facility updatedFacility = new Facility(facilityID, updatedName, facilityQuantity, updatedBuyingDate, facilityStatus, selectedPhongBan.getDepartmentId());
+                    dbHandler.updateFacility(updatedFacility);
+                }catch (Exception e) {
+                    Toast.makeText(UpdateFacility.this, "Cập nhật cơ sở vật chất không thành công", Toast.LENGTH_SHORT).show();
+                }
+                Toast.makeText(UpdateFacility.this, "Cập nhật cơ sở vật chất thành công", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
+    }
+
+    private void showDatePickerDialog(final EditText editText, String date) {
+        String[] day_month_year = date.split("/");
+        int day = Integer.parseInt(day_month_year[0]);
+        int month = Integer.parseInt(day_month_year[1]) - 1;
+        int year = Integer.parseInt(day_month_year[2]);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int selectedYear, int selectedMonth, int selectedDay) {
+                editText.setText(selectedDay + "/" + (selectedMonth + 1) + "/" + selectedYear);
+            }
+        }, year, month, day);
+
+        datePickerDialog.show();
     }
 
 }

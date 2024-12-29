@@ -164,6 +164,7 @@
                 android:textColor="@color/black"
                 android:textColorHint="#020202"
                 android:textColorLink="#070707"
+                android:focusable="false"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -179,48 +180,41 @@
             android:text="Ngày mua"
             android:textColor="@color/black" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputUpdateDepartmentIDLayout"
-            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/inputUpdateBuyingDateLayout"
-            android:layout_marginTop="-15dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidth="2dp"
-            app:cursorColor="#000000"
-            app:hintEnabled="false"
-            app:hintTextColor="#000000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputUpdateDepartmentID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textColorHint="#020202"
-                android:textColorLink="#070707"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
         <TextView
-            android:id="@+id/labelUpdateDepartmentIDLayout"
+            android:id="@+id/labelUpdateDepartmentID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_alignTop="@id/inputUpdateDepartmentIDLayout"
+            android:layout_below="@+id/inputUpdateBuyingDateLayout"
             android:background="@color/white"
             android:text="Mã phòng ban"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/inputUpdateDepartmentID"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_below="@id/labelUpdateDepartmentID"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+
+        <TextView
+            android:id="@+id/labelFacilityStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/inputUpdateDepartmentID"
+            android:background="@color/white"
+            android:text="Trạng thái"
             android:textColor="@color/black" />
 
         <Spinner
             android:id="@+id/spinnerFacilityStatus"
             android:layout_width="match_parent"
             android:layout_height="120px"
-            android:layout_below="@id/inputUpdateDepartmentIDLayout"
-            android:layout_marginTop="15dp"
+            android:layout_below="@id/labelFacilityStatus"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"/>
     </RelativeLayout>

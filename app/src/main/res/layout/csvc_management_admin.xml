@@ -74,13 +74,30 @@
         android:layout_alignStart="@id/rlHeaderContainer"
         android:src="@android:drawable/ic_menu_search" />
 
-    <ListView
-        android:id="@+id/FacilityContainer"
+
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="360dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:layout_below="@id/ivSearchCSVC"
-        android:padding="10dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_corner_background">
-    </ListView>
+        android:padding="10dp"
+        android:background="@drawable/rounded_corner_background"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/listViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/FacilityContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -114,7 +114,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- taikhoan -->
+        </activity>
+        <activity
+            android:name=".SearchFacilities"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- taikhoan -->
         <activity
             android:name=".AccountManagement"
             android:exported="true">
@@ -195,7 +205,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- employee info -->
+        </activity>
+        <activity
+            android:name=".SearchProject"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity><!-- employee info -->
         <activity
             android:name=".EmployeeInfo"
             android:exported="true">

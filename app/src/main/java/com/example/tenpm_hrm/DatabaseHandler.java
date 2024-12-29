@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Department;
 import models.Facility;
 import models.NhanVien;
 import models.Project;
@@ -30,7 +31,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     "TENPB TEXT NOT NULL, " +
                     "NGTHANHLAP TEXT NOT NULL, " +
                     "MATRUONGPHONG INTEGER, " +
-                    "NGAYNHANCHUC TEXT " +
+                    "NGAYNHANCHUC TEXT, " +
+                    "AVATAR_PATH TEXT " +
                     ");";
     private static final String CREATE_TABLE_NHANVIEN =
             "CREATE TABLE NHANVIEN (" +
@@ -92,6 +94,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                     "NGAYBATDAU TEXT NOT NULL, " +
                     "NGAYKETTHUC TEXT, " +
                     "TRANGTHAI TEXT NOT NULL CHECK (TRANGTHAI IN ('Đang thực hiện', 'Hoàn thành', 'Bị hủy')), " +
+                    "MOTA TEXT, " +
                     "MAPB INTEGER, " +
                     "FOREIGN KEY (MAPB) REFERENCES PHONGBAN(MAPB)" +
                     ");";
@@ -144,16 +147,155 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("TENPB", "Phòng Kỹ thuật");
-        values.put("NGTHANHLAP", "2024-12-04");
+        values.put("NGTHANHLAP", "27/12/2024");
         values.put("MATRUONGPHONG", 1);
-        values.put("NGAYNHANCHUC", "2024-12-04");
+        values.put("NGAYNHANCHUC", "27/12/2024");
+        values.put("AVATAR_PATH", "content://com.google.android.apps.photos.contentprovider/-1/1/content%3A%2F%2Fmedia%2Fexternal%2Fimages%2Fmedia%2F1000000036/ORIGINAL/NONE/image%2Fjpeg/1615531904");
         long rowId = db.insert("PHONGBAN", null, values);
+    }
+
+    public void addFacilities() {
+        db = this.getWritableDatabase(); // Mở kết nối đến cơ sở dữ liệu
+
+        // Thêm phần tử 1
+        ContentValues values1 = new ContentValues();
+        values1.put("TENCSVC", "Máy tính xách tay");
+        values1.put("SOLUONG", 10);
+        values1.put("NGAYMUA", "27/12/2024");
+        values1.put("TRANGTHAI", "Sử dụng");
+        values1.put("MAPB", 1); // Phòng Kỹ thuật
+        long rowId1 = db.insert("COSOVATCHAT", null, values1);
+
+        // Thêm phần tử 2
+        ContentValues values2 = new ContentValues();
+        values2.put("TENCSVC", "Máy chiếu");
+        values2.put("SOLUONG", 5);
+        values2.put("NGAYMUA", "27/12/2024");
+        values2.put("TRANGTHAI", "Bảo trì");
+        values2.put("MAPB", 2); // Phòng Kinh Doanh
+        long rowId2 = db.insert("COSOVATCHAT", null, values2);
+
+        // Thêm phần tử 3
+        ContentValues values3 = new ContentValues();
+        values3.put("TENCSVC", "Điều hòa");
+        values3.put("SOLUONG", 3);
+        values3.put("NGAYMUA", "27/12/2024");
+        values3.put("TRANGTHAI", "Hư hỏng");
+        values3.put("MAPB", 3); // Phòng Nhân Sự
+        long rowId3 = db.insert("COSOVATCHAT", null, values3);
+
+        // Kiểm tra xem việc thêm có thành công không
+        if (rowId1 == -1 || rowId2 == -1 || rowId3 == -1) {
+            // Xử lý lỗi nếu không thêm được
+            Log.e("Database", "Error inserting records into COSOVATCHAT.");
+        } else {
+            Log.i("Database", "Inserted 3 records into COSOVATCHAT.");
+        }
+
+        db.close(); // Đóng cơ sở dữ liệu sau khi thao tác xong
+    }
+
+    public void add20Facilities() {
+        db = this.getWritableDatabase(); // Mở kết nối đến cơ sở dữ liệu
+
+        for (int i = 1; i <= 20; i++) {
+            ContentValues values = new ContentValues();
+            values.put("TENCSVC", "Cơ sở vật chất " + i);
+            values.put("SOLUONG", (i % 10) + 1); // Số lượng từ 1 đến 10
+            values.put("NGAYMUA", "27/12/2024");
+            values.put("TRANGTHAI", (i % 3 == 0) ? "Sử dụng" : (i % 3 == 1) ? "Bảo trì" : "Hư hỏng"); // Trạng thái xoay vòng
+            values.put("MAPB", (i % 4) + 1); // MAPB: 1 đến 4 (xoay vòng phòng ban)
+
+            long rowId = db.insert("COSOVATCHAT", null, values);
+
+            // Kiểm tra xem từng lần thêm có thành công không
+            if (rowId == -1) {
+                Log.e("Database", "Error inserting record for facility " + i);
+            } else {
+                Log.i("Database", "Inserted facility " + i + " successfully.");
+            }
+        }
+
+        db.close(); // Đóng cơ sở dữ liệu sau khi thao tác xong
     }
 
 
 
 
+    public void addProjectDe() {
+        db = this.getWritableDatabase();
+        ContentValues projectValues = new ContentValues();
+        projectValues.put("TENDUAN", "Dự án XYZ");
+        projectValues.put("NGAYBATDAU", "28/12/2024");
+        projectValues.put("NGAYKETTHUC", "31/12/2024");
+        projectValues.put("TRANGTHAI", "Đang thực hiện");
+        projectValues.put("MOTA", "Mô tả dự án XYZ");
+        projectValues.put("MAPB", 1); // Mã phòng ban đã tồn tại
+        long projectId = db.insert("DUAN", null, projectValues);
 
+        if (projectId != -1) {
+            // Nếu thêm dự án thành công, thêm nhân viên vào dự án
+            addEmployeeToProject((int) projectId);
+        }
+    }
+
+    private void addEmployeeToProject(int projectId) {
+        ContentValues employeeValues1 = new ContentValues();
+        employeeValues1.put("MANV", 1); // Mã nhân viên đã tồn tại
+        employeeValues1.put("MADA", projectId);
+        employeeValues1.put("VAITRO", "Quản lý");
+        employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
+
+        ContentValues employeeValues2 = new ContentValues();
+        employeeValues2.put("MANV", 2); // Mã nhân viên khác
+        employeeValues2.put("MADA", projectId);
+        employeeValues2.put("VAITRO", "Thành viên");
+        employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
+
+        db.insert("NHANVIEN_DUAN", null, employeeValues1);
+        db.insert("NHANVIEN_DUAN", null, employeeValues2);
+    }
+
+    public void add20Projects() {
+        db = this.getWritableDatabase();
+
+        for (int i = 1; i <= 20; i++) {
+            // Tạo dữ liệu cho dự án
+            ContentValues projectValues = new ContentValues();
+            projectValues.put("TENDUAN", "Dự án XYZ " + i);
+            projectValues.put("NGAYBATDAU", "28/12/2024");
+            projectValues.put("NGAYKETTHUC", "31/12/2024");
+            projectValues.put("TRANGTHAI", "Đang thực hiện");
+            projectValues.put("MOTA", "Mô tả dự án XYZ " + i);
+            projectValues.put("MAPB", (i % 4) + 1); // MAPB: 1 đến 4 (xoay vòng phòng ban)
+
+            // Thêm dự án vào cơ sở dữ liệu
+            long projectId = db.insert("DUAN", null, projectValues);
+
+            // Nếu thêm dự án thành công, thêm nhân viên vào dự án
+            if (projectId != -1) {
+                addEmployeesToProject((int) projectId, i);
+            }
+        }
+    }
+
+    // Hàm thêm nhân viên vào dự án
+    private void addEmployeesToProject(int projectId, int index) {
+        ContentValues employeeValues1 = new ContentValues();
+        employeeValues1.put("MANV", (index % 5) + 1); // Mã nhân viên từ 1 đến 5 (xoay vòng)
+        employeeValues1.put("MADA", projectId);
+        employeeValues1.put("VAITRO", "Quản lý");
+        employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
+
+        ContentValues employeeValues2 = new ContentValues();
+        employeeValues2.put("MANV", ((index + 1) % 5) + 1); // Mã nhân viên từ 1 đến 5 (xoay vòng)
+        employeeValues2.put("MADA", projectId);
+        employeeValues2.put("VAITRO", "Thành viên");
+        employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
+
+        db.insert("NHANVIEN_DUAN", null, employeeValues1);
+        db.insert("NHANVIEN_DUAN", null, employeeValues2);
+    }
 
 
     public void addAdminAccount() {
@@ -226,6 +368,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put("SOLUONG", facility.getFacilityQuantity());
         values.put("NGAYMUA", facility.getFacilityBuyingDate());
         values.put("TRANGTHAI", facility.getFacilityStatus());
+        values.put("MAPB", facility.getDepartmentID());
         long rowId = db.insert("COSOVATCHAT", null, values);
     }
 
@@ -274,24 +417,71 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-//  ================Project================
-public void addProject(Project project) {
-    db = this.getWritableDatabase();
-    ContentValues values = new ContentValues();
-    values.put("TENDUAN", project.getTenDA());
-    values.put("NGAYBATDAU", project.getNgayBD());
-    values.put("NGAYKETTHUC", project.getNgayKT());
-    values.put("TRANGTHAI", project.getTrangThai());
-    values.put("MAPB", project.getMaPB());
-    long rowId = db.insert("DUAN", null, values);
-}
+    public List<Facility> searchFacility(String facilityID, String facilityName, String facilityQuantity, String facilityStatus, String facilityBuyingDate, String departmentID) {
+        List<Facility> facilityList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM COSOVATCHAT WHERE 1=1");
+
+        if (facilityID != null && !facilityID.isEmpty()) queryBuilder.append(" AND MACSVC = ").append(facilityID);
+        if (facilityName != null && !facilityName.isEmpty()) queryBuilder.append(" AND TENCSVC LIKE '%").append(facilityName).append("%'");
+        if (facilityQuantity != null && !facilityQuantity.isEmpty()) queryBuilder.append(" AND SOLUONG = ").append(facilityQuantity);
+        if (facilityBuyingDate != null && !facilityBuyingDate.isEmpty()) queryBuilder.append(" AND NGAYMUA LIKE '%").append(facilityBuyingDate).append("%'");
+        if (facilityStatus != null && !facilityStatus.isEmpty()) queryBuilder.append(" AND TRANGTHAI LIKE '%").append(facilityStatus).append("%'");
+        if (departmentID != null && !departmentID.isEmpty()) queryBuilder.append(" AND MAPB LIKE '%").append(departmentID).append("%'");
+
+        queryBuilder.append(" ORDER BY MACSVC ASC");
+
+        Cursor cursor = db.rawQuery(queryBuilder.toString(), null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Facility facility = new Facility(
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MACSVC")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("TENCSVC")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("SOLUONG")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("NGAYMUA")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("TRANGTHAI")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MAPB"))
+                );
+                facilityList.add(facility);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        for (Facility facility : facilityList) {
+            Log.d("FacilityList", "MACSVC: " + facility.getFacilityID() +
+                    ", TENCSVC: " + facility.getFacilityName() +
+                    ", SOLUONG: " + facility.getFacilityQuantity() +
+                    ", NGAYMUA: " + facility.getFacilityBuyingDate() +
+                    ", TRANGTHAI: " + facility.getFacilityStatus() +
+                    ", MAPB: " + facility.getDepartmentID());
+        }
+        return facilityList;
+    }
+
+
+    //  ================Project================
+    public int addProject(Project project) {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("TENDUAN", project.getTenDA());
+        values.put("NGAYBATDAU", project.getNgayBD());
+        values.put("NGAYKETTHUC", project.getNgayKT());
+        values.put("TRANGTHAI", project.getTrangThai());
+        values.put("MOTA", project.getMoTa());
+        values.put("MAPB", project.getMaPB());
+        long rowId = db.insert("DUAN", null, values);
+        return (int) rowId;
+    }
 
     public Project getProject(int id) {
         db = this.getReadableDatabase();
         Cursor cursor = db.query("DUAN", null, "MADA" + " = ?", new String[] { String.valueOf(id) },null, null, null);
         if(cursor != null)
             cursor.moveToFirst();
-        Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+        Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getInt(6));
         cursor.close();
         return project;
     }
@@ -305,7 +495,7 @@ public void addProject(Project project) {
         cursor.moveToFirst();
 
         while(cursor.isAfterLast() == false) {
-            Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getInt(5));
+            Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getInt(6));
             projectList.add(project);
             cursor.moveToNext();
         }
@@ -321,6 +511,7 @@ public void addProject(Project project) {
         values.put("NGAYBATDAU", project.getNgayBD());
         values.put("NGAYKETTHUC", project.getNgayKT());
         values.put("TRANGTHAI", project.getTrangThai());
+        values.put("MOTA", project.getMoTa());
         values.put("MAPB", project.getMaPB());
         return db.update("DUAN", values, "MADA" + " = ?", new String[]{String.valueOf(project.getMaDA())}) > 0;
     }
@@ -330,6 +521,45 @@ public void addProject(Project project) {
         db.delete("DUAN", "MADA" + " = ?", new String[] { String.valueOf(project.getMaDA())});
         db.close();
     }
+
+    public List<Project> searchProject(String projectID, String projectName, String startingDate, String endingDate, String projectStatus, String departmentID) {
+        List<Project> projectList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Tạo câu lệnh SQL động
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM DUAN WHERE 1=1");
+
+        if (projectID != null && !projectID.isEmpty()) queryBuilder.append(" AND MADA = ").append(projectID);
+        if (projectName != null && !projectName.isEmpty()) queryBuilder.append(" AND TENDUAN LIKE '%").append(projectName).append("%'");
+        if (startingDate != null && !startingDate.isEmpty()) queryBuilder.append(" AND NGAYBATDAU LIKE '%").append(startingDate).append("%'");
+        if (endingDate != null && !endingDate.isEmpty()) queryBuilder.append(" AND NGAYKETTHUC LIKE '%").append(endingDate).append("%'");
+        if (projectStatus != null && !projectStatus.isEmpty()) queryBuilder.append(" AND TRANGTHAI LIKE '%").append(projectStatus).append("%'");
+        if (departmentID != null && !departmentID.isEmpty()) queryBuilder.append(" AND MAPB = ").append(departmentID);
+
+        queryBuilder.append(" ORDER BY MADA ASC");
+
+        Cursor cursor = db.rawQuery(queryBuilder.toString(), null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Project project = new Project(
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MADA")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("TENDUAN")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("NGAYBATDAU")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("NGAYKETTHUC")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("TRANGTHAI")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("MOTA")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MAPB"))
+                );
+                projectList.add(project);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return projectList;
+    }
+
 
     public void addProjectNhanVien(Project_NhanVien projectNhanVien) {
         db = this.getWritableDatabase();
@@ -352,9 +582,9 @@ public void addProject(Project project) {
         return projectNhanVien;
     }
 
-    public List<Project_NhanVien> getAllProjectsNhanVien() {
+    public List<Project_NhanVien> getAllProjectsNhanVien(int mada) {
         List<Project_NhanVien> projectNhanVienList = new ArrayList<>();
-        String query = "SELECT * FROM NHANVIEN_DUAN";
+        String query = "SELECT * FROM NHANVIEN_DUAN WHERE MADA = " + mada;
 
         db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
@@ -376,7 +606,8 @@ public void addProject(Project project) {
         values.put("MADA", projectNhanVien.getMaDA());
         values.put("VAITRO", projectNhanVien.getVaiTro());
         values.put("NGAYTHAMGIA", projectNhanVien.getNgayTG());
-        return db.update("NHANVIEN_DUAN", values, "MADA" + " = ?", new String[]{String.valueOf(projectNhanVien.getMaDA())}) > 0;
+        long result = db.insertWithOnConflict("NHANVIEN_DUAN", null, values, SQLiteDatabase.CONFLICT_REPLACE);
+        return result != -1;
     }
 
     public void deleteProjectNhanVien(Project project) {
@@ -385,8 +616,71 @@ public void addProject(Project project) {
         db.close();
     }
 
+    // ============Phòng ban===================
+    public void addDepartment(Department department) {
+        db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("TENPB", department.getDepartmentName());
+        values.put("NGTHANHLAP", department.getEstablishmentDate());
+        values.put("MATRUONGPHONG", department.getManagerId());
+        values.put("NGAYNHANCHUC", department.getManagerAppointmentDate());
+        values.put("AVATAR_PATH", department.getAvatarPath());
+        long rowId = db.insert("PHONGBAN", null, values);
 
-//    ============================= Request
+        if (rowId == -1) {
+            Log.e("DatabaseHandler", "Error adding department: " + department.getDepartmentName());
+        } else {
+            Log.d("DatabaseHandler", "Department added with ID: " + rowId);
+        }
+    }
+
+    public Department getDepartment(int id) {
+        db = this.getReadableDatabase();
+        Cursor cursor = db.query("PHONGBAN", null, "MAPB" + " = ?", new String[] { String.valueOf(id) },null, null, null);
+        if(cursor != null)
+            cursor.moveToFirst();
+        Department department = new Department(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getInt(3), cursor.getString(4), cursor.getString(5));
+        cursor.close();
+        return department;
+    }
+
+    public List<Department> getAllDepartment() {
+        List<Department> departmentList = new ArrayList<>();
+        String query = "SELECT * FROM PHONGBAN";
+
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+
+        while(cursor.isAfterLast() == false) {
+            Department department = new Department(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getInt(3), cursor.getString(4), cursor.getString(5));
+            departmentList.add(department);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return departmentList;
+    }
+
+    public boolean updateDepartment(Department department) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MAPB", department.getDepartmentId());
+        values.put("TENPB", department.getDepartmentName());
+        values.put("NGTHANHLAP", department.getEstablishmentDate());
+        values.put("MATRUONGPHONG", department.getManagerId());
+        values.put("NGAYNHANCHUC", department.getManagerAppointmentDate());
+        values.put("AVATAR_PATH", department.getAvatarPath());
+        return db.update("PHONGBAN", values, "MAPB" + " = ?", new String[]{String.valueOf(department.getDepartmentId())}) > 0;
+    }
+
+    public void deleteDepartment(Department department) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("PHONGBAN", "MAPB" + " = ?", new String[] { String.valueOf(department.getDepartmentId())});
+    }
+
+
+
+    //    ============================= Request
     public boolean addRequest(int manv, String chude, String noidung) {
         db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
