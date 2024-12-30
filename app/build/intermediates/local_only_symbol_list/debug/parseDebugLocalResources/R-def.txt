@@ -173,6 +173,7 @@ id etOTP
 id etPassword
 id etPhone
 id etPosition
+id etSearchEmployeeName
 id findAccountIcon
 id genderGroup
 id halfCircleView
@@ -352,6 +353,7 @@ id textInputLayout4
 id textInputLayout5
 id textView
 id textView10
+id textView11
 id textView13
 id textView14
 id textView15
