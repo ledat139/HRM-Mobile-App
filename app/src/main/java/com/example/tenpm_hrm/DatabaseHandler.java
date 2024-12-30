@@ -148,6 +148,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put("MATRUONGPHONG", 1);
         values.put("NGAYNHANCHUC", "2024-12-04");
         long rowId = db.insert("PHONGBAN", null, values);
+        ContentValues values2 = new ContentValues();
+        values.put("TENPB", "Phòng Nhân Sự");
+        values.put("NGTHANHLAP", "2024-12-05");
+        values.put("MATRUONGPHONG", 2);
+        values.put("NGAYNHANCHUC", "2024-12-06");
+        long rowId2 = db.insert("PHONGBAN", null, values);
     }
 
 
@@ -198,7 +204,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values2.put("DIACHI", "Hồ Chí Minh");
         values2.put("CCCD", "001004075823");
         values2.put("CAPBAC", "MANAGER");
-        values2.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+        values2.put("MAPB", 2); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
 
         long rowId2 = db.insert("NHANVIEN", null, values2);
         if (rowId2 == -1) {
@@ -605,8 +611,6 @@ public void addProject(Project project) {
         String[] whereArgs = { employeeId };
 
         int rowsAffected = db.delete("NHANVIEN", whereClause, whereArgs);
-        db.close();
-
         return rowsAffected > 0;
     }
     public NhanVien getEmployeeById(int employeeId) {
@@ -650,7 +654,7 @@ public void addProject(Project project) {
         int rowsUpdated = db.update("NHANVIEN", values, "MANV = ?", new String[]{String.valueOf(nhanVien.getMaNV())});
         return rowsUpdated > 0;
     }
-    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String capBac, String phongBan) {
+    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String cccd, String capBac, String phongBan) {
         List<NhanVien> employeeList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -663,6 +667,7 @@ public void addProject(Project project) {
         if (sdt != null && !sdt.isEmpty()) queryBuilder.append(" AND SDT LIKE '%").append(sdt).append("%'");
         if (email != null && !email.isEmpty()) queryBuilder.append(" AND EMAIL LIKE '%").append(email).append("%'");
         if (diaChi != null && !diaChi.isEmpty()) queryBuilder.append(" AND DIACHI LIKE '%").append(diaChi).append("%'");
+        if (cccd != null && !cccd.isEmpty()) queryBuilder.append(" AND CCCD LIKE '%").append(cccd).append("%'");
         if (capBac != null && !capBac.isEmpty()) queryBuilder.append(" AND CAPBAC LIKE '%").append(capBac).append("%'");
         if (phongBan != null && !phongBan.isEmpty()) queryBuilder.append(" AND MAPB LIKE '%").append(phongBan).append("%'");
 
