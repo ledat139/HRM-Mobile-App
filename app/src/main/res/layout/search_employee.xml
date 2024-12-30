@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Id"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Họ và tên"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:gravity="center_vertical"
             android:paddingEnd="8dp"
             android:text="Giới tính" />
@@ -88,7 +88,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Ngày sinh"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -105,13 +105,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="8dp">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Số điện thoại"
-            android:gravity="start"
-            android:paddingEnd="8dp"/>
+            android:layout_weight="1.2"
+            android:paddingEnd="8dp"
+            android:text="Số điện thoại" />
+
         <EditText
             android:id="@+id/etPhone"
             android:layout_width="0dp"
@@ -128,7 +129,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Email"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -148,7 +149,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Địa chỉ"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -168,7 +169,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="CCCD"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -188,7 +189,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Cấp bậc"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -208,7 +209,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:text="Phòng ban"
             android:gravity="start"
             android:paddingEnd="8dp"/>
@@ -230,7 +231,7 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1.2" />
 
         <Button
             android:id="@+id/buttonCancel"

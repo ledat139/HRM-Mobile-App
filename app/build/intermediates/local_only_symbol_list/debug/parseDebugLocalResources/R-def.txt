@@ -20,6 +20,7 @@ drawable account_detail
 drawable add
 drawable arrow
 drawable attendance
+drawable avatar_shape
 drawable baque
 drawable baseline_home_24
 drawable baseline_notifications_24
@@ -264,6 +265,7 @@ id item_employee_iv_manager_reject
 id item_employee_ll_parent
 id item_employee_tv_fullname
 id item_employee_tv_infor
+id ivAvatar
 id ivCSVCDelete
 id ivCSVCDetail
 id ivDelete
@@ -300,6 +302,8 @@ id labelUpdateProjectDesc
 id labelUpdateProjectSEndingDateContainer
 id labelUpdateProjectSInitialDateContainer
 id labelUpdateProjectStatus
+id layout
+id layoutPiechart
 id linearContent
 id linearLayout
 id listView
@@ -310,6 +314,7 @@ id lvRQ
 id main
 id participantContainer
 id participantListHeader
+id pieChart
 id profile_image
 id progressBar
 id projectContainer
@@ -335,6 +340,7 @@ id rlHeaderContainer
 id rvCalendar
 id scrollView
 id scrollView2
+id scroolviewLayout
 id services_grid
 id sidebar
 id spinnerFacilityStatus

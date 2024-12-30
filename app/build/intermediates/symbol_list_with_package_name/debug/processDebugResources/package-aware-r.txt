@@ -3020,6 +3020,7 @@ drawable account_detail
 drawable add
 drawable arrow
 drawable attendance
+drawable avatar_shape
 drawable avd_hide_password
 drawable avd_show_password
 drawable baque
@@ -3627,6 +3628,7 @@ id item_employee_ll_parent
 id item_employee_tv_fullname
 id item_employee_tv_infor
 id item_touch_helper_previous_elevation
+id ivAvatar
 id ivCSVCDelete
 id ivCSVCDetail
 id ivDelete
@@ -3667,6 +3669,7 @@ id labelUpdateProjectSInitialDateContainer
 id labelUpdateProjectStatus
 id labeled
 id layout
+id layoutPiechart
 id left
 id leftToRight
 id legacy
@@ -3795,6 +3798,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pieChart
 id pin
 id pooling_container_listener_holder_tag
 id position
@@ -3847,6 +3851,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollView2
 id scrollable
+id scroolviewLayout
 id search_badge
 id search_bar
 id search_button

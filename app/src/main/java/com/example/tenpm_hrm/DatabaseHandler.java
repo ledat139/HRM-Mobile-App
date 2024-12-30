@@ -360,7 +360,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values2.put("DIACHI", "Hồ Chí Minh");
         values2.put("CCCD", "001004075823");
         values2.put("CAPBAC", "MANAGER");
-        values2.put("MAPB", 2);
+        values2.put("MAPB", 2); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
 
         long rowId2 = db.insert("NHANVIEN", null, values2);
         if (rowId2 == -1) {
@@ -1067,8 +1067,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String[] whereArgs = { employeeId };
 
         int rowsAffected = db.delete("NHANVIEN", whereClause, whereArgs);
-        db.close();
-
         return rowsAffected > 0;
     }
     public NhanVien getEmployeeById(int employeeId) {
@@ -1112,7 +1110,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int rowsUpdated = db.update("NHANVIEN", values, "MANV = ?", new String[]{String.valueOf(nhanVien.getMaNV())});
         return rowsUpdated > 0;
     }
-    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String capBac, String phongBan) {
+    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String cccd, String capBac, String phongBan) {
         List<NhanVien> employeeList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1125,6 +1123,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (sdt != null && !sdt.isEmpty()) queryBuilder.append(" AND SDT LIKE '%").append(sdt).append("%'");
         if (email != null && !email.isEmpty()) queryBuilder.append(" AND EMAIL LIKE '%").append(email).append("%'");
         if (diaChi != null && !diaChi.isEmpty()) queryBuilder.append(" AND DIACHI LIKE '%").append(diaChi).append("%'");
+        if (cccd != null && !cccd.isEmpty()) queryBuilder.append(" AND CCCD LIKE '%").append(cccd).append("%'");
         if (capBac != null && !capBac.isEmpty()) queryBuilder.append(" AND CAPBAC LIKE '%").append(capBac).append("%'");
         if (phongBan != null && !phongBan.isEmpty()) queryBuilder.append(" AND MAPB LIKE '%").append(phongBan).append("%'");
 
