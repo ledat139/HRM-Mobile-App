@@ -12,8 +12,10 @@
     </string-array>
     <color name="black">#FF000000</color>
     <color name="blue">#5A72A5</color>
+    <color name="dark_blue">#003366</color>
     <color name="gray">#888</color>
     <color name="green">#5AA572</color>
+    <color name="light_gray">#D3D3D3</color>
     <color name="light_green">#B5F4D1</color>
     <color name="primary_color">#5C63D6</color>
     <color name="red">#E57373</color>
