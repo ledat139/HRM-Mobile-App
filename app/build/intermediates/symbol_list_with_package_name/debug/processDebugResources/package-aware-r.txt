@@ -3304,7 +3304,6 @@ id actions
 id activity_chooser_view_content
 id add
 id addAccountBtn
-id addEmployeeButton
 id addInputDepartmentAvatarContainer
 id adjust_height
 id adjust_width
@@ -3344,7 +3343,7 @@ id btnLogin
 id btnLogout
 id btnPersonalInfo
 id btnProjectAdd
-id btnUpdateAccount
+id btnUpdateDepartment
 id btnUpdateProject
 id btn_approve_all
 id btn_new_request
@@ -3428,6 +3427,7 @@ id decor_content_parent
 id default_activity_button
 id deleteAccountIcon
 id deltaRelative
+id departmentContainerItem
 id departmentGridView
 id departmentImageView
 id departmentNameTextView
@@ -3467,7 +3467,6 @@ id edtChuDe
 id edtNoiDung
 id elastic
 id embed
-id employeeManagementLayout
 id end
 id endToStart
 id enterAlways
@@ -3551,6 +3550,7 @@ id immediateStop
 id included
 id indeterminate
 id info
+id inputAccType
 id inputAddBuyingDate
 id inputAddBuyingDateLayout
 id inputAddDepartmentEstablishmentDate
@@ -3601,6 +3601,7 @@ id inputUpdateFacilityName
 id inputUpdateFacilityNameLayout
 id inputUpdateFacilityQuantity
 id inputUpdateFacilityQuantityLayout
+id inputUpdateManagerID
 id inputUpdateProjectDesc
 id inputUpdateProjectDescContainer
 id inputUpdateProjectName
@@ -3674,12 +3675,10 @@ id line3
 id linear
 id linearContent
 id linearLayout
-id listButton
 id listMode
 id listView
 id listViewContainer
 id list_item
-id lvAccount
 id lvAttendace
 id lvRQ
 id m3_side_sheet
@@ -3805,12 +3804,21 @@ id progress_circular
 id progress_horizontal
 id projectContainer
 id projectContainerInformation
+id projectDepartmentIDLayout
+id projectDepartmentName
+id projectDesc
+id projectDescContainer
+id projectName
+id projectNameContainer
+id projectSEndingDate
+id projectSEndingDateContainer
+id projectSInitialDate
+id projectSInitialDateContainer
+id projectStatus
+id projectStatusLayout
 id radio
-id radioEmployee
 id radioFemale
-id radioGroupAccountType
 id radioMale
-id radioManager
 id ratio
 id rectangles
 id report_drawn
@@ -3834,7 +3842,6 @@ id scrollIndicatorUp
 id scrollView
 id scrollView2
 id scrollable
-id searchView
 id search_badge
 id search_bar
 id search_button
@@ -3910,9 +3917,6 @@ id text2
 id textEnd
 id textInputLayout
 id textInputLayout2
-id textInputLayout3
-id textInputLayout4
-id textInputLayout5
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3969,6 +3973,8 @@ id tvCSVCName
 id tvCSVCQuantity
 id tvCSVCStatus
 id tvDepartment
+id tvDepartmentID
+id tvEmployeeNumber
 id tvEmployeeType
 id tvForgotPassword
 id tvHeaderDescription
@@ -4145,7 +4151,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout account_detail
 layout account_item
 layout account_management_admin
 layout activity_forgot_password
@@ -4196,6 +4201,7 @@ layout item_employee
 layout item_facility
 layout item_participant
 layout item_project
+layout item_project_employee
 layout login
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -4255,6 +4261,8 @@ layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout project
+layout project_detail
+layout project_employee
 layout request_item
 layout request_management_admin
 layout request_management_client
@@ -4265,6 +4273,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout update_department
 layout update_facility
 layout update_participant
 layout update_project

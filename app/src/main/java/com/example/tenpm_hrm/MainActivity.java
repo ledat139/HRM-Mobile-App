@@ -17,10 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         dbHandler = new DatabaseHandler(this);
         dbHandler.deleteDatabase(this); // deletedb
-        dbHandler.addDe();
-        dbHandler.addDe();
-        dbHandler.addDe();
-        dbHandler.addDe();
+        dbHandler.addDepartmentsData();
         dbHandler.add20Facilities();
         dbHandler.add20Projects();
         dbHandler.addAdminAccount();
