@@ -211,6 +211,7 @@
         android:backgroundTint="#5C63D6"
         android:paddingVertical="12dp"
         android:text="Thêm CSVC"
+        app:cornerRadius="5dp"
         android:textStyle="bold"
         android:textSize="18dp"
         android:textColor="@color/white"

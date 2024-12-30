@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Sun Dec 29 22:40:20 ICT 2024
 base.0=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -5,6 +6,15 @@ base.2=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\
 base.3=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
 base.4=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.5=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+=======
+#Mon Dec 30 02:33:58 ICT 2024
+base.0=C\:\\Users\\DUY\\AndroidStudioProjects\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\DUY\\AndroidStudioProjects\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\DUY\\AndroidStudioProjects\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.3=C\:\\Users\\DUY\\AndroidStudioProjects\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.4=C\:\\Users\\DUY\\AndroidStudioProjects\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.5=C\:\\Users\\DUY\\AndroidStudioProjects\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+>>>>>>> 04fd3b21fa819c0c9a3144bd9b833a8307db9ac5
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex

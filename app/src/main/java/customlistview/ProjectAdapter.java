@@ -1,6 +1,7 @@
 package customlistview;
 
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -109,13 +111,24 @@ public class ProjectAdapter extends BaseAdapter {
             }
         });
 
-        ivProjectDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbHandler.deleteProject(project);
-            }
-        });
+        ivProjectDelete.setOnClickListener(view -> {
+            new AlertDialog.Builder(context)
+                    .setTitle("Xác nhận")
+                    .setMessage("Bạn có muốn xóa cơ sở vật chất: " + project.getMaDA() + " không?")
+                    .setPositiveButton("Xóa", (dialog, which) -> {
+                        try {
+                            dbHandler.deleteProject(project);
+                            projectList.remove(position);
+                            notifyDataSetChanged();
+                            Toast.makeText(context, "Đã xóa cơ sở vật chất", Toast.LENGTH_SHORT).show();
+                        }catch (Exception e) {
+                            Toast.makeText(context, "Xóa cơ sở vật chất không thành công", Toast.LENGTH_SHORT).show();
+                        }
 
+                    })
+                    .setNegativeButton("Hủy", (dialog, which) -> dialog.dismiss())
+                    .show();
+        });
         return convertView;
     }
 

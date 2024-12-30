@@ -58,6 +58,10 @@ public class SearchProject extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         inputSearchProjectDepartmentID.setAdapter(adapter);
 
+        ArrayAdapter<String> statusAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, statusList);
+        statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        inputSearchProjectStatus.setAdapter(statusAdapter);
+
         inputSearchStartingDate.setOnClickListener(view -> showDatePickerDialog(inputSearchStartingDate));
         inputSearchEndingDate.setOnClickListener(view -> showDatePickerDialog(inputSearchEndingDate));
 

@@ -41,8 +41,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+<<<<<<< HEAD
     implementation("com.sun.mail:android-activation:1.6.2")
     implementation("com.sun.mail:android-mail:1.6.2")
     implementation(libs.recyclerview)
     implementation(libs.volley)
+=======
+    implementation(libs.play.services.location)
+    implementation("com.sun.mail:android-activation:1.6.2")
+    implementation("com.sun.mail:android-mail:1.6.2")
+>>>>>>> 04fd3b21fa819c0c9a3144bd9b833a8307db9ac5
 }
