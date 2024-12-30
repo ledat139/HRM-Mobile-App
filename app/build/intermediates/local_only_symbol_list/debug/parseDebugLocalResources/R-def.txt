@@ -114,6 +114,7 @@ id btnLogin
 id btnLogout
 id btnPersonalInfo
 id btnProjectAdd
+id btnUpdateAccount
 id btnUpdateProject
 id btn_approve_all
 id btn_new_request
@@ -192,7 +193,6 @@ id imageView_Detail
 id imgCopyright
 id imgLogo
 id imgSidebar
-id inputAccType
 id inputAddBuyingDate
 id inputAddBuyingDateLayout
 id inputAddDepartmentEstablishmentDate
@@ -303,6 +303,7 @@ id linearLayout
 id listButton
 id listView
 id listViewContainer
+id lvAccount
 id lvAttendace
 id lvRQ
 id main
@@ -312,8 +313,11 @@ id profile_image
 id progressBar
 id projectContainer
 id projectContainerInformation
+id radioEmployee
 id radioFemale
+id radioGroupAccountType
 id radioMale
+id radioManager
 id rlHeaderContainer
 id rvCalendar
 id scrollView
@@ -326,6 +330,9 @@ id status
 id statusValue
 id textInputLayout
 id textInputLayout2
+id textInputLayout3
+id textInputLayout4
+id textInputLayout5
 id textView
 id textView10
 id textView13
@@ -387,6 +394,7 @@ id txtFullName
 id txtPosition
 id workDays
 id workDaysValue
+layout account_detail
 layout account_item
 layout account_management_admin
 layout activity_forgot_password
