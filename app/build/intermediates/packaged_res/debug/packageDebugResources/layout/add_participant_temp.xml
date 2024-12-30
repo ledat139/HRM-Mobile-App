@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="20dp"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm dự án mới"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/primary_color"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputParticipantIDContainer"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_below="@id/tvLabel"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp">
+
+        <Spinner
+            android:id="@+id/inputParticipantID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignTop="@id/inputParticipantIDContainer"
+        android:background="@color/white"
+        android:text="Mã người tham gia"
+        android:textColor="@color/black" />
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/inputParticipantID"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputParticipantRoleContainer"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_below="@id/inputParticipantIDContainer"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        app:cursorColor="#000000"
+        app:hintEnabled="false"
+        app:hintTextColor="#000000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputParticipantRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="#020202"
+            android:textColorLink="#070707"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="257dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignTop="@id/inputParticipantRoleContainer"
+        android:background="@color/white"
+        android:text="Vai trò"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputParticipantJoiningDateContainer"
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_below="@id/inputParticipantRoleContainer"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        app:cursorColor="#000000"
+        app:hintEnabled="false"
+        app:hintTextColor="#000000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputParticipantJoiningDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="#020202"
+            android:textColorLink="#070707"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="257dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignTop="@id/inputParticipantJoiningDateContainer"
+        android:background="@color/white"
+        android:text="Ngày tham gia"
+        android:textColor="@color/black" />
+</RelativeLayout>

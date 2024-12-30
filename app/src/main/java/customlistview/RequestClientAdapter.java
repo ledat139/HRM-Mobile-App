@@ -49,16 +49,31 @@ public class RequestClientAdapter extends ArrayAdapter<Request> {
         }
         else tvFullName.setText("");
         // If this is a manager -> show icon manager. Otherwise, show Staff in tvPosition
+//        if (request.isApproved() == 1)
+//        {
+//            ivManager_approved.setVisibility(View.VISIBLE);
+//        }
+//        else if(request.isApproved() == 0)
+//        {
+//            ivManager_pending.setVisibility(View.VISIBLE);
+//        }
+//        else{
+//            ivManager_reject.setVisibility(View.VISIBLE);
+//        }
         if (request.isApproved() == 1)
         {
             ivManager_approved.setVisibility(View.VISIBLE);
+            convertView.setAlpha(0.5f);
+            convertView.setEnabled(false);
         }
         else if(request.isApproved() == 0)
         {
             ivManager_pending.setVisibility(View.VISIBLE);
         }
-        else{
+        else if(request.isApproved() == -1){
             ivManager_reject.setVisibility(View.VISIBLE);
+            convertView.setAlpha(0.5f);
+            convertView.setEnabled(false);
         }
 
 

@@ -1,4 +1,5 @@
 package com.example.tenpm_hrm.attendance;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -39,7 +40,10 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
     private Button treGioBtn;
     private Button coPhepBtn;
     private Button khongPhepBtn;
+    private Button danhDauBtn;
+    private boolean checkdate = false;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +58,9 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         treGioBtn = findViewById(R.id.treGioBtn);
         coPhepBtn = findViewById(R.id.coPhepBtn);
         khongPhepBtn = findViewById(R.id.khongPhepBtn);
+        danhDauBtn = findViewById(R.id.danhDauBtn);
 
+        danhDauBtn.setVisibility(View.GONE);
         db = new AttendanceDbAdapter(this);
         selectedDate = LocalDate.now();
         currentDate = selectedDate;
@@ -78,6 +84,7 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         dungGioBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                danhDauBtn.setVisibility(View.GONE);
                 status = "Đúng giờ";
                 List<CustomAttendance> attendanceList = db.getAttendanceList(status, dateTemp);
                 AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
@@ -87,6 +94,7 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         treGioBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                danhDauBtn.setVisibility(View.GONE);
                 status = "Trễ giờ";
                 List<CustomAttendance> attendanceList = db.getAttendanceList(status, dateTemp);
                 AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
@@ -96,12 +104,39 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         coPhepBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                danhDauBtn.setVisibility(View.GONE);
                 status = "Xin nghỉ";
                 List<CustomAttendance> attendanceList = db.getAttendanceList(status, dateTemp);
                 AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
                 lvAttendance.setAdapter(adapter);
             }
         });
+        khongPhepBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (checkdate == true)
+                danhDauBtn.setVisibility(View.GONE);
+                else danhDauBtn.setVisibility(View.VISIBLE);
+                List<CustomAttendance> attendanceList = db.getAbsenseList(dateTemp);
+                AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
+                lvAttendance.setAdapter(adapter);
+            }
+        });
+        danhDauBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<CustomAttendance> attendanceList = db.getAbsenseList(dateTemp);
+                for (CustomAttendance temp : attendanceList){
+                    Attendance attendance = new Attendance();
+                    attendance.setEmployeeId(temp.getEmployeeId());
+                    attendance.setWorkDate(customDate(currentDate));
+                    attendance.setStatus(temp.getStatus());
+                    db.insertCheckIn(attendance);
+                }
+                danhDauBtn.setVisibility(View.GONE);
+            }
+        });
+
     }
 
     private String getDateValue(LocalDate selectedDate) {
@@ -151,7 +186,6 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         CalendarRecycleViewAdapterAdmin calendarRecycleViewAdapterAdmin = new CalendarRecycleViewAdapterAdmin(daysInMonth, this, selectedDate.getMonthValue(), selectedDate.getYear());
         rvCalendar.setLayoutManager(new GridLayoutManager(getApplicationContext(), 7));
         rvCalendar.setAdapter(calendarRecycleViewAdapterAdmin);
-
     }
 
     public void nextMonthAction(View view) {
@@ -194,9 +228,10 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
 
     @Override
     public void onClick(int position, String dayText) {
-        if(!dayText.equals("") && (Integer.parseInt(dayText) <= Integer.parseInt(dayFromdate(currentDate))
+        if(!dayText.equals("") && (Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
                 || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate)) ) )
         {
+            checkdate = true;
             LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
 
             dateTemp = customDate(temp);
@@ -206,6 +241,20 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
             List<CustomAttendance> attendanceList = db.getAttendanceList(status, dateTemp);
             AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
             lvAttendance.setAdapter(adapter);
+            danhDauBtn.setVisibility(View.GONE);
+        }
+        else if(!dayText.equals("") && Integer.parseInt(dayText) == Integer.parseInt(dayFromdate(currentDate))) {
+            checkdate = false;
+            LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
+
+            dateTemp = customDate(temp);
+            Toast.makeText(this, getDateValue(temp), Toast.LENGTH_SHORT).show();
+            tvDateValue.setText(getDateValue(temp));
+            status = "Đúng giờ";
+            List<CustomAttendance> attendanceList = db.getAttendanceList(status, dateTemp);
+            AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
+            lvAttendance.setAdapter(adapter);
+            danhDauBtn.setVisibility(View.GONE);
         }
     }
 

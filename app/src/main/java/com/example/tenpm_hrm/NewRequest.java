@@ -54,11 +54,11 @@ public class NewRequest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (dbHandler.addRequest(nhanVien.getMaNV(), edtChuDe.getText().toString(), edtNoiDung.getText().toString())) {
-                    Intent newRequestIntent = new Intent(NewRequest.this, RequestManagementClient.class);
-                    newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
-                    startActivity(newRequestIntent);
+//                    Intent newRequestIntent = new Intent(NewRequest.this, RequestManagementClient.class);
+//                    newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+//                    startActivity(newRequestIntent);
                     Toast.makeText(NewRequest.this, "Gửi yêu cầu mới thành công!", Toast.LENGTH_SHORT).show();
-
+                    finish();
                 } else {
                     Toast.makeText(NewRequest.this, "Gửi yêu cầu mới thất bại :(", Toast.LENGTH_SHORT).show();
                 }

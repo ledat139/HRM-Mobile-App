@@ -30,13 +30,13 @@
         android:src="@drawable/account_detail" />
 
     <TextView
-        android:id="@+id/tvProjectParticipant"
+        android:id="@+id/tvProjectDepartment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvProjectName"
         android:layout_marginStart="16dp"
         android:layout_marginTop="7dp"
-        android:text="Tên người tham gia: Huỳnh Nhật Duy"
+        android:text="Phòng ban: IT"
         android:textColor="#000" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_below="@id/tvProjectParticipant"
+        android:layout_below="@id/tvProjectDepartment"
         android:layout_marginTop="15dp"
         android:background="@drawable/manager_type_shape"
         android:text="Chưa hoàn thành"

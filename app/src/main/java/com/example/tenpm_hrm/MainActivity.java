@@ -17,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
         dbHandler = new DatabaseHandler(this);
         dbHandler.deleteDatabase(this); // deletedb
-        dbHandler.addDe();
+        dbHandler.addDepartmentsData();
+        dbHandler.add20Facilities();
+        dbHandler.add20Projects();
         dbHandler.addAdminAccount();
 
-        // Chuyển hướng đến LoginActivity
         Intent intent = new Intent(MainActivity.this, Login.class);
         startActivity(intent);
-        finish(); // Kết thúc MainActivity để không quay lại
+        finish();
     }
 }
