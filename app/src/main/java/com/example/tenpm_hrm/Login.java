@@ -112,6 +112,7 @@ public class Login extends AppCompatActivity {
             }
             intent.putExtra("nhanVien",  nhanVien);
             intent.putExtra("taiKhoan", taiKhoan);
+            intent.putExtra("maNV", maNV);
             System.out.println(nhanVien.toString());
             startActivity(intent);
             finish(); // Kết thúc Activity đăng nhập

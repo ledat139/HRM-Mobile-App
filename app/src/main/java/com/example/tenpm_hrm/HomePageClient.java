@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,7 @@ public class HomePageClient extends AppCompatActivity {
     private CardView cardProject;
     private CardView cardRequest;
     private ProgressBar progressBar; // Add a ProgressBar for better UX
+    private DatabaseHandler dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,10 @@ public class HomePageClient extends AppCompatActivity {
         cardAttendance = findViewById(R.id.cardAttendance);
         cardProject = findViewById(R.id.cardProject);
 //        progressBar = findViewById(R.id.progressBar);
+        dbHelper = new DatabaseHandler(this);
         Intent intent = getIntent();
+        int manv = intent.getIntExtra("maNV", -1);
+        String employeeId = String.valueOf(manv);
         NhanVien nhanVien = intent.getParcelableExtra("nhanVien");
 
         imgSidebar.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +107,8 @@ public class HomePageClient extends AppCompatActivity {
 //                progressBar.setVisibility(View.VISIBLE);
 
                 // Start the new activity
-                Intent newRequestIntent = new Intent(HomePageClient.this, EmployeeInfo.class);
+                Intent newRequestIntent = new Intent(HomePageClient.this, ChangeEmployeeInformation.class);
+                newRequestIntent.putExtra("employeeId", employeeId);
                 startActivity(newRequestIntent);
 
                 // Optionally hide the ProgressBar after a short delay

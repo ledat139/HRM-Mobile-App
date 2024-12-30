@@ -40,7 +40,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             "CREATE TABLE NHANVIEN (" +
                     "MANV INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "HOTEN TEXT NOT NULL, " +
-                    "GIOITINH TEXT NOT NULL CHECK (GIOITINH IN ('Nam', 'Nu')), " +
+                    "GIOITINH TEXT NOT NULL CHECK (GIOITINH IN ('Nam', 'Nữ')), " +
                     "NGSINH TEXT NOT NULL, " +
                     "SDT TEXT NOT NULL UNIQUE, " +
                     "EMAIL TEXT NOT NULL UNIQUE, " +
@@ -353,7 +353,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Nhân viên 2
         ContentValues values2 = new ContentValues();
         values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
-        values2.put("GIOITINH", "Nu");
+        values2.put("GIOITINH", "Nữ");
         values2.put("NGSINH", "2000-05-20");
         values2.put("SDT", "321321321");
         values2.put("EMAIL", "nuhoang@gmail.com");
@@ -409,7 +409,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Nhân viên 4
         ContentValues values4 = new ContentValues();
         values4.put("HOTEN", "Mùa Xuân Rực Rỡ");
-        values4.put("GIOITINH", "Nu");
+        values4.put("GIOITINH", "Nữ");
         values4.put("NGSINH", "1998-03-25");
         values4.put("SDT", "789789789");
         values4.put("EMAIL", "xuanro@gmail.com");
