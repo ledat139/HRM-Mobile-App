@@ -29,9 +29,14 @@ public class SearchEmployee extends AppCompatActivity {
             // Lấy dữ liệu từ các trường nhập liệu
             String maNV = id.getText().toString().trim();
             String hoTen = name.getText().toString().trim();
+            String gender;
             int selectedGenderId = genderGroup.getCheckedRadioButtonId();
-            RadioButton selectedGender = findViewById(selectedGenderId);
-            String gender = selectedGender.getText().toString();
+            if (selectedGenderId != -1) {
+                RadioButton selectedGenderRadioButton = findViewById(selectedGenderId);
+                gender = selectedGenderRadioButton.getText().toString();
+            } else {
+                gender = null;
+            }
             String ngSinh = birthday.getText().toString().trim();
             String sdt = phone.getText().toString().trim();
             String emailText = email.getText().toString().trim();

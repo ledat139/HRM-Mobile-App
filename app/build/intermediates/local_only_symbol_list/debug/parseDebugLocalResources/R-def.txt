@@ -20,6 +20,7 @@ drawable account_detail
 drawable add
 drawable arrow
 drawable attendance
+drawable avatar_shape
 drawable baque
 drawable baseline_home_24
 drawable baseline_notifications_24
@@ -113,6 +114,7 @@ id btnLogin
 id btnLogout
 id btnPersonalInfo
 id btnProjectAdd
+id btnUpdateAccount
 id btnUpdateDepartment
 id btnUpdateProject
 id btn_approve_all
@@ -177,6 +179,7 @@ id etOTP
 id etPassword
 id etPhone
 id etPosition
+id etSearchEmployeeName
 id findAccountIcon
 id genderGroup
 id gioitinhEdt
@@ -200,7 +203,6 @@ id imageView_Detail
 id imgCopyright
 id imgLogo
 id imgSidebar
-id inputAccType
 id inputAddBuyingDate
 id inputAddBuyingDateLayout
 id inputAddDepartmentEstablishmentDate
@@ -271,6 +273,7 @@ id item_employee_iv_manager_reject
 id item_employee_ll_parent
 id item_employee_tv_fullname
 id item_employee_tv_infor
+id ivAvatar
 id ivCSVCDelete
 id ivCSVCDetail
 id ivDelete
@@ -307,10 +310,13 @@ id labelUpdateProjectDesc
 id labelUpdateProjectSEndingDateContainer
 id labelUpdateProjectSInitialDateContainer
 id labelUpdateProjectStatus
+id layout
+id layoutPiechart
 id linearContent
 id linearLayout
 id listView
 id listViewContainer
+id lvAccount
 id lvAttendace
 id lvRQ
 id main
@@ -318,6 +324,7 @@ id manvEdt
 id ngaysinhEdt
 id participantContainer
 id participantListHeader
+id pieChart
 id profile_image
 id progressBar
 id projectContainer
@@ -334,12 +341,16 @@ id projectSInitialDate
 id projectSInitialDateContainer
 id projectStatus
 id projectStatusLayout
+id radioEmployee
 id radioFemale
+id radioGroupAccountType
 id radioMale
+id radioManager
 id rlHeaderContainer
 id rvCalendar
 id scrollView
 id scrollView2
+id scroolviewLayout
 id services_grid
 id sidebar
 id spinnerFacilityStatus
@@ -347,8 +358,12 @@ id status
 id statusValue
 id textInputLayout
 id textInputLayout2
+id textInputLayout3
+id textInputLayout4
+id textInputLayout5
 id textView
 id textView10
+id textView11
 id textView13
 id textView14
 id textView15
@@ -410,6 +425,7 @@ id txtFullName
 id txtPosition
 id workDays
 id workDaysValue
+layout account_detail
 layout account_item
 layout account_management_admin
 layout activity_change_password

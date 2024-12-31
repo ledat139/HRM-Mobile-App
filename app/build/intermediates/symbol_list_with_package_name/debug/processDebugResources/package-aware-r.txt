@@ -3020,6 +3020,7 @@ drawable account_detail
 drawable add
 drawable arrow
 drawable attendance
+drawable avatar_shape
 drawable avd_hide_password
 drawable avd_show_password
 drawable baque
@@ -3343,6 +3344,7 @@ id btnLogin
 id btnLogout
 id btnPersonalInfo
 id btnProjectAdd
+id btnUpdateAccount
 id btnUpdateDepartment
 id btnUpdateProject
 id btn_approve_all
@@ -3489,6 +3491,7 @@ id etOTP
 id etPassword
 id etPhone
 id etPosition
+id etSearchEmployeeName
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3558,7 +3561,6 @@ id immediateStop
 id included
 id indeterminate
 id info
-id inputAccType
 id inputAddBuyingDate
 id inputAddBuyingDateLayout
 id inputAddDepartmentEstablishmentDate
@@ -3634,6 +3636,7 @@ id item_employee_ll_parent
 id item_employee_tv_fullname
 id item_employee_tv_infor
 id item_touch_helper_previous_elevation
+id ivAvatar
 id ivCSVCDelete
 id ivCSVCDetail
 id ivDelete
@@ -3674,6 +3677,7 @@ id labelUpdateProjectSInitialDateContainer
 id labelUpdateProjectStatus
 id labeled
 id layout
+id layoutPiechart
 id left
 id leftToRight
 id legacy
@@ -3687,6 +3691,7 @@ id listMode
 id listView
 id listViewContainer
 id list_item
+id lvAccount
 id lvAttendace
 id lvRQ
 id m3_side_sheet
@@ -3803,6 +3808,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pieChart
 id pin
 id pooling_container_listener_holder_tag
 id position
@@ -3827,8 +3833,11 @@ id projectSInitialDateContainer
 id projectStatus
 id projectStatusLayout
 id radio
+id radioEmployee
 id radioFemale
+id radioGroupAccountType
 id radioMale
+id radioManager
 id ratio
 id rectangles
 id report_drawn
@@ -3852,6 +3861,7 @@ id scrollIndicatorUp
 id scrollView
 id scrollView2
 id scrollable
+id scroolviewLayout
 id search_badge
 id search_bar
 id search_button
@@ -3927,12 +3937,16 @@ id text2
 id textEnd
 id textInputLayout
 id textInputLayout2
+id textInputLayout3
+id textInputLayout4
+id textInputLayout5
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
 id textView
 id textView10
+id textView11
 id textView13
 id textView14
 id textView15
@@ -4161,6 +4175,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout account_detail
 layout account_item
 layout account_management_admin
 layout activity_change_password

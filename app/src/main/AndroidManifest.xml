@@ -29,6 +29,12 @@
             android:name=".UpdateFacility"
             android:exported="false" />
         <activity
+            android:name=".AccountDetail"
+            android:exported="true">
+
+
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -256,6 +262,22 @@
         <activity
             android:name=".ChangeEmployeeInformation"
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChangeEmployeeInformation"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SearchEmployee"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
