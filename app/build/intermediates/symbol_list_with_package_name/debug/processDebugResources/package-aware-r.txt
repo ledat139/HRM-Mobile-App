@@ -3391,6 +3391,7 @@ id checkOutTimeValue
 id checkbox
 id checked
 id chronometer
+id chucvuEdt
 id circle_center
 id clear_text
 id clip_horizontal
@@ -3403,6 +3404,7 @@ id compress
 id confirm_button
 id constraint
 id constraintLayout
+id constraintLayout2
 id container
 id content
 id contentPanel
@@ -3464,8 +3466,12 @@ id edge
 id edit_query
 id edit_text_id
 id edtChuDe
+id edtNewPw
 id edtNoiDung
+id edtOldPw
+id edtReNewPw
 id elastic
+id emailEdt
 id embed
 id end
 id endToStart
@@ -3507,6 +3513,7 @@ id fullscreen_header
 id genderGroup
 id ghost_view
 id ghost_view_holder
+id gioitinhEdt
 id gone
 id graph
 id graph_wrap
@@ -3522,6 +3529,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hotenEdt
 id ibAddDepartmentAvatar
 id icon
 id icon_group
@@ -3683,6 +3691,7 @@ id lvAttendace
 id lvRQ
 id m3_side_sheet
 id main
+id manvEdt
 id marquee
 id masked
 id match_constraint
@@ -3752,6 +3761,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id ngaysinhEdt
 id noScroll
 id noState
 id none
@@ -4153,6 +4163,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout account_item
 layout account_management_admin
+layout activity_change_password
 layout activity_forgot_password
 layout activity_main
 layout activity_otp

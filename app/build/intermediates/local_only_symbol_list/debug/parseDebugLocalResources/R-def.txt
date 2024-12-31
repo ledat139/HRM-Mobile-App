@@ -145,8 +145,10 @@ id checkInTimeValue
 id checkOut
 id checkOutTime
 id checkOutTimeValue
+id chucvuEdt
 id coPhepBtn
 id constraintLayout
+id constraintLayout2
 id content
 id csvcContainerInformation
 id danhDauBtn
@@ -159,7 +161,11 @@ id departmentNameTextView
 id drawer_layout
 id dungGioBtn
 id edtChuDe
+id edtNewPw
 id edtNoiDung
+id edtOldPw
+id edtReNewPw
+id emailEdt
 id etAddress
 id etBirthday
 id etCCCD
@@ -173,8 +179,10 @@ id etPhone
 id etPosition
 id findAccountIcon
 id genderGroup
+id gioitinhEdt
 id halfCircleView
 id header_requests
+id hotenEdt
 id ibAddDepartmentAvatar
 id idDepartment
 id imageView
@@ -306,6 +314,8 @@ id listViewContainer
 id lvAttendace
 id lvRQ
 id main
+id manvEdt
+id ngaysinhEdt
 id participantContainer
 id participantListHeader
 id profile_image
@@ -402,6 +412,7 @@ id workDays
 id workDaysValue
 layout account_item
 layout account_management_admin
+layout activity_change_password
 layout activity_forgot_password
 layout activity_main
 layout activity_otp

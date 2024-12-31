@@ -1,10 +1,9 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-248:12
-INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-248:12
-INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-248:12
-INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-248:12
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-267:12
+INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-267:12
+INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-267:12
+INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-267:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\DELL\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DELL\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DELL\.gradle\caches\8.9\transforms\5818f7d7046436b7862fd5e690a7597b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -75,8 +74,8 @@ ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:5-6
 	android:name
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:22-64
 application
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-246:19
-INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-246:19
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-265:19
+INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-265:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\DELL\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\DELL\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DELL\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -123,178 +122,196 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DE
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:17:9-47
 	android:dataExtractionRules
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:11:9-65
-activity#com.example.tenpm_hrm.OTP
+activity#com.example.tenpm_hrm.ChangePassword
 ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:20:13-32
-activity#com.example.tenpm_hrm.forgotPassword
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:20:13-43
+activity#com.example.tenpm_hrm.OTP
 ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:23:13-43
-activity#com.example.tenpm_hrm.UpdateFacility
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:23:13-32
+activity#com.example.tenpm_hrm.forgotPassword
 ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-37
 	android:name
 		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:26:13-43
+activity#com.example.tenpm_hrm.UpdateFacility
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:9-30:40
+	android:exported
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:29:13-43
 activity#com.example.tenpm_hrm.MainActivity
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:9-36:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:9-39:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:33:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:29:13-41
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:13-38:29
 action#android.intent.action.MAIN
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:35:17-69
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:35:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:37:27-74
 activity#com.example.tenpm_hrm.RequestManagementClient
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:37:9-45:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:40:9-48:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:39:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:42:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:38:13-52
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:41:13-52
 activity#com.example.tenpm_hrm.NewRequest
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:46:9-54:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:49:9-57:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:48:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:51:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:47:13-39
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:50:13-39
 activity#com.example.tenpm_hrm.RequestManagementAdmin
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:55:9-63:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:58:9-66:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:57:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:60:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:56:13-51
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:59:13-51
 activity#com.example.tenpm_hrm.attendance.AttendanceDetails
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:64:9-72:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:67:9-75:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:66:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:69:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:65:13-57
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:68:13-57
 activity#com.example.tenpm_hrm.attendance.AttendanceManagement
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:73:9-81:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:76:9-84:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:75:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:78:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:74:13-60
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:77:13-60
 activity#com.example.tenpm_hrm.DepartmentManagement
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:82:9-90:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:85:9-93:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:84:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:87:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:83:13-49
-activity#com.example.tenpm_hrm.NewDepartment
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:91:9-99:20
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:86:13-49
+activity#com.example.tenpm_hrm.UpdateDepartment
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:94:9-102:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:93:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:96:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:92:13-42
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:95:13-45
 activity#com.example.tenpm_hrm.CSVCManagement
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:100:9-108:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:103:9-111:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:102:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:105:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:101:13-43
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:104:13-43
 activity#com.example.tenpm_hrm.NewCSVC
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:109:9-117:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:112:9-120:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:111:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:114:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:110:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:113:13-36
 activity#com.example.tenpm_hrm.SearchFacilities
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:118:9-126:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:121:9-129:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:120:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:123:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:119:13-45
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:122:13-45
 activity#com.example.tenpm_hrm.AccountManagement
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:128:9-136:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:130:9-138:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:130:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:132:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:129:13-46
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:131:13-46
 activity#com.example.tenpm_hrm.NewAccount
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:137:9-145:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:139:9-147:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:139:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:141:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:138:13-39
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:140:13-39
 activity#com.example.tenpm_hrm.EmployeeManagement
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:146:9-154:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:148:9-156:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:148:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:150:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:147:13-47
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:149:13-47
 activity#com.example.tenpm_hrm.NewEmployee
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:155:9-163:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:157:9-165:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:157:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:159:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:156:13-40
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:158:13-40
 activity#com.example.tenpm_hrm.HomePageClient
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:164:9-172:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:166:9-174:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:166:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:168:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:165:13-43
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:167:13-43
 activity#com.example.tenpm_hrm.HomepageAdmin
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:173:9-181:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:175:9-183:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:175:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:177:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:174:13-42
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:176:13-42
 activity#com.example.tenpm_hrm.ProjectManagement
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:182:9-190:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:184:9-192:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:184:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:186:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:183:13-46
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:185:13-46
+activity#com.example.tenpm_hrm.ProjectEmployee
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:193:9-201:20
+	android:exported
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:195:13-36
+	android:name
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:194:13-44
+activity#com.example.tenpm_hrm.ProjectDetail
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:202:9-210:20
+	android:exported
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:204:13-36
+	android:name
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:203:13-42
 activity#com.example.tenpm_hrm.NewProject
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:191:9-199:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:211:9-219:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:193:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:213:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:192:13-39
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:212:13-39
 activity#com.example.tenpm_hrm.UpdateProject
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:200:9-208:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:220:9-228:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:202:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:222:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:201:13-42
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:221:13-42
 activity#com.example.tenpm_hrm.SearchProject
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:209:9-217:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:229:9-237:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:211:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:231:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:210:13-42
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:230:13-42
 activity#com.example.tenpm_hrm.EmployeeInfo
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:218:9-226:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:238:9-246:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:220:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:240:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:219:13-41
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:239:13-41
 activity#com.example.tenpm_hrm.Login
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:227:9-235:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:247:9-255:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:229:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:249:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:228:13-34
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:248:13-34
 activity#com.example.tenpm_hrm.ChangeEmployeeInformation
-ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:237:9-244:20
+ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:256:9-264:20
 	android:exported
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:238:13-36
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:258:13-36
 	android:name
-		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:237:19-60
+		ADDED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml:257:13-54
 uses-sdk
 INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\thucHanhMobi\HRM-Mobile-App\app\src\main\AndroidManifest.xml
@@ -501,517 +518,3 @@ action#androidx.profileinstaller.action.BENCHMARK_OPERATION
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
 	android:name
 		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DELL\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-=======
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-264:12
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:1-264:12
-MERGED from [com.android.volley:volley:1.2.1] C:\Users\DUY\.gradle\caches\8.9\transforms\dfe7da88978403eb67d5d55c17f351fc\transformed\volley-1.2.1\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\DUY\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DUY\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DUY\.gradle\caches\8.9\transforms\5818f7d7046436b7862fd5e690a7597b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\DUY\.gradle\caches\8.9\transforms\55ed41026fbaf6ac5437acee9d592c12\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\fcb9e67f8973dc567ac76d9b890320cb\transformed\recyclerview-1.3.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\DUY\.gradle\caches\8.9\transforms\a7af6c61a8b57617d7824f27a1d86ae9\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\ecd238b712019b0e958a8dde68369328\transformed\play-services-location-21.3.0\AndroidManifest.xml:2:1-8:12
-MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\4e7e19085dae610889a38fffd8c1eef7\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:2:1-5:12
-MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\DUY\.gradle\caches\8.9\transforms\dbaf9feb0e9ee1d2218269c65a38a362\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.9.3] C:\Users\DUY\.gradle\caches\8.9\transforms\4160786f69b181e0049b4e7b07e7345e\transformed\activity-1.9.3\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\2c26f959ca64211b95c4f59296ca91b2\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DUY\.gradle\caches\8.9\transforms\3635a7db85ba384e18c8ee79c9dd1ef7\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\b1818df66385382ba6b80f0ec1f4553a\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\80703b0baa729ec1eb75234f5f677c1b\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\9ef30ac8a406b31956d0e310062bf30e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\def6abd375cfde530ead474547fb8300\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\9c7d2eb27de48d760757beff2e84ecec\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\7d622eb729e5ef376c752575ba08b402\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\9e068ca0b5cd5f31c90e9e6abe2be840\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\98031bdcc012e2540ea0fcd68ff778f3\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\91ed4b7cf58fb455894b42605f85434e\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\0d0483b7e76be4b0c97f721574d0dbcb\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\d5b30d135aa7635e1545b55076ebaf7d\transformed\core-ktx-1.13.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\ec9ea1896cf79461246f4f73f59fb1b0\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\eab6d9df50c6791c2d5ab8c755c9185b\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\398bfd180ef7126d2404da668792776c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\1faaf05e5e492f56c3e3752e60eda30f\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\8575ba8924692686d0de1c2f45e0cf86\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\29a2e38905d365c7c4e5c664a8e56a12\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\663a8ab99bbbcb1d7aa56800b8f626b7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\89fdaaebc2132fc3ca4d75b57f7343b1\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\97e4ee72b03e6b8cb43d7ef9865a81fa\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\890246f00c5b842f158ea043930d31ba\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a5231093dd4f16c3b9d89bfce5c34c6e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\60ea6174c277238eb063cf8720145680\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\3cd45fae05c2cc965d1e52e95def9e19\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\874849a0c7d9b74d87808cb13484838b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\8c09d545bbe3a72eb05da03a77db35bd\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\cc844a9759b8b438169daa400c7ed21e\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
-	package
-		INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-	android:versionName
-		INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-	xmlns:tools
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:3:5-51
-	android:versionCode
-		INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:5:5-79
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:5:22-76
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:6:5-81
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:6:22-78
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:5-67
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:7:22-64
-application
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-262:19
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:9:5-262:19
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\DUY\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\DUY\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DUY\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DUY\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\ecd238b712019b0e958a8dde68369328\transformed\play-services-location-21.3.0\AndroidManifest.xml:6:5-20
-MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\ecd238b712019b0e958a8dde68369328\transformed\play-services-location-21.3.0\AndroidManifest.xml:6:5-20
-MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
-MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
-MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\4e7e19085dae610889a38fffd8c1eef7\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\4e7e19085dae610889a38fffd8c1eef7\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
-MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a5231093dd4f16c3b9d89bfce5c34c6e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a5231093dd4f16c3b9d89bfce5c34c6e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-	android:extractNativeLibs
-		INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-	android:appComponentFactory
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
-	android:supportsRtl
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:16:9-35
-	android:label
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:14:9-41
-	android:fullBackupContent
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:12:9-54
-	android:roundIcon
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:15:9-54
-	tools:targetApi
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:18:9-29
-	android:icon
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:13:9-43
-	android:allowBackup
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:10:9-35
-	android:theme
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:17:9-47
-	android:dataExtractionRules
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:11:9-65
-activity#com.example.tenpm_hrm.OTP
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:19:9-21:40
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:21:13-37
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:20:13-32
-activity#com.example.tenpm_hrm.forgotPassword
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:22:9-24:40
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:24:13-37
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:23:13-43
-activity#com.example.tenpm_hrm.UpdateFacility
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:25:9-27:40
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:26:13-43
-activity#com.example.tenpm_hrm.MainActivity
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:28:9-36:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:30:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:29:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:31:13-35:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:17-69
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:32:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:17-77
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:34:27-74
-activity#com.example.tenpm_hrm.RequestManagementClient
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:37:9-45:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:39:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:38:13-52
-activity#com.example.tenpm_hrm.NewRequest
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:46:9-54:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:48:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:47:13-39
-activity#com.example.tenpm_hrm.RequestManagementAdmin
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:55:9-63:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:57:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:56:13-51
-activity#com.example.tenpm_hrm.attendance.AttendanceDetails
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:64:9-72:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:66:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:65:13-57
-activity#com.example.tenpm_hrm.attendance.AttendanceManagement
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:73:9-81:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:75:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:74:13-60
-activity#com.example.tenpm_hrm.DepartmentManagement
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:82:9-90:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:84:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:83:13-49
-activity#com.example.tenpm_hrm.UpdateDepartment
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:91:9-99:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:93:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:92:13-45
-activity#com.example.tenpm_hrm.CSVCManagement
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:100:9-108:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:102:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:101:13-43
-activity#com.example.tenpm_hrm.NewCSVC
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:109:9-117:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:111:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:110:13-36
-activity#com.example.tenpm_hrm.SearchFacilities
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:118:9-126:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:120:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:119:13-45
-activity#com.example.tenpm_hrm.AccountManagement
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:127:9-135:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:129:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:128:13-46
-activity#com.example.tenpm_hrm.NewAccount
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:136:9-144:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:138:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:137:13-39
-activity#com.example.tenpm_hrm.EmployeeManagement
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:145:9-153:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:147:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:146:13-47
-activity#com.example.tenpm_hrm.NewEmployee
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:154:9-162:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:156:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:155:13-40
-activity#com.example.tenpm_hrm.HomePageClient
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:163:9-171:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:165:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:164:13-43
-activity#com.example.tenpm_hrm.HomepageAdmin
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:172:9-180:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:174:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:173:13-42
-activity#com.example.tenpm_hrm.ProjectManagement
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:181:9-189:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:183:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:182:13-46
-activity#com.example.tenpm_hrm.ProjectEmployee
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:190:9-198:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:192:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:191:13-44
-activity#com.example.tenpm_hrm.ProjectDetail
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:199:9-207:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:201:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:200:13-42
-activity#com.example.tenpm_hrm.NewProject
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:208:9-216:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:210:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:209:13-39
-activity#com.example.tenpm_hrm.UpdateProject
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:217:9-225:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:219:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:218:13-42
-activity#com.example.tenpm_hrm.SearchProject
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:226:9-234:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:228:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:227:13-42
-activity#com.example.tenpm_hrm.EmployeeInfo
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:235:9-243:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:237:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:236:13-41
-activity#com.example.tenpm_hrm.Login
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:244:9-252:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:246:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:245:13-34
-activity#com.example.tenpm_hrm.ChangeEmployeeInformation
-ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:253:9-261:20
-	android:exported
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:255:13-36
-	android:name
-		ADDED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml:254:13-54
-uses-sdk
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-MERGED from [com.android.volley:volley:1.2.1] C:\Users\DUY\.gradle\caches\8.9\transforms\dfe7da88978403eb67d5d55c17f351fc\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
-MERGED from [com.android.volley:volley:1.2.1] C:\Users\DUY\.gradle\caches\8.9\transforms\dfe7da88978403eb67d5d55c17f351fc\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\DUY\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.12.0] C:\Users\DUY\.gradle\caches\8.9\transforms\78f67b5708353c674415c8572a036048\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DUY\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DUY\.gradle\caches\8.9\transforms\1ca2577159546573791380d8664176c4\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DUY\.gradle\caches\8.9\transforms\5818f7d7046436b7862fd5e690a7597b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\DUY\.gradle\caches\8.9\transforms\5818f7d7046436b7862fd5e690a7597b\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\DUY\.gradle\caches\8.9\transforms\55ed41026fbaf6ac5437acee9d592c12\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\DUY\.gradle\caches\8.9\transforms\55ed41026fbaf6ac5437acee9d592c12\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\fcb9e67f8973dc567ac76d9b890320cb\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\fcb9e67f8973dc567ac76d9b890320cb\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\DUY\.gradle\caches\8.9\transforms\a7af6c61a8b57617d7824f27a1d86ae9\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\DUY\.gradle\caches\8.9\transforms\a7af6c61a8b57617d7824f27a1d86ae9\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\ecd238b712019b0e958a8dde68369328\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
-MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\ecd238b712019b0e958a8dde68369328\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
-MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
-MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
-MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\4e7e19085dae610889a38fffd8c1eef7\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
-MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\4e7e19085dae610889a38fffd8c1eef7\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
-MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
-MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\DUY\.gradle\caches\8.9\transforms\dbaf9feb0e9ee1d2218269c65a38a362\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\DUY\.gradle\caches\8.9\transforms\dbaf9feb0e9ee1d2218269c65a38a362\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.9.3] C:\Users\DUY\.gradle\caches\8.9\transforms\4160786f69b181e0049b4e7b07e7345e\transformed\activity-1.9.3\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.9.3] C:\Users\DUY\.gradle\caches\8.9\transforms\4160786f69b181e0049b4e7b07e7345e\transformed\activity-1.9.3\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\2c26f959ca64211b95c4f59296ca91b2\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\2c26f959ca64211b95c4f59296ca91b2\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DUY\.gradle\caches\8.9\transforms\3635a7db85ba384e18c8ee79c9dd1ef7\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\DUY\.gradle\caches\8.9\transforms\3635a7db85ba384e18c8ee79c9dd1ef7\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\b1818df66385382ba6b80f0ec1f4553a\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\b1818df66385382ba6b80f0ec1f4553a\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\80703b0baa729ec1eb75234f5f677c1b\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\80703b0baa729ec1eb75234f5f677c1b\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\9ef30ac8a406b31956d0e310062bf30e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\9ef30ac8a406b31956d0e310062bf30e\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\def6abd375cfde530ead474547fb8300\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\def6abd375cfde530ead474547fb8300\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\9c7d2eb27de48d760757beff2e84ecec\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\9c7d2eb27de48d760757beff2e84ecec\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\7d622eb729e5ef376c752575ba08b402\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\7d622eb729e5ef376c752575ba08b402\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\9e068ca0b5cd5f31c90e9e6abe2be840\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\9e068ca0b5cd5f31c90e9e6abe2be840\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\98031bdcc012e2540ea0fcd68ff778f3\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\98031bdcc012e2540ea0fcd68ff778f3\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\91ed4b7cf58fb455894b42605f85434e\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\91ed4b7cf58fb455894b42605f85434e\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\0d0483b7e76be4b0c97f721574d0dbcb\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\0d0483b7e76be4b0c97f721574d0dbcb\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\d5b30d135aa7635e1545b55076ebaf7d\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\d5b30d135aa7635e1545b55076ebaf7d\transformed\core-ktx-1.13.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\ec9ea1896cf79461246f4f73f59fb1b0\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\ec9ea1896cf79461246f4f73f59fb1b0\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\eab6d9df50c6791c2d5ab8c755c9185b\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\eab6d9df50c6791c2d5ab8c755c9185b\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\398bfd180ef7126d2404da668792776c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\398bfd180ef7126d2404da668792776c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\1faaf05e5e492f56c3e3752e60eda30f\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\1faaf05e5e492f56c3e3752e60eda30f\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\8575ba8924692686d0de1c2f45e0cf86\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\8575ba8924692686d0de1c2f45e0cf86\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\29a2e38905d365c7c4e5c664a8e56a12\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\DUY\.gradle\caches\8.9\transforms\29a2e38905d365c7c4e5c664a8e56a12\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\663a8ab99bbbcb1d7aa56800b8f626b7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\663a8ab99bbbcb1d7aa56800b8f626b7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\89fdaaebc2132fc3ca4d75b57f7343b1\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\89fdaaebc2132fc3ca4d75b57f7343b1\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\97e4ee72b03e6b8cb43d7ef9865a81fa\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\97e4ee72b03e6b8cb43d7ef9865a81fa\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\890246f00c5b842f158ea043930d31ba\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\890246f00c5b842f158ea043930d31ba\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a5231093dd4f16c3b9d89bfce5c34c6e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a5231093dd4f16c3b9d89bfce5c34c6e\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\60ea6174c277238eb063cf8720145680\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\DUY\.gradle\caches\8.9\transforms\60ea6174c277238eb063cf8720145680\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\3cd45fae05c2cc965d1e52e95def9e19\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\3cd45fae05c2cc965d1e52e95def9e19\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\874849a0c7d9b74d87808cb13484838b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\874849a0c7d9b74d87808cb13484838b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\8c09d545bbe3a72eb05da03a77db35bd\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\DUY\.gradle\caches\8.9\transforms\8c09d545bbe3a72eb05da03a77db35bd\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\cc844a9759b8b438169daa400c7ed21e\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\cc844a9759b8b438169daa400c7ed21e\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-	android:targetSdkVersion
-		INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from C:\Users\DUY\AndroidStudioProjects\HRM-Mobile-App\app\src\main\AndroidManifest.xml
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\DUY\.gradle\caches\8.9\transforms\53f983d9ab08c614c2429cdc6c50a3e1\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\DUY\.gradle\caches\8.9\transforms\47e480f908f9f3af473da8d90a9c7ace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
-provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\DUY\.gradle\caches\8.9\transforms\e27263fba6bdf35911a0e8e9db42f215\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
-	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\DUY\.gradle\caches\8.9\transforms\0b9fed599c03569f991abe87e42ea6d4\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\DUY\.gradle\caches\8.9\transforms\b819bbe73aba078ee6547b3c6c3b92b6\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-permission#com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-	android:protectionLevel
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-uses-permission#com.example.tenpm_hrm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-	android:name
-		ADDED from [androidx.core:core:1.13.0] C:\Users\DUY\.gradle\caches\8.9\transforms\690db0ec3c2a417c4c29a8a235812c83\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\DUY\.gradle\caches\8.9\transforms\a392f0a877c69a30c0ef8dd3f5aebc99\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
->>>>>>> 04fd3b21fa819c0c9a3144bd9b833a8307db9ac5

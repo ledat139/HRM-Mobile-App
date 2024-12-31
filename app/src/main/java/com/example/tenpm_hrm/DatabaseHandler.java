@@ -431,7 +431,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Log.e("DatabaseHandler", "Error inserting fourth admin account data");
             }
         }
-        db.close();
+//        db.close();
     }
 
 

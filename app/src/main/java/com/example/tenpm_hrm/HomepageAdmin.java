@@ -3,10 +3,12 @@ package com.example.tenpm_hrm;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.tenpm_hrm.attendance.AttendanceManagement;
+
+import models.NhanVien;
 
 public class HomepageAdmin extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -28,6 +32,15 @@ public class HomepageAdmin extends AppCompatActivity {
     private CardView cardRequest;
     private CardView cardAccount;
     private ProgressBar progressBar; // ProgressBar for better UX
+
+    private Button btnChangePassword;
+
+    private Button btnPersonalInfo;
+
+    private TextView txtFullName;
+
+    private TextView txtPosition;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +62,14 @@ public class HomepageAdmin extends AppCompatActivity {
         cardAccount = findViewById(R.id.cardAccount);
         progressBar = findViewById(R.id.progressBar); // Khởi tạo ProgressBar
 
+        btnChangePassword = findViewById(R.id.btnChangePassword);
+
+        btnPersonalInfo = findViewById(R.id.btnPersonalInfo);
+
+        txtFullName = findViewById(R.id.txtFullName);
+
+        txtPosition = findViewById(R.id.txtPosition);
+
         // Thiết lập sự kiện click cho các CardView
         setupCardClickListener(cardRequest, RequestManagementAdmin.class);
         setupCardClickListener(cardEmployee, EmployeeManagement.class);
@@ -61,6 +82,35 @@ public class HomepageAdmin extends AppCompatActivity {
 
         // Nhận dữ liệu từ Intent
         Intent intent = getIntent();
+        NhanVien nhanVien = intent.getParcelableExtra("nhanVien");
+
+        txtFullName.setText(nhanVien.getHoTen());
+        txtPosition.setText(nhanVien.getCapBac());
+
+        btnPersonalInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newRequestIntent = new Intent(HomepageAdmin.this, EmployeeInfo.class);
+                newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                startActivity(newRequestIntent);
+            }
+        });
+
+        btnChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (nhanVien != null) {
+                    // Tạo Intent để chuyển đến Activity RequestManagementClient
+                    Intent newRequestIntent = new Intent(HomepageAdmin.this, ChangePassword.class);
+                    newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                    startActivity(newRequestIntent); // Khởi động Activity mới
+                } else {
+                    Log.e("HomePageClient", "NhanVien is null, cannot start RequestManagementClient");
+                }
+            }
+
+        });
 
         imgSidebar.setOnClickListener(new View.OnClickListener() {
             @Override

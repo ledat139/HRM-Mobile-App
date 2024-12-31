@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,14 @@ public class HomePageClient extends AppCompatActivity {
     private CardView cardAttendance;
     private CardView cardProject;
     private CardView cardRequest;
+
+    private Button btnChangePassword;
+
+    private Button btnPersonalInfo;
+
+    private TextView txtFullName;
+
+    private TextView txtPosition;
     private ProgressBar progressBar; // Add a ProgressBar for better UX
 
     @Override
@@ -44,8 +53,44 @@ public class HomePageClient extends AppCompatActivity {
         cardAttendance = findViewById(R.id.cardAttendance);
         cardProject = findViewById(R.id.cardProject);
 //        progressBar = findViewById(R.id.progressBar);
+
+        btnPersonalInfo = findViewById(R.id.btnPersonalInfo);
+        btnChangePassword = findViewById(R.id.btnChangePassword);
+
+        txtFullName = findViewById(R.id.txtFullName);
+
+        txtPosition = findViewById(R.id.txtPosition);
+
         Intent intent = getIntent();
         NhanVien nhanVien = intent.getParcelableExtra("nhanVien");
+
+        txtFullName.setText(nhanVien.getHoTen());
+        txtPosition.setText(nhanVien.getCapBac());
+
+        btnChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (nhanVien != null) {
+                    // Tạo Intent để chuyển đến Activity RequestManagementClient
+                    Intent newRequestIntent = new Intent(HomePageClient.this, ChangePassword.class);
+                    newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                    startActivity(newRequestIntent); // Khởi động Activity mới
+                } else {
+                    Log.e("HomePageClient", "NhanVien is null, cannot start RequestManagementClient");
+                }
+            }
+
+        });
+
+        btnPersonalInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newRequestIntent = new Intent(HomePageClient.this, EmployeeInfo.class);
+                newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                startActivity(newRequestIntent);
+            }
+        });
 
         imgSidebar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +148,7 @@ public class HomePageClient extends AppCompatActivity {
 
                 // Start the new activity
                 Intent newRequestIntent = new Intent(HomePageClient.this, EmployeeInfo.class);
+                newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
                 startActivity(newRequestIntent);
 
                 // Optionally hide the ProgressBar after a short delay
