@@ -52,6 +52,7 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     private NhanVien nhanVien;
     private int maNV;
     private boolean check;
+    private TextView tvDateValue;
 
 
     private FusedLocationProviderClient fusedLocationClient;
@@ -59,8 +60,8 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     //10.980899, 106.756021 - nhà
     //10.869951, 106.803116 - UIT
     // Tọa độ công ty (VD: vị trí công ty ở Hồ Chí Minh)
-    private static final double COMPANY_LATITUDE = 10.980899; // Vĩ độ
-    private static final double COMPANY_LONGITUDE = 106.756021; // Kinh độ
+    private static final double COMPANY_LATITUDE = 10.869951; // Vĩ độ
+    private static final double COMPANY_LONGITUDE = 106.803116; // Kinh độ
     private static final float COMPANY_RADIUS = 100; // Bán kính cho phép chấm công (100 mét)
 
     @Override
@@ -76,6 +77,7 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         checkInTime = findViewById(R.id.checkInTimeValue);
         status = findViewById(R.id.statusValue);
         absentBtn = findViewById(R.id.absentBtn);
+        tvDateValue = findViewById(R.id.dateValue);
 
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("nhanVien")) {
@@ -100,13 +102,13 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         db.insertCheckIn(new Attendance(3, 2, "18/11/2024", "08:16", null, "Đi trễ"));
         selectedDate = LocalDate.now();
         currentDate = selectedDate;
+        tvDateValue.setText(getDateValue(selectedDate));
         workDay.setText(customDate(currentDate));
         checkinTime = LocalTime.now();
         checkInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getLocationAndCheckAttendance();
-
             }
         });
         absentBtn.setOnClickListener(new View.OnClickListener() {
@@ -128,7 +130,7 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         });
         setTvMonthYear();
         Attendance attendance = db.getAttendance(maNV, customDate(currentDate));
-        if (attendance.getWorkDate() != null) {
+        if (attendance.getStatus().equals("Không phép")) {
             workDay.setText(attendance.getWorkDate());
             checkInTime.setText(attendance.getCheckinTime());
             status.setText(attendance.getStatus());
@@ -210,6 +212,37 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         }
     }
 
+    public String getDayOfWeek(LocalDate date){
+        String dayOfWeek = "";
+        switch(date.getDayOfWeek().toString()){
+            case "SUNDAY":
+                dayOfWeek = "Chủ nhật";
+                break;
+            case "MONDAY":
+                dayOfWeek = "Thứ hai";
+                break;
+            case "TUESDAY":
+                dayOfWeek = "Thứ ba";
+                break;
+            case "WEDNESDAY":
+                dayOfWeek = "Thứ tư";
+                break;
+            case "THURSDAY":
+                dayOfWeek = "Thứ năm";
+                break;
+            case "FRIDAY":
+                dayOfWeek = "Thứ sáu";
+                break;
+            case "SATURDAY":
+                dayOfWeek = "Thứ bảy";
+                break;
+        }
+        return dayOfWeek;
+    }
+    private String getDateValue(LocalDate selectedDate) {
+        String dayOfWeek = getDayOfWeek(selectedDate);
+        return dayOfWeek + ", ngày " + dayFromdate(selectedDate) + " tháng " + monthFromDate(selectedDate) + " năm " + yearFromDate(selectedDate);
+    }
 
     private String hoursFromTime(LocalTime checkinTime) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
@@ -273,6 +306,7 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     @Override
     public void onClick(int position, String dayText) {
         LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
+        tvDateValue.setText(getDateValue(temp));
         if( !dayText.equals("") && (Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
                 || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate)) ))
         {
