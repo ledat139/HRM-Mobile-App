@@ -40,10 +40,6 @@
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\employee_management.xml"
     },
     {
-        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_homepage_admin.xml.flat",
-        "source": "com.example.tenpm_hrm.app-main-36:/layout/homepage_admin.xml"
-    },
-    {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_item_employee.xml.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\item_employee.xml"
     },
@@ -186,6 +182,10 @@
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_attendance_employee_detail.xml.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\layout\\attendance_employee_detail.xml"
+    },
+    {
+        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_employee_information.xml.flat",
+        "source": "com.example.tenpm_hrm.app-main-36:/layout/employee_information.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\layout_department_management.xml.flat",
@@ -434,10 +434,6 @@
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_marketing.png.flat",
         "source": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-main-36:\\drawable\\marketing.png"
-    },
-    {
-        "merged": "com.example.tenpm_hrm.app-debug-34:/layout_homepage_client.xml.flat",
-        "source": "com.example.tenpm_hrm.app-main-36:/layout/homepage_client.xml"
     },
     {
         "merged": "C:\\Users\\DELL\\.gradle\\daemon\\8.9\\com.example.tenpm_hrm.app-debug-34:\\drawable_yellow_bg.xml.flat",

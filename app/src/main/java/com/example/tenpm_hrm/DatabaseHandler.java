@@ -360,7 +360,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values2.put("EMAIL", "nuhoang@gmail.com");
         values2.put("DIACHI", "Hồ Chí Minh");
         values2.put("CCCD", "001004075823");
-        values2.put("CAPBAC", "MANAGER");
+        values2.put("CAPBAC", "FRESHER");
         values2.put("MAPB", 2); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
 
         long rowId2 = db.insert("NHANVIEN", null, values2);
