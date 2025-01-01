@@ -4177,10 +4177,7 @@ layout abc_tooltip
 layout account_detail
 layout account_item
 layout account_management_admin
-<<<<<<< HEAD
-=======
 layout activity_change_password
->>>>>>> d5e9293eaa1f3f6034c1f34fcf299ced1f331822
 layout activity_forgot_password
 layout activity_main
 layout activity_otp

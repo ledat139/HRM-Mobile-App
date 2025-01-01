@@ -236,8 +236,9 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
 
     @Override
     public void onClick(int position, String dayText) {
-        if(!dayText.equals("") && (Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
-                || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate)) ) )
+        if(!dayText.equals("") && Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
+                || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate))
+        || Integer.parseInt(yearFromDate(selectedDate)) < Integer.parseInt(yearFromDate(currentDate)))
         {
             checkdate = true;
             LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
