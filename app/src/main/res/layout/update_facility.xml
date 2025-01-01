@@ -126,6 +126,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textColorHint="#020202"
+                android:inputType="number"
                 android:textColorLink="#070707"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
