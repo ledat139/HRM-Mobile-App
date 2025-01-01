@@ -3,6 +3,7 @@ package com.example.tenpm_hrm;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,7 @@ public class EmployeeManagement extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.employee_management);
 
-        mainLayout = findViewById(R.id.main);
+        mainLayout = findViewById(R.id.scroolviewLayout);
         btnAddEmployee = findViewById(R.id.button);
         dbHelper = new DatabaseHandler(this);
         ivSearch = findViewById(R.id.ivSearch);
@@ -54,6 +55,7 @@ public class EmployeeManagement extends AppCompatActivity {
                 startActivityForResult(intent, 1); // Sử dụng request code 1
             }
         });
+        //addFakeEmployeesToDatabase();
         // Lấy dữ liệu từ cơ sở dữ liệu và thêm các mục
         addItemsFromDatabase();
     }
@@ -95,7 +97,12 @@ public class EmployeeManagement extends AppCompatActivity {
         nameTextView.setText(name);
         departmentTextView.setText("Phòng ban: " + department);
         positionTextView.setText(position);
-        employeeIdTextView.setText("Mã nhân viên: " + employeeId);
+        if ("Nhân viên".equals(position)) {
+            // Đặt màu nền và màu chữ khi position là "Nhân viên"
+            positionTextView.setBackground(getDrawable(R.drawable.employee_type_shape ));
+            positionTextView.setTextColor(Color.parseColor("#5AA572"));
+        }
+        employeeIdTextView.setText("ID: " + employeeId);
 
         // Thêm sự kiện xóa
         deleteImageView.setOnClickListener(v -> {
@@ -108,8 +115,17 @@ public class EmployeeManagement extends AppCompatActivity {
                         boolean isDeleted = dbHelper.deleteEmployee(employeeId);
                         if (isDeleted) {
                             // Xóa view khỏi giao diện
-                            mainLayout.removeView(newItem);
-                            addedItems.remove(newItem); // Loại bỏ item khỏi danh sách đã thêm
+                            removeAllItems();
+                            List<NhanVien> employeeList = dbHelper.searchEmployees(null,null, null, null, null, null, null, null, null, null);
+                            for (NhanVien nhanVien : employeeList) {
+                                addItemToManagement(
+                                        nhanVien.getHoTen(),
+                                        String.valueOf(nhanVien.getMaPB()),
+                                        nhanVien.getCapBac(),
+                                        String.valueOf(nhanVien.getMaNV())
+                                );
+                            }
+                            // Loại bỏ item khỏi danh sách đã thêm
                         }
                     })
                     .setNegativeButton(android.R.string.no, null)
@@ -120,7 +136,7 @@ public class EmployeeManagement extends AppCompatActivity {
             // Chuyển sang intent sửa thông tin, truyền ID của nhân viên
             Intent intent = new Intent(EmployeeManagement.this, ChangeEmployeeInformation.class);
             intent.putExtra("employeeId", employeeId);
-            startActivity(intent);
+            startActivityForResult(intent, 3);
         });
 
         // Thêm item mới vào layout chính
@@ -133,7 +149,7 @@ public class EmployeeManagement extends AppCompatActivity {
 
         if (lastAddedItem == null) {
             // Nếu là item đầu tiên, căn nó với đỉnh của layout chính
-            constraintSet.connect(newItem.getId(), ConstraintSet.TOP, mainLayout.getId(), ConstraintSet.TOP, 800);
+            constraintSet.connect(newItem.getId(), ConstraintSet.TOP, mainLayout.getId(), ConstraintSet.TOP, 0);
         } else {
             // Nếu không, căn nó với cạnh dưới của item trước đó
             constraintSet.connect(newItem.getId(), ConstraintSet.TOP, lastAddedItem.getId(), ConstraintSet.BOTTOM, 32); // Khoảng cách 32dp
@@ -170,7 +186,7 @@ public class EmployeeManagement extends AppCompatActivity {
             // Trả về từ form search
             if (requestCode == 1) {
                 // Lấy danh sách nhân viên có thông tin tương ứng
-                List<NhanVien> employeeList = dbHelper.searchEmployees(maNV, hoTen, gioiTinh, ngSinh, sdt, email, diaChi, capBac, phongBan);
+                List<NhanVien> employeeList = dbHelper.searchEmployees(maNV, hoTen, gioiTinh, ngSinh, sdt, email, diaChi, cccd, capBac, phongBan);
 
                 removeAllItems();
 
@@ -195,9 +211,35 @@ public class EmployeeManagement extends AppCompatActivity {
                     addItemToManagement(hoTen, phongBan, capBac, maNV);
                 }
             }
+            else if (requestCode == 3) {
+                // Sửa thông tin nhân viên
+                List<NhanVien> employeeList = dbHelper.searchEmployees(null,null, null, null, null, null, null, null, null, null);
+                for (NhanVien nhanVien : employeeList) {
+                    if (nhanVien.getMaNV() == Integer.parseInt(maNV)) {
+                        nhanVien.setHoTen(hoTen);
+                        nhanVien.setGioiTinh(gioiTinh);
+                        nhanVien.setNgSinh(ngSinh);
+                        nhanVien.setSdt(sdt);
+                        nhanVien.setEmail(email);
+                        nhanVien.setDiaChi(diaChi);
+                        nhanVien.setCccd(cccd);
+                        nhanVien.setCapBac(capBac);
+                        nhanVien.setMaPB(Integer.parseInt(phongBan));
+                        break;
+                    }
+                }
+                removeAllItems();
+                for (NhanVien nhanVien : employeeList) {
+                    addItemToManagement(
+                            nhanVien.getHoTen(),
+                            String.valueOf(nhanVien.getMaPB()),
+                            nhanVien.getCapBac(),
+                            String.valueOf(nhanVien.getMaNV())
+                    );
+                }
+            }
         }
     }
-
 
     private void removeAllItems() {
         // Xóa các item đã thêm trên giao diện
@@ -208,6 +250,28 @@ public class EmployeeManagement extends AppCompatActivity {
         addedItems.clear(); // Xóa danh sách các item đã thêm
     }
 
+    public void addFakeEmployeesToDatabase() {
+
+        Toast.makeText(this, "Thêm phòng ban GENG thành công!", Toast.LENGTH_SHORT).show();
+        List<NhanVien> fakeEmployees = new ArrayList<>();
+
+        fakeEmployees.add(new NhanVien(10, "Faker", "Nam", "1996-05-07", "0123456789", "faker@example.com", "Hà Nội", "123456789", "Nhân viên", 1));
+        fakeEmployees.add(new NhanVien(11, "Doran", "Nam", "1996-09-03", "0987654321", "doran@example.com", "Hà Nội", "987654321", "Quản lý", 1));
+        fakeEmployees.add(new NhanVien(12, "Oner", "Nam", "1998-03-21", "0123123123", "oner@example.com", "TPHCM", "123123123", "Trưởng phòng", 1));
+        fakeEmployees.add(new NhanVien(13, "Gumayusi", "Nam", "2000-06-06", "0912345678", "gumayusi@example.com", "Đà Nẵng", "567856785", "Nhân viên", 1));
+        fakeEmployees.add(new NhanVien(14, "Keria", "Nam", "1999-01-14", "0912346789", "keria@example.com", "TPHCM", "789078907", "Nhân viên", 1));
+
+        fakeEmployees.add(new NhanVien(15, "Chovy", "Nam", "2000-12-12", "0965432109", "chovy@example.com", "TPHCM", "234523452", "Quản lý", 2));
+        fakeEmployees.add(new NhanVien(16, "Ruler", "Nam", "1999-06-29", "0987654320", "ruler@example.com", "Cần Thơ", "345634563", "Trưởng phòng", 2));
+        fakeEmployees.add(new NhanVien(17, "Duro", "Nam", "1997-10-15", "0908765432", "duro@example.com", "Hà Nội", "456745674", "Nhân viên", 2));
+        fakeEmployees.add(new NhanVien(18, "Canyon", "Nam", "1999-07-02", "0911122334", "canyon@example.com", "Hải Phòng", "567856786", "Nhân viên", 2));
+        fakeEmployees.add(new NhanVien(19, "Kiin", "Nam", "2001-11-19", "0922334455", "kiin@example.com", "Đà Nẵng", "678967896", "Quản lý", 2));
+
+        // Thêm từng nhân viên vào cơ sở dữ liệu
+        for (NhanVien nhanVien : fakeEmployees) {
+            dbHelper.addNhanVien(nhanVien);
+        }
+    }
 
 
 }

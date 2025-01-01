@@ -1,6 +1,8 @@
 package com.example.tenpm_hrm;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -65,6 +67,41 @@ public class NewEmployee extends AppCompatActivity {
         String cccd = etCCCD.getText().toString();
         String position = etPosition.getText().toString();
         int iddepartment = Integer.parseInt(etDepartment.getText().toString());
+
+        // Lấy đối tượng cơ sở dữ liệu đọc
+        SQLiteDatabase db = dbHandler.getReadableDatabase();
+
+// Kiểm tra nếu số điện thoại đã tồn tại
+        Cursor phoneCursor = db.rawQuery("SELECT COUNT(*) FROM NHANVIEN WHERE SDT = ?", new String[]{phone});
+        phoneCursor.moveToFirst();
+        int phoneCount = phoneCursor.getInt(0);
+        phoneCursor.close();
+
+        // Kiểm tra nếu CCCD đã tồn tại
+        Cursor cccdCursor = db.rawQuery("SELECT COUNT(*) FROM NHANVIEN WHERE CCCD = ?", new String[]{cccd});
+        cccdCursor.moveToFirst();
+        int cccdCount = cccdCursor.getInt(0);
+        cccdCursor.close();
+
+        // Kiểm tra nếu email đã tồn tại
+        Cursor emailCursor = db.rawQuery("SELECT COUNT(*) FROM NHANVIEN WHERE EMAIL = ?", new String[]{email});
+        emailCursor.moveToFirst();
+        int emailCount = emailCursor.getInt(0);
+        emailCursor.close();
+
+        // Nếu bất kỳ giá trị nào đã tồn tại, hiển thị thông báo lỗi và dừng thao tác
+        if (phoneCount > 0) {
+            Toast.makeText(getApplicationContext(), "Số điện thoại đã tồn tại!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (cccdCount > 0) {
+            Toast.makeText(getApplicationContext(), "CCCD đã tồn tại!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (emailCount > 0) {
+            Toast.makeText(getApplicationContext(), "Email đã tồn tại!", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
 
         // Tạo đối tượng NhanVien

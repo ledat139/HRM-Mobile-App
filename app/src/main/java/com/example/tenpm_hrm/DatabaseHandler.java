@@ -1,5 +1,6 @@
 package com.example.tenpm_hrm;
 
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -13,6 +14,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+import models.Account;
 import models.Department;
 import models.Facility;
 import models.NhanVien;
@@ -38,7 +40,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             "CREATE TABLE NHANVIEN (" +
                     "MANV INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "HOTEN TEXT NOT NULL, " +
-                    "GIOITINH TEXT NOT NULL CHECK (GIOITINH IN ('Nam', 'Nu')), " +
+                    "GIOITINH TEXT NOT NULL CHECK (GIOITINH IN ('Nam', 'Nữ')), " +
                     "NGSINH TEXT NOT NULL, " +
                     "SDT TEXT NOT NULL UNIQUE, " +
                     "EMAIL TEXT NOT NULL UNIQUE, " +
@@ -155,15 +157,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     public void addFacilities() {
-        db = this.getWritableDatabase(); // Mở kết nối đến cơ sở dữ liệu
-
+        db = this.getWritableDatabase();
         // Thêm phần tử 1
         ContentValues values1 = new ContentValues();
         values1.put("TENCSVC", "Máy tính xách tay");
         values1.put("SOLUONG", 10);
         values1.put("NGAYMUA", "27/12/2024");
         values1.put("TRANGTHAI", "Sử dụng");
-        values1.put("MAPB", 1); // Phòng Kỹ thuật
+        values1.put("MAPB", 1);
         long rowId1 = db.insert("COSOVATCHAT", null, values1);
 
         // Thêm phần tử 2
@@ -172,7 +173,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values2.put("SOLUONG", 5);
         values2.put("NGAYMUA", "27/12/2024");
         values2.put("TRANGTHAI", "Bảo trì");
-        values2.put("MAPB", 2); // Phòng Kinh Doanh
+        values2.put("MAPB", 2);
         long rowId2 = db.insert("COSOVATCHAT", null, values2);
 
         // Thêm phần tử 3
@@ -181,42 +182,67 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values3.put("SOLUONG", 3);
         values3.put("NGAYMUA", "27/12/2024");
         values3.put("TRANGTHAI", "Hư hỏng");
-        values3.put("MAPB", 3); // Phòng Nhân Sự
+        values3.put("MAPB", 3);
         long rowId3 = db.insert("COSOVATCHAT", null, values3);
+        db.close();
+    }
 
-        // Kiểm tra xem việc thêm có thành công không
-        if (rowId1 == -1 || rowId2 == -1 || rowId3 == -1) {
-            // Xử lý lỗi nếu không thêm được
-            Log.e("Database", "Error inserting records into COSOVATCHAT.");
-        } else {
-            Log.i("Database", "Inserted 3 records into COSOVATCHAT.");
-        }
+    public void addDepartmentsData() {
+        SQLiteDatabase db = this.getWritableDatabase();
 
-        db.close(); // Đóng cơ sở dữ liệu sau khi thao tác xong
+        // Thêm phòng ban IT
+        ContentValues values1 = new ContentValues();
+        values1.put("TENPB", "IT");
+        values1.put("NGTHANHLAP", "01/01/2020");
+        values1.put("MATRUONGPHONG", 1);
+        values1.put("NGAYNHANCHUC", "15/02/2020");
+        values1.put("AVATAR_PATH", "it");
+        db.insert("PHONGBAN", null, values1);
+
+        // Thêm phòng ban HR
+        ContentValues values2 = new ContentValues();
+        values2.put("TENPB", "HR");
+        values2.put("NGTHANHLAP", "15/05/2021");
+        values2.put("MATRUONGPHONG", 2);
+        values2.put("NGAYNHANCHUC", "10/06/2019");
+        values2.put("AVATAR_PATH", "hr");
+        db.insert("PHONGBAN", null, values2);
+
+        // Thêm phòng ban Sales
+        ContentValues values3 = new ContentValues();
+        values3.put("TENPB", "Sales");
+        values3.put("NGTHANHLAP", "20/03/2018");
+        values3.put("MATRUONGPHONG", 3);
+        values3.put("NGAYNHANCHUC", "05/04/2018");
+        values3.put("AVATAR_PATH", "sale");
+        db.insert("PHONGBAN", null, values3);
+
+        // Thêm phòng ban Marketing
+        ContentValues values4 = new ContentValues();
+        values4.put("TENPB", "Marketing");
+        values4.put("NGTHANHLAP", "10/06/2017");
+        values4.put("MATRUONGPHONG", 4);
+        values4.put("NGAYNHANCHUC", "01/07/2021");
+        values4.put("AVATAR_PATH", "marketing");
+        db.insert("PHONGBAN", null, values4);
+
+        db.close();
     }
 
     public void add20Facilities() {
-        db = this.getWritableDatabase(); // Mở kết nối đến cơ sở dữ liệu
-
+        db = this.getWritableDatabase();
         for (int i = 1; i <= 20; i++) {
             ContentValues values = new ContentValues();
             values.put("TENCSVC", "Cơ sở vật chất " + i);
-            values.put("SOLUONG", (i % 10) + 1); // Số lượng từ 1 đến 10
+            values.put("SOLUONG", (i % 10) + 1);
             values.put("NGAYMUA", "27/12/2024");
-            values.put("TRANGTHAI", (i % 3 == 0) ? "Sử dụng" : (i % 3 == 1) ? "Bảo trì" : "Hư hỏng"); // Trạng thái xoay vòng
-            values.put("MAPB", (i % 4) + 1); // MAPB: 1 đến 4 (xoay vòng phòng ban)
+            values.put("TRANGTHAI", (i % 3 == 0) ? "Sử dụng" : (i % 3 == 1) ? "Bảo trì" : "Hư hỏng");
+            values.put("MAPB", (i % 4) + 1);
 
             long rowId = db.insert("COSOVATCHAT", null, values);
-
-            // Kiểm tra xem từng lần thêm có thành công không
-            if (rowId == -1) {
-                Log.e("Database", "Error inserting record for facility " + i);
-            } else {
-                Log.i("Database", "Inserted facility " + i + " successfully.");
-            }
         }
 
-        db.close(); // Đóng cơ sở dữ liệu sau khi thao tác xong
+        db.close();
     }
 
 
@@ -230,24 +256,23 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         projectValues.put("NGAYKETTHUC", "31/12/2024");
         projectValues.put("TRANGTHAI", "Đang thực hiện");
         projectValues.put("MOTA", "Mô tả dự án XYZ");
-        projectValues.put("MAPB", 1); // Mã phòng ban đã tồn tại
+        projectValues.put("MAPB", 1);
         long projectId = db.insert("DUAN", null, projectValues);
 
         if (projectId != -1) {
-            // Nếu thêm dự án thành công, thêm nhân viên vào dự án
             addEmployeeToProject((int) projectId);
         }
     }
 
     private void addEmployeeToProject(int projectId) {
         ContentValues employeeValues1 = new ContentValues();
-        employeeValues1.put("MANV", 1); // Mã nhân viên đã tồn tại
+        employeeValues1.put("MANV", 1);
         employeeValues1.put("MADA", projectId);
         employeeValues1.put("VAITRO", "Quản lý");
         employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
 
         ContentValues employeeValues2 = new ContentValues();
-        employeeValues2.put("MANV", 2); // Mã nhân viên khác
+        employeeValues2.put("MANV", 2);
         employeeValues2.put("MADA", projectId);
         employeeValues2.put("VAITRO", "Thành viên");
         employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
@@ -260,35 +285,32 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db = this.getWritableDatabase();
 
         for (int i = 1; i <= 20; i++) {
-            // Tạo dữ liệu cho dự án
             ContentValues projectValues = new ContentValues();
             projectValues.put("TENDUAN", "Dự án XYZ " + i);
             projectValues.put("NGAYBATDAU", "28/12/2024");
             projectValues.put("NGAYKETTHUC", "31/12/2024");
             projectValues.put("TRANGTHAI", "Đang thực hiện");
+            projectValues.put("TRANGTHAI", (i % 3 == 0) ? "Đang thực hiện" : (i % 3 == 1) ? "Hoàn thành" : "Bị hủy");
             projectValues.put("MOTA", "Mô tả dự án XYZ " + i);
-            projectValues.put("MAPB", (i % 4) + 1); // MAPB: 1 đến 4 (xoay vòng phòng ban)
+            projectValues.put("MAPB", (i % 4) + 1);
 
-            // Thêm dự án vào cơ sở dữ liệu
             long projectId = db.insert("DUAN", null, projectValues);
 
-            // Nếu thêm dự án thành công, thêm nhân viên vào dự án
             if (projectId != -1) {
                 addEmployeesToProject((int) projectId, i);
             }
         }
     }
 
-    // Hàm thêm nhân viên vào dự án
     private void addEmployeesToProject(int projectId, int index) {
         ContentValues employeeValues1 = new ContentValues();
-        employeeValues1.put("MANV", (index % 5) + 1); // Mã nhân viên từ 1 đến 5 (xoay vòng)
+        employeeValues1.put("MANV", (index % 4) + 1);
         employeeValues1.put("MADA", projectId);
         employeeValues1.put("VAITRO", "Quản lý");
         employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
 
         ContentValues employeeValues2 = new ContentValues();
-        employeeValues2.put("MANV", ((index + 1) % 5) + 1); // Mã nhân viên từ 1 đến 5 (xoay vòng)
+        employeeValues2.put("MANV", ((index + 1) % 4) + 1);
         employeeValues2.put("MADA", projectId);
         employeeValues2.put("VAITRO", "Thành viên");
         employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
@@ -301,7 +323,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void addAdminAccount() {
         db = this.getWritableDatabase();
 
-        // Thêm thông tin nhân viên đầu tiên
+        // Nhân viên 1
         ContentValues values1 = new ContentValues();
         values1.put("HOTEN", "Mùa Đông Không Lạnh");
         values1.put("GIOITINH", "Nam");
@@ -311,15 +333,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values1.put("DIACHI", "Long Thành, Đồng Nai");
         values1.put("CCCD", "001004075822");
         values1.put("CAPBAC", "MANAGER");
-        values1.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+        values1.put("MAPB", 1);
 
         long rowId1 = db.insert("NHANVIEN", null, values1);
         if (rowId1 == -1) {
             Log.e("DatabaseHandler", "Error inserting first employee data");
         } else {
-            // Thêm tài khoản cho nhân viên đầu tiên
             ContentValues accountValues1 = new ContentValues();
-            accountValues1.put("MANV", rowId1); // Sử dụng MANV vừa tạo
+            accountValues1.put("MANV", rowId1);
             accountValues1.put("TENTK", "admin");
             accountValues1.put("MATKHAU", "admin");
             accountValues1.put("LOAITAIKHOAN", "quản lý");
@@ -330,25 +351,24 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             }
         }
 
-        // Thêm thông tin nhân viên thứ hai
+        // Nhân viên 2
         ContentValues values2 = new ContentValues();
         values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
-        values2.put("GIOITINH", "Nu");
+        values2.put("GIOITINH", "Nữ");
         values2.put("NGSINH", "2000-05-20");
         values2.put("SDT", "321321321");
         values2.put("EMAIL", "nuhoang@gmail.com");
         values2.put("DIACHI", "Hồ Chí Minh");
         values2.put("CCCD", "001004075823");
-        values2.put("CAPBAC", "MANAGER");
-        values2.put("MAPB", 1); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
+        values2.put("CAPBAC", "FRESHER");
+        values2.put("MAPB", 2); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
 
         long rowId2 = db.insert("NHANVIEN", null, values2);
         if (rowId2 == -1) {
             Log.e("DatabaseHandler", "Error inserting second employee data");
         } else {
-            // Thêm tài khoản cho nhân viên thứ hai
             ContentValues accountValues2 = new ContentValues();
-            accountValues2.put("MANV", rowId2); // Sử dụng MANV vừa tạo
+            accountValues2.put("MANV", rowId2);
             accountValues2.put("TENTK", "client");
             accountValues2.put("MATKHAU", "client");
             accountValues2.put("LOAITAIKHOAN", "nhân viên");
@@ -358,7 +378,65 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Log.e("DatabaseHandler", "Error inserting second admin account data");
             }
         }
+
+        // Nhân viên 3
+        ContentValues values3 = new ContentValues();
+        values3.put("HOTEN", "Mùa Thu Bình Yên");
+        values3.put("GIOITINH", "Nam");
+        values3.put("NGSINH", "1995-11-12");
+        values3.put("SDT", "456456456");
+        values3.put("EMAIL", "thuquyen@gmail.com");
+        values3.put("DIACHI", "Hà Nội");
+        values3.put("CCCD", "001004075824");
+        values3.put("CAPBAC", "STAFF");
+        values3.put("MAPB", 3);
+
+        long rowId3 = db.insert("NHANVIEN", null, values3);
+        if (rowId3 == -1) {
+            Log.e("DatabaseHandler", "Error inserting third employee data");
+        } else {
+            ContentValues accountValues3 = new ContentValues();
+            accountValues3.put("MANV", rowId3);
+            accountValues3.put("TENTK", "staff1");
+            accountValues3.put("MATKHAU", "staff123");
+            accountValues3.put("LOAITAIKHOAN", "nhân viên");
+
+            long accountRowId3 = db.insert("TAIKHOAN", null, accountValues3);
+            if (accountRowId3 == -1) {
+                Log.e("DatabaseHandler", "Error inserting third admin account data");
+            }
+        }
+
+        // Nhân viên 4
+        ContentValues values4 = new ContentValues();
+        values4.put("HOTEN", "Mùa Xuân Rực Rỡ");
+        values4.put("GIOITINH", "Nữ");
+        values4.put("NGSINH", "1998-03-25");
+        values4.put("SDT", "789789789");
+        values4.put("EMAIL", "xuanro@gmail.com");
+        values4.put("DIACHI", "Đà Nẵng");
+        values4.put("CCCD", "001004075825");
+        values4.put("CAPBAC", "STAFF");
+        values4.put("MAPB", 4);
+
+        long rowId4 = db.insert("NHANVIEN", null, values4);
+        if (rowId4 == -1) {
+            Log.e("DatabaseHandler", "Error inserting fourth employee data");
+        } else {
+            ContentValues accountValues4 = new ContentValues();
+            accountValues4.put("MANV", rowId4);
+            accountValues4.put("TENTK", "staff2");
+            accountValues4.put("MATKHAU", "staff456");
+            accountValues4.put("LOAITAIKHOAN", "nhân viên");
+
+            long accountRowId4 = db.insert("TAIKHOAN", null, accountValues4);
+            if (accountRowId4 == -1) {
+                Log.e("DatabaseHandler", "Error inserting fourth admin account data");
+            }
+        }
+//        db.close();
     }
+
 
     // ============Cơ sở vật chất===================
     public void addFacility(Facility facility) {
@@ -526,7 +604,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         List<Project> projectList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
 
-        // Tạo câu lệnh SQL động
         StringBuilder queryBuilder = new StringBuilder("SELECT * FROM DUAN WHERE 1=1");
 
         if (projectID != null && !projectID.isEmpty()) queryBuilder.append(" AND MADA = ").append(projectID);
@@ -559,6 +636,70 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
         return projectList;
     }
+
+    public List<Project> getProjectsByEmployee(int maNV) {
+        List<Project> projectList = new ArrayList<>();
+
+        String query = "SELECT d.MADA, d.TENDUAN, d.NGAYBATDAU, d.NGAYKETTHUC, d.TRANGTHAI, d.MOTA, d.MAPB " +
+                "FROM DUAN d " +
+                "INNER JOIN NHANVIEN_DUAN nd ON d.MADA = nd.MADA " +
+                "WHERE nd.MANV = ?";
+
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(maNV)});
+
+        if (cursor.moveToFirst()) {
+            do {
+                Project project = new Project(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getInt(6));
+                projectList.add(project);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return projectList;
+    }
+
+    public List<Project> searchProjectByEmployee(String projectID, String projectName, String startingDate, String endingDate, String projectStatus, String departmentID, String maNV) {
+        List<Project> projectList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        StringBuilder queryBuilder = new StringBuilder(
+                "SELECT d.MADA, d.TENDUAN, d.NGAYBATDAU, d.NGAYKETTHUC, d.TRANGTHAI, d.MOTA, d.MAPB " +
+                        "FROM DUAN d " +
+                        "INNER JOIN NHANVIEN_DUAN nd ON d.MADA = nd.MADA " +
+                        "WHERE 1=1");
+
+        if (maNV != null && !maNV.isEmpty()) queryBuilder.append(" AND nd.MANV = ").append(maNV);
+        if (projectID != null && !projectID.isEmpty()) queryBuilder.append(" AND MADA = ").append(projectID);
+        if (projectName != null && !projectName.isEmpty()) queryBuilder.append(" AND TENDUAN LIKE '%").append(projectName).append("%'");
+        if (startingDate != null && !startingDate.isEmpty()) queryBuilder.append(" AND NGAYBATDAU LIKE '%").append(startingDate).append("%'");
+        if (endingDate != null && !endingDate.isEmpty()) queryBuilder.append(" AND NGAYKETTHUC LIKE '%").append(endingDate).append("%'");
+        if (projectStatus != null && !projectStatus.isEmpty()) queryBuilder.append(" AND TRANGTHAI LIKE '%").append(projectStatus).append("%'");
+        if (departmentID != null && !departmentID.isEmpty()) queryBuilder.append(" AND MAPB = ").append(departmentID);
+
+        queryBuilder.append(" ORDER BY d.MADA ASC");
+
+        Cursor cursor = db.rawQuery(queryBuilder.toString(), null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Project project = new Project(
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MADA")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("TENDUAN")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("NGAYBATDAU")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("NGAYKETTHUC")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("TRANGTHAI")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("MOTA")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("MAPB"))
+                );
+                projectList.add(project);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return projectList;
+    }
+
 
 
     public void addProjectNhanVien(Project_NhanVien projectNhanVien) {
@@ -673,9 +814,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return db.update("PHONGBAN", values, "MAPB" + " = ?", new String[]{String.valueOf(department.getDepartmentId())}) > 0;
     }
 
-    public void deleteDepartment(Department department) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete("PHONGBAN", "MAPB" + " = ?", new String[] { String.valueOf(department.getDepartmentId())});
+    public int countEmployeesByDepartment(int departmentID) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        int employeeCount = 0;
+
+        String query = "SELECT COUNT(*) FROM NHANVIEN WHERE MAPB = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(departmentID)});
+
+        if (cursor.moveToFirst()) {
+            employeeCount = cursor.getInt(0);
+        }
+        cursor.close();
+        return employeeCount;
     }
 
 
@@ -886,6 +1036,25 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("SELECT * FROM NHANVIEN", null);
     }
+
+    public List<NhanVien> getAllEmployes() {
+        List<NhanVien> nhanVienList = new ArrayList<>();
+        db = this.getReadableDatabase();
+
+        String query = "SELECT * FROM NHANVIEN";
+
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+
+        while(cursor.isAfterLast() == false) {
+            NhanVien nhanVien = new NhanVien(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7), cursor.getString(8), cursor.getInt(9));
+            nhanVienList.add(nhanVien);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return nhanVienList;
+    }
     // Define column names
     public static final String COLUMN_NAME = "HOTEN";
     public static final String COLUMN_DEPARTMENT = "MAPB";
@@ -899,8 +1068,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String[] whereArgs = { employeeId };
 
         int rowsAffected = db.delete("NHANVIEN", whereClause, whereArgs);
-        db.close();
-
         return rowsAffected > 0;
     }
     public NhanVien getEmployeeById(int employeeId) {
@@ -944,7 +1111,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int rowsUpdated = db.update("NHANVIEN", values, "MANV = ?", new String[]{String.valueOf(nhanVien.getMaNV())});
         return rowsUpdated > 0;
     }
-    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String capBac, String phongBan) {
+    public List<NhanVien> searchEmployees(String maNV, String hoTen,String gioiTinh, String ngSinh, String sdt, String email, String diaChi, String cccd, String capBac, String phongBan) {
         List<NhanVien> employeeList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -957,6 +1124,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (sdt != null && !sdt.isEmpty()) queryBuilder.append(" AND SDT LIKE '%").append(sdt).append("%'");
         if (email != null && !email.isEmpty()) queryBuilder.append(" AND EMAIL LIKE '%").append(email).append("%'");
         if (diaChi != null && !diaChi.isEmpty()) queryBuilder.append(" AND DIACHI LIKE '%").append(diaChi).append("%'");
+        if (cccd != null && !cccd.isEmpty()) queryBuilder.append(" AND CCCD LIKE '%").append(cccd).append("%'");
         if (capBac != null && !capBac.isEmpty()) queryBuilder.append(" AND CAPBAC LIKE '%").append(capBac).append("%'");
         if (phongBan != null && !phongBan.isEmpty()) queryBuilder.append(" AND MAPB LIKE '%").append(phongBan).append("%'");
 
@@ -988,24 +1156,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
+
+
+
 //    update mk taikhoan
 public boolean updatePassword(String email, String newPassword) {
     SQLiteDatabase db = this.getWritableDatabase();
     ContentValues contentValues = new ContentValues();
     contentValues.put("MATKHAU", newPassword);
 
-    // Câu lệnh SQL cập nhật MATKHAU trong bảng TAIKHOAN kết hợp với NHANVIEN
-    String query = "UPDATE TAIKHOAN " +
-            "SET MATKHAU = ? " +
-            "WHERE MANV IN (SELECT MANV FROM NHANVIEN WHERE EMAIL = ?)";
-    try {
-        db.execSQL(query, new Object[]{newPassword, email});
-        return true; // Trả về true nếu câu lệnh thực thi thành công
-    } catch (Exception e) {
-        e.printStackTrace();
-        return false; // Trả về false nếu xảy ra lỗi
+        // Câu lệnh SQL cập nhật MATKHAU trong bảng TAIKHOAN kết hợp với NHANVIEN
+        String query = "UPDATE TAIKHOAN " +
+                "SET MATKHAU = ? " +
+                "WHERE MANV IN (SELECT MANV FROM NHANVIEN WHERE EMAIL = ?)";
+        try {
+            db.execSQL(query, new Object[]{newPassword, email});
+            return true; // Trả về true nếu câu lệnh thực thi thành công
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false; // Trả về false nếu xảy ra lỗi
+        }
     }
-}
 
     public boolean isEmailExists(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1028,5 +1199,81 @@ public boolean updatePassword(String email, String newPassword) {
         }
         return false; // Email does not exist
     }
+    public boolean addAccount(int employeeId, String username, String password, String accountType) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", employeeId);
+        values.put("TENTK", username);
+        values.put("MATKHAU", password);
+        values.put("LOAITAIKHOAN", accountType);
+        long result = db.insert("TAIKHOAN", null, values);
+        return result != -1;
+    }
+    public List<Account> getAllAccounts() {
+        List<Account> accountList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
 
+        Cursor cursor = db.rawQuery("SELECT * FROM TAIKHOAN", null);
+        if (cursor.moveToFirst()) {
+            do {
+                int accountId = cursor.getInt(0);
+                int employeeId = cursor.getInt(1);
+                String username = cursor.getString(2);
+                String password = cursor.getString(3);
+                String accountType = cursor.getString(4);
+
+                accountList.add(new Account( employeeId, accountId, username, password, accountType));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return accountList;
+    }
+
+    public boolean updateAccount(Account account) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("MANV", account.getMaNV());
+        values.put("TENTK", account.getTenTK());
+        values.put("MATKHAU", account.getMatKhau());
+        values.put("LOAITAIKHOAN", account.getLoaiTK());
+
+
+        // Cập nhật thông tin dựa trên ID
+        int rowsAffected = db.update("TAIKHOAN", values, "MATK" + " = ?", new String[]{String.valueOf(account.getMaTK())});
+        db.close();
+        return rowsAffected > 0; // Trả về true nếu có ít nhất 1 dòng được cập nhật
+    }
+    public boolean deleteAccount(Account account) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int rowsDeleted = db.delete("TAIKHOAN", "MATK" + " = ?", new String[]{String.valueOf(account.getMaTK())});
+        db.close();
+        return rowsDeleted > 0; // Trả về true nếu có ít nhất 1 dòng bị xóa
+    }
+    public Account getAccountById(int accountId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Câu lệnh SQL để truy vấn tài khoản theo ID
+        String query = "SELECT * FROM TAIKHOAN WHERE MATK = ?";
+        Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(accountId)});
+
+        // Nếu tìm thấy tài khoản
+        if (cursor != null && cursor.moveToFirst()) {
+            // Khởi tạo đối tượng Account từ dữ liệu truy vấn
+            Account account = new Account();
+            account.setMaTK(cursor.getInt(0));  // Cột "id"
+            account.setMaNV(cursor.getInt(1));  // Cột "maNV"
+            account.setTenTK(cursor.getString(2));  // Cột "tenTK"
+            account.setMatKhau(cursor.getString(3));
+            account.setLoaiTK(cursor.getString(4));  // Cột "loaiTK"
+
+            // Đóng con trỏ và trả về tài khoản
+            cursor.close();
+            db.close();
+            return account;
+        }
+        // Nếu không tìm thấy tài khoản, trả về null
+        cursor.close();
+        db.close();
+        return null;
+    }
 }

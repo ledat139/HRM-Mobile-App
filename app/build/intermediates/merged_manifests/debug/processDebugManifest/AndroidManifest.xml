@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.TENPM_HRM" >
         <activity
+            android:name="com.example.tenpm_hrm.ChangePassword"
+            android:exported="false" />
+        <activity
             android:name="com.example.tenpm_hrm.OTP"
             android:exported="false" />
         <activity
@@ -40,6 +43,10 @@
         <activity
             android:name="com.example.tenpm_hrm.UpdateFacility"
             android:exported="false" />
+        <activity
+            android:name="com.example.tenpm_hrm.AccountDetail"
+            android:exported="true" >
+        </activity>
         <activity
             android:name="com.example.tenpm_hrm.MainActivity"
             android:exported="true" >
@@ -104,7 +111,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.tenpm_hrm.NewDepartment"
+            android:name="com.example.tenpm_hrm.UpdateDepartment"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -138,8 +145,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- taikhoan -->
+        </activity> <!-- taikhoan -->
         <activity
             android:name="com.example.tenpm_hrm.AccountManagement"
             android:exported="true" >
@@ -204,6 +210,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.tenpm_hrm.ProjectEmployee"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tenpm_hrm.ProjectDetail"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.example.tenpm_hrm.NewProject"
             android:exported="true" >
             <intent-filter>
@@ -250,6 +274,24 @@
         </activity>
         <activity
             android:name="com.example.tenpm_hrm.ChangeEmployeeInformation"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tenpm_hrm.ChangeEmployeeInformation"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tenpm_hrm.SearchEmployee"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

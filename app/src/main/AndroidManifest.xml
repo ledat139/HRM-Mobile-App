@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TENPM_HRM"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".ChangePassword"
+            android:exported="false" />
         <activity
             android:name=".OTP"
             android:exported="false" />
@@ -26,8 +29,14 @@
             android:name=".UpdateFacility"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AccountDetail"
             android:exported="true">
+
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +45,7 @@
         </activity> <!-- yeucau -->
         <activity
             android:name=".RequestManagementClient"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,7 +54,7 @@
         </activity>
         <activity
             android:name=".NewRequest"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,7 +63,7 @@
         </activity>
         <activity
             android:name=".RequestManagementAdmin"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,7 +72,7 @@
         </activity> <!-- chamcong -->
         <activity
             android:name=".attendance.AttendanceDetails"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -72,7 +81,7 @@
         </activity>
         <activity
             android:name=".attendance.AttendanceManagement"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -81,7 +90,7 @@
         </activity> <!-- phongban -->
         <activity
             android:name=".DepartmentManagement"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -89,8 +98,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewDepartment"
-            android:exported="true">
+            android:name=".UpdateDepartment"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -99,7 +108,7 @@
         </activity> <!-- csvc -->
         <activity
             android:name=".CSVCManagement"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -108,7 +117,7 @@
         </activity>
         <activity
             android:name=".NewCSVC"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -117,17 +126,16 @@
         </activity>
         <activity
             android:name=".SearchFacilities"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- taikhoan -->
+        </activity> <!-- taikhoan -->
         <activity
             android:name=".AccountManagement"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -136,7 +144,7 @@
         </activity>
         <activity
             android:name=".NewAccount"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -145,7 +153,7 @@
         </activity> <!-- nhanvien -->
         <activity
             android:name=".EmployeeManagement"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -154,7 +162,7 @@
         </activity>
         <activity
             android:name=".NewEmployee"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -163,7 +171,7 @@
         </activity> <!-- homepage -->
         <activity
             android:name=".HomePageClient"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -172,7 +180,7 @@
         </activity>
         <activity
             android:name=".HomepageAdmin"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -181,7 +189,25 @@
         </activity> <!-- project -->
         <activity
             android:name=".ProjectManagement"
-            android:exported="true">
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProjectEmployee"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProjectDetail"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -190,7 +216,7 @@
         </activity>
         <activity
             android:name=".NewProject"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -199,7 +225,7 @@
         </activity>
         <activity
             android:name=".UpdateProject"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -208,16 +234,16 @@
         </activity>
         <activity
             android:name=".SearchProject"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity><!-- employee info -->
+        </activity> <!-- employee info -->
         <activity
             android:name=".EmployeeInfo"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -226,14 +252,22 @@
         </activity> <!-- login -->
         <activity
             android:name=".Login"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChangeEmployeeInformation"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ChangeEmployeeInformation"
             android:exported="true">
             <intent-filter>
@@ -242,7 +276,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SearchEmployee"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

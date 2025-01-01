@@ -9,12 +9,12 @@
     android:background="@android:color/white">
 
     <LinearLayout
+        android:id="@+id/departmentContainerItem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
-        <!-- FrameLayout chứa hình đại diện -->
         <FrameLayout
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -29,7 +29,6 @@
 />
         </FrameLayout>
 
-        <!-- TextView hiển thị tên phòng ban nằm dưới FrameLayout -->
         <TextView
             android:id="@+id/departmentNameTextView"
             android:layout_width="wrap_content"

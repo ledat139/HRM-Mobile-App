@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rlHeaderContainer"
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="52dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg">
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="Phòng ban"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHeaderDescription"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvHeaderTitle"
+            android:layout_below="@+id/tvHeaderTitle"
+            android:layout_marginTop="10dp"
+            android:text="Cập nhật thông tin chi tiết của phòng ban"
+            android:textColor="#545454"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@id/rlHeaderContainer"
+        android:layout_alignEnd="@id/rlHeaderContainer"
+        app:srcCompat="@drawable/depart" />
+
+    <TextView
+        android:id="@+id/tvDepartmentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin phòng ban: 1"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/rlHeaderContainer"
+        android:layout_alignStart="@+id/rlHeaderContainer" />
+
+    <RelativeLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tvDepartmentID"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="15dp"
+        android:background="@drawable/rounded_corner_background">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddDepartmentNameContainer"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddDepartmentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:clickable="false"
+                android:textColorHint="#020202"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/inputAddDepartmentNameContainer"
+            android:background="@color/white"
+            android:text="Tên phòng ban"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddDepartmentEstablishmentDateContainer"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAddDepartmentNameContainer"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddDepartmentEstablishmentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:clickable="false"
+                android:textColorHint="#020202"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignTop="@id/inputAddDepartmentEstablishmentDateContainer"
+            android:background="@color/white"
+            android:text="Ngày thành lập"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/labelAddAddManagerID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_below="@+id/inputAddDepartmentEstablishmentDateContainer"
+            android:background="@color/white"
+            android:text="Mã người quản lý"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/inputUpdateManagerID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="15dp"
+            android:layout_below="@+id/labelAddAddManagerID" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddManagerAppointmentDateContainer"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputUpdateManagerID"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddManagerAppointmentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:inputType="none"
+                android:textColorHint="#020202"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/inputAddManagerAppointmentDateContainer"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:text="Ngày nhậm chức"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvEmployeeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAddManagerAppointmentDateContainer"
+            android:layout_marginStart="25dp"
+            android:background="@color/white"
+            android:text="Số lượng nhân viên: 10"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnUpdateDepartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#5C63D6"
+        android:paddingVertical="12dp"
+        android:text="Cập nhật phòng ban"
+        android:textStyle="bold"
+        app:cornerRadius="5dp"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

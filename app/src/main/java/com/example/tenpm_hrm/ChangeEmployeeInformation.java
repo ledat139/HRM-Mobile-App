@@ -61,7 +61,33 @@ public class ChangeEmployeeInformation extends AppCompatActivity {
         }
 
         // Xử lý sự kiện lưu
-        btnSave.setOnClickListener(v -> saveEmployeeInfo());
+        btnSave.setOnClickListener(v -> {
+                saveEmployeeInfo();
+                String name = etName.getText().toString();
+                int selectedGenderId = genderGroup.getCheckedRadioButtonId();
+                RadioButton selectedGender = findViewById(selectedGenderId);
+                String gender = selectedGender.getText().toString();
+                String birthday = etBirthday.getText().toString();
+                String phone = etPhone.getText().toString();
+                String email = etEmail.getText().toString();
+                String address = etAddress.getText().toString();
+                String cccd = etCCCD.getText().toString();
+                String position = etPosition.getText().toString();
+                int iddepartment = Integer.parseInt(etDepartment.getText().toString());
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra("maNV", String.valueOf(employeeId));
+                resultIntent.putExtra("name", name);
+                resultIntent.putExtra("gender", gender);
+                resultIntent.putExtra("birthday", birthday);
+                resultIntent.putExtra("phone", phone);
+                resultIntent.putExtra("email", email);
+                resultIntent.putExtra("address", address);
+                resultIntent.putExtra("cccd", cccd);
+                resultIntent.putExtra("position", position);
+                resultIntent.putExtra("iddepartment", String.valueOf(iddepartment));
+                setResult(RESULT_OK, resultIntent);
+                finish(); // Quay lại
+        });
     }
 
     private void FillInformation(NhanVien nhanVien) {
@@ -81,7 +107,7 @@ public class ChangeEmployeeInformation extends AppCompatActivity {
         etDepartment.setText(String.valueOf(nhanVien.getMaPB()));
     }
 
-    private void saveEmployeeInfo() {
+    public void saveEmployeeInfo() {
         // Kiểm tra dữ liệu đầu vào
         if (TextUtils.isEmpty(etName.getText())) {
             showToast("Vui lòng nhập tên nhân viên");
