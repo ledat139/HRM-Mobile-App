@@ -3814,7 +3814,6 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
-id profile_image
 id progressBar
 id progress_circular
 id progress_horizontal
@@ -3947,6 +3946,7 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
 id textView13
 id textView14
 id textView15
@@ -4003,7 +4003,6 @@ id tvEmployeeType
 id tvForgotPassword
 id tvHeaderDescription
 id tvHeaderTitle
-id tvHome
 id tvID
 id tvJoiningDate
 id tvLabel

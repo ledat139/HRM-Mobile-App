@@ -3813,7 +3813,6 @@ int id pooling_container_listener_holder_tag 0x7f09024c
 int id position 0x7f09024d
 int id postLayout 0x7f09024e
 int id pressed 0x7f09024f
-int id profile_image 0x7f090250
 int id progressBar 0x7f090251
 int id progress_circular 0x7f090252
 int id progress_horizontal 0x7f090253
@@ -3946,6 +3945,7 @@ int id textTop 0x7f0902d1
 int id textView 0x7f0902d2
 int id textView10 0x7f0902d3
 int id textView11 0x7f0902d4
+int id textView12 0x7f090346
 int id textView13 0x7f0902d5
 int id textView14 0x7f0902d6
 int id textView15 0x7f0902d7
@@ -4002,7 +4002,6 @@ int id tvEmployeeType 0x7f090309
 int id tvForgotPassword 0x7f09030a
 int id tvHeaderDescription 0x7f09030b
 int id tvHeaderTitle 0x7f09030c
-int id tvHome 0x7f09030d
 int id tvID 0x7f09030e
 int id tvJoiningDate 0x7f09030f
 int id tvLabel 0x7f090310
