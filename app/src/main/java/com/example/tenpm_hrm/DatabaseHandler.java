@@ -290,6 +290,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             projectValues.put("NGAYBATDAU", "28/12/2024");
             projectValues.put("NGAYKETTHUC", "31/12/2024");
             projectValues.put("TRANGTHAI", "Đang thực hiện");
+            projectValues.put("TRANGTHAI", (i % 3 == 0) ? "Đang thực hiện" : (i % 3 == 1) ? "Hoàn thành" : "Bị hủy");
             projectValues.put("MOTA", "Mô tả dự án XYZ " + i);
             projectValues.put("MAPB", (i % 4) + 1);
 
@@ -303,13 +304,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private void addEmployeesToProject(int projectId, int index) {
         ContentValues employeeValues1 = new ContentValues();
-        employeeValues1.put("MANV", (index % 5) + 1);
+        employeeValues1.put("MANV", (index % 4) + 1);
         employeeValues1.put("MADA", projectId);
         employeeValues1.put("VAITRO", "Quản lý");
         employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
 
         ContentValues employeeValues2 = new ContentValues();
-        employeeValues2.put("MANV", ((index + 1) % 5) + 1);
+        employeeValues2.put("MANV", ((index + 1) % 4) + 1);
         employeeValues2.put("MADA", projectId);
         employeeValues2.put("VAITRO", "Thành viên");
         employeeValues2.put("NGAYTHAMGIA", "28/12/2024");

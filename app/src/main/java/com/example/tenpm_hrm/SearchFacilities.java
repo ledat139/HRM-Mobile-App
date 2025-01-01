@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import models.Department;
 
@@ -41,11 +42,7 @@ public class SearchFacilities extends AppCompatActivity {
         }
 
 
-        ArrayList<Department> phongBanList = new ArrayList<>();
-        phongBanList.add(new Department(1, "Phòng Kỹ Thuật", "2020-01-01", 1, "Nguyễn Văn A", "path_to_it_avatar"));
-        phongBanList.add(new Department(2, "Phòng Kinh Doanh", "2019-05-15", 2, "Trần Thị B", "path_to_sale_avatar"));
-        phongBanList.add(new Department(3, "Phòng Nhân Sự", "2018-03-20", 3, "Lê Thị C", "path_to_hr_avatar"));
-        phongBanList.add(new Department(4, "Phòng Marketing", "2021-06-10", 4, "Phạm Minh D", "path_to_marketing_avatar"));
+        List<Department> phongBanList = dbHandler.getAllDepartment();
 
 
         ArrayList<String> tenPhongBanList = new ArrayList<>();

@@ -67,6 +67,7 @@
         android:layout_marginTop="20dp"
         android:layout_below="@+id/tvDepartmentID"
         android:layout_centerHorizontal="true"
+        android:paddingBottom="15dp"
         android:background="@drawable/rounded_corner_background">
 
         <com.google.android.material.textfield.TextInputLayout
