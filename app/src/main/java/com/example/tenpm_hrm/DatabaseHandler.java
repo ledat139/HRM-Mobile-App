@@ -322,6 +322,25 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void addAdminAccount() {
         db = this.getWritableDatabase();
 
+        ContentValues values1 = new ContentValues();
+        values1.put("HOTEN", "Dat");
+        values1.put("GIOITINH", "Nam");
+        values1.put("NGSINH", "1990-01-01");
+        values1.put("SDT", "012345678");
+        values1.put("EMAIL", "tiendatcntt1309@gmail.com");
+        values1.put("DIACHI", "Địa chỉ ");
+        values1.put("CCCD", "00100407582");
+        values1.put("CAPBAC", "Quản lý");
+        values1.put("MAPB", 1);
+        db.insert("NHANVIEN", null, values1);
+
+        ContentValues accountValues1 = new ContentValues();
+        accountValues1.put("MANV", 1);
+        accountValues1.put("TENTK", "dat");
+        accountValues1.put("MATKHAU", "dat");
+        accountValues1.put("LOAITAIKHOAN",  "nhân viên");
+        db.insert("TAIKHOAN", null, accountValues1);
+
         String[] names = {
                 "Nguyễn Văn An", "Trần Thị Trang", "Lê Văn Cường", "Phạm Thị Dung",
                 "Hoàng Hữu Nam", "Nguyễn Xuân Diệu", "Đặng Thành Nam", "Nguyễn Mai Phuương",

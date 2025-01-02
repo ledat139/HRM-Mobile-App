@@ -56,12 +56,12 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
 
 
     private FusedLocationProviderClient fusedLocationClient;
-
+//10.88543493112511, 106.780528692843
     //10.980899, 106.756021 - nhà
     //10.869951, 106.803116 - UIT
     // Tọa độ công ty (VD: vị trí công ty ở Hồ Chí Minh)
-    private static final double COMPANY_LATITUDE = 10.869951; // Vĩ độ
-    private static final double COMPANY_LONGITUDE = 106.803116; // Kinh độ
+    private static final double COMPANY_LATITUDE = 10.88543493112511; // Vĩ độ
+    private static final double COMPANY_LONGITUDE = 106.780528692843; // Kinh độ
     private static final float COMPANY_RADIUS = 100; // Bán kính cho phép chấm công (100 mét)
 
     @Override

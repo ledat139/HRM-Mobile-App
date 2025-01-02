@@ -74,7 +74,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/rectangle"
         android:ems="10"
-        android:hint="example@gmail.com"
+        android:hint="Tên tài khoản"
         android:inputType="text"
         android:paddingLeft="10dp"
         android:textColorHint="#AFAAAA"
