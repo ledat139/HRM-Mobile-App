@@ -38,12 +38,14 @@
             android:text="Họ và tên"
             android:gravity="start"
             android:paddingEnd="8dp"/>
+
         <EditText
             android:id="@+id/etName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
-            android:hint="Nhập họ và tên"/>
+            android:hint="Nhập họ và tên"
+            android:inputType="text|textPersonName|textAutoComplete|textAutoCorrect|textCapSentences|textCapWords|textEnableTextConversionSuggestions|textImeMultiLine|textMultiLine" />
     </LinearLayout>
 
     <LinearLayout
@@ -218,6 +220,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
+            android:inputType="number"
             android:hint="Nhập phòng ban"/>
     </LinearLayout>
 

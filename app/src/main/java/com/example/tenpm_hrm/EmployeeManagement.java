@@ -26,7 +26,7 @@ public class EmployeeManagement extends AppCompatActivity {
     private View lastAddedItem; // Lưu tham chiếu đến item cuối cùng được thêm
     private Button btnAddEmployee;
     private DatabaseHandler dbHelper;
-    private ImageView deleteImageView, editImageView, ivSearch;
+    private ImageView deleteImageView, editImageView, ivSearch, ivAvatar;
     private List<ConstraintLayout> addedItems = new ArrayList<>();
 
     @Override
@@ -39,7 +39,6 @@ public class EmployeeManagement extends AppCompatActivity {
         btnAddEmployee = findViewById(R.id.button);
         dbHelper = new DatabaseHandler(this);
         ivSearch = findViewById(R.id.ivSearch);
-
         btnAddEmployee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +84,7 @@ public class EmployeeManagement extends AppCompatActivity {
         // Tạo một ConstraintLayout mới cho item
         ConstraintLayout newItem = (ConstraintLayout) getLayoutInflater().inflate(R.layout.item_employee, null);
         newItem.setId(View.generateViewId());
-
+        ivAvatar = newItem.findViewById(R.id.ivAvatar);
         // Gán dữ liệu động
         TextView nameTextView = newItem.findViewById(R.id.tvName);
         TextView departmentTextView = newItem.findViewById(R.id.tvDepartment);
@@ -93,14 +92,17 @@ public class EmployeeManagement extends AppCompatActivity {
         TextView employeeIdTextView = newItem.findViewById(R.id.tvID);
         deleteImageView = newItem.findViewById(R.id.ivDelete);
         editImageView = newItem.findViewById(R.id.imageView_Detail);
-
+        String departmentName = dbHelper.getDepartmentNameById(department);
         nameTextView.setText(name);
-        departmentTextView.setText("Phòng ban: " + department);
+        departmentTextView.setText("Phòng ban: " + departmentName);
         positionTextView.setText(position);
         if ("Nhân viên".equals(position)) {
             // Đặt màu nền và màu chữ khi position là "Nhân viên"
             positionTextView.setBackground(getDrawable(R.drawable.employee_type_shape ));
             positionTextView.setTextColor(Color.parseColor("#5AA572"));
+        }
+        else if ("Quản lý".equals(position)) {
+            ivAvatar.setImageResource(R.drawable.manager);
         }
         employeeIdTextView.setText("ID: " + employeeId);
 

@@ -3129,6 +3129,7 @@ drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable mail_img
 drawable management_img
+drawable manager
 drawable manager_type_shape
 drawable marketing
 drawable material_cursor_drawable
