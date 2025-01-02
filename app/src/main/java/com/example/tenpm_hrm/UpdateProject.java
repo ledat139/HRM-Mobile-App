@@ -208,10 +208,7 @@ public class UpdateProject extends AppCompatActivity {
 
         inputParticipantJoiningDate.setOnClickListener(view -> showDatePickerDialog(inputParticipantJoiningDate));
 
-        ArrayList<NhanVien> nhanVienList = new ArrayList<>();
-        nhanVienList.add(new NhanVien(1, "Trần Thị B", "Nữ", "27/12/2024", "0907654321", "tranthib@example.com", "Hà Nội", "123456789", "Nhân viên", 1));
-        nhanVienList.add(new NhanVien(2, "Phạm Minh C", "Nam", "27/12/2024", "0912345678", "phamminhc@example.com", "Hồ Chí Minh", "987654321", "Quản lý", 1));
-        nhanVienList.add(new NhanVien(3, "Lê Thị D", "Nữ", "27/12/2024", "0934567890", "lethid@example.com", "Đà Nẵng", "112233445", "Trưởng phòng", 1));
+        List<NhanVien> nhanVienList = dbHandler.getAllEmployes();
 
         ArrayList<String> tenNhanVienList = new ArrayList<>();
         for (NhanVien nhanVien : nhanVienList) {
