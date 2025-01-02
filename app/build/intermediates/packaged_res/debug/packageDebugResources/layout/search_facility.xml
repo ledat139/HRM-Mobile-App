@@ -20,6 +20,7 @@
         <EditText
             android:id="@+id/inputSearchFacilityID"
             android:layout_width="0dp"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:hint="Nhập mã CSVC" />
@@ -60,6 +61,7 @@
         <EditText
             android:id="@+id/inputSearchFacilityQuantity"
             android:layout_width="0dp"
+            android:inputType="number"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:hint="Nhập số lượng CSVC"/>

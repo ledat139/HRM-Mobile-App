@@ -6,10 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,19 +21,16 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.tenpm_hrm.attendance.AttendanceManagement;
-import com.github.mikephil.charting.animation.Easing;
-import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.PercentFormatter;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
-import com.github.mikephil.charting.utils.ColorTemplate;
+import com.github.mikephil.charting.components.Legend;
 
 import java.util.ArrayList;
+
+import models.NhanVien;
 
 public class HomepageAdmin extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -45,6 +44,11 @@ public class HomepageAdmin extends AppCompatActivity {
     private CardView cardRequest;
     private CardView cardAccount;
     private ProgressBar progressBar; // ProgressBar for better UX
+
+    private Button btnChangePassword;
+    private Button btnPersonalInfo;
+    private TextView txtFullName;
+    private TextView txtPosition;
     private PieChart pieChart;
     private DatabaseHandler dbHelper;
 
@@ -57,6 +61,9 @@ public class HomepageAdmin extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         imgSidebar = findViewById(R.id.imgSidebar);
         btnLogout = findViewById(R.id.btnLogout);
+        progressBar = findViewById(R.id.progressBar); // Khởi tạo ProgressBar
+        pieChart = findViewById(R.id.pieChart);
+        dbHelper = new DatabaseHandler(this);
 
         // Khởi tạo các CardView
         cardRequest = findViewById(R.id.cardRequest);
@@ -66,9 +73,11 @@ public class HomepageAdmin extends AppCompatActivity {
         cardFacilities = findViewById(R.id.cardFacilities);
         cardProject = findViewById(R.id.cardProject);
         cardAccount = findViewById(R.id.cardAccount);
-        progressBar = findViewById(R.id.progressBar); // Khởi tạo ProgressBar
-        pieChart = findViewById(R.id.pieChart);
-        dbHelper = new DatabaseHandler(this);
+
+        btnChangePassword = findViewById(R.id.btnChangePassword);
+        btnPersonalInfo = findViewById(R.id.btnPersonalInfo);
+        txtFullName = findViewById(R.id.txtFullName);
+        txtPosition = findViewById(R.id.txtPosition);
 
         // Thiết lập sự kiện click cho các CardView
         setupCardClickListener(cardRequest, RequestManagementAdmin.class);
@@ -78,56 +87,68 @@ public class HomepageAdmin extends AppCompatActivity {
         setupCardClickListener(cardFacilities, CSVCManagement.class);
         setupCardClickListener(cardProject, ProjectManagement.class);
         setupCardClickListener(cardAccount, AccountManagement.class);
-        setupPieChart();
 
         // Nhận dữ liệu từ Intent
         Intent intent = getIntent();
+        NhanVien nhanVien = intent.getParcelableExtra("nhanVien");
 
-        imgSidebar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Mở hoặc đóng sidebar
-                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else {
-                    drawerLayout.openDrawer(GravityCompat.START);
-                }
+        if (nhanVien != null) {
+            txtFullName.setText(nhanVien.getHoTen());
+            txtPosition.setText(nhanVien.getCapBac());
+
+            btnPersonalInfo.setOnClickListener(v -> {
+                Intent newRequestIntent = new Intent(HomepageAdmin.this, EmployeeInfo.class);
+                newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                startActivity(newRequestIntent);
+            });
+
+            btnChangePassword.setOnClickListener(v -> {
+                Intent newRequestIntent = new Intent(HomepageAdmin.this, ChangePassword.class);
+                newRequestIntent.putExtra("nhanVien", nhanVien); // Gửi đối tượng NhanVien qua Intent
+                startActivity(newRequestIntent);
+            });
+        } else {
+            Log.e("HomePageAdmin", "NhanVien is null");
+        }
+
+        imgSidebar.setOnClickListener(v -> {
+            // Mở hoặc đóng sidebar
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Xóa dữ liệu người dùng từ SharedPreferences
-                SharedPreferences sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.clear(); // Xóa tất cả dữ liệu
-                editor.apply();
+        btnLogout.setOnClickListener(v -> {
+            // Xóa dữ liệu người dùng từ SharedPreferences
+            SharedPreferences sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear(); // Xóa tất cả dữ liệu
+            editor.apply();
 
-                // Chuyển hướng về màn hình đăng nhập
-                Intent loginIntent = new Intent(HomepageAdmin.this, Login.class);
-                loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Để xóa tất cả các Activity cũ
-                startActivity(loginIntent);
-                finish(); // Kết thúc Activity hiện tại
-            }
+            // Chuyển hướng về màn hình đăng nhập
+            Intent loginIntent = new Intent(HomepageAdmin.this, Login.class);
+            loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK); // Để xóa tất cả các Activity cũ
+            startActivity(loginIntent);
+            finish(); // Kết thúc Activity hiện tại
         });
+
+        setupPieChart(); // Set up PieChart
     }
 
     private void setupCardClickListener(CardView card, Class<?> targetActivity) {
-        card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Hiện ProgressBar trước khi chuyển đến Activity mới
-                progressBar.setVisibility(View.VISIBLE);
-
-                // Bắt đầu Activity mới
-                Intent newActivityIntent = new Intent(HomepageAdmin.this, targetActivity);
-                startActivity(newActivityIntent);
-                // Ẩn ProgressBar sau một khoảng thời gian ngắn
-                v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
-            }
+        card.setOnClickListener(v -> {
+            // Hiện ProgressBar trước khi chuyển đến Activity mới
+            progressBar.setVisibility(View.VISIBLE);
+            // Bắt đầu Activity mới
+            Intent newActivityIntent = new Intent(HomepageAdmin.this, targetActivity);
+            startActivity(newActivityIntent);
+            // Ẩn ProgressBar sau một khoảng thời gian ngắn
+            v.postDelayed(() -> progressBar.setVisibility(View.GONE), 300);
         });
     }
+
     private void setupPieChart() {
         SQLiteDatabase db = dbHelper.getReadableDatabase(); // Lấy cơ sở dữ liệu ở chế độ chỉ đọc
 
@@ -176,7 +197,6 @@ public class HomepageAdmin extends AppCompatActivity {
 
         // Tạo PieData từ DataSet
         PieData data = new PieData(dataSet);
-
         dataSet.setValueFormatter(new PercentFormatter()); // Hiển thị phần trăm
 
         // Cấu hình PieChart
@@ -186,13 +206,11 @@ public class HomepageAdmin extends AppCompatActivity {
         pieChart.setHoleRadius(40f); // kích thước lỗ
         pieChart.setTransparentCircleRadius(45f); // lỗ trong suốt
 
-        //chú thích
-        //pieChart.setCenterText("Tỷ lệ nhân viên theo phòng ban");
         data.setValueTextSize(14f);  // Kích thước chữ cho giá trị
         data.setValueTextColor(Color.BLACK);  // Màu chữ giá trị
         pieChart.setEntryLabelColor(Color.BLACK);
-
         pieChart.setEntryLabelTextSize(10f);
+
         Legend legend = pieChart.getLegend();
         legend.setEnabled(true);
         legend.setOrientation(Legend.LegendOrientation.VERTICAL);  // Đặt hướng ngang cho các chú thích
@@ -208,8 +226,4 @@ public class HomepageAdmin extends AppCompatActivity {
         // Cập nhật PieChart
         pieChart.invalidate();
     }
-
-
-
-
 }

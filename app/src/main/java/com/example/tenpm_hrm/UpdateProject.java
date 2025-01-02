@@ -78,11 +78,7 @@ public class UpdateProject extends AppCompatActivity {
 
 
 
-        ArrayList<Department> phongBanList = new ArrayList<>();
-        phongBanList.add(new Department(1, "Phòng Kỹ Thuật", "27/12/2024", 1, "Nguyễn Văn A", "path_to_it_avatar"));
-        phongBanList.add(new Department(2, "Phòng Kinh Doanh", "27/12/2024", 2, "Trần Thị B", "path_to_sale_avatar"));
-        phongBanList.add(new Department(3, "Phòng Nhân Sự", "27/12/2024", 3, "Lê Thị C", "path_to_hr_avatar"));
-        phongBanList.add(new Department(4, "Phòng Marketing", "27/12/2024", 4, "Phạm Minh D", "path_to_marketing_avatar"));
+        List<Department> phongBanList = dbHandler.getAllDepartment();
 
         ArrayList<String> tenPhongBanList = new ArrayList<>();
         for (Department phongBan : phongBanList) {

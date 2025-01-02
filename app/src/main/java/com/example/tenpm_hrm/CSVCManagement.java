@@ -60,17 +60,6 @@ public class CSVCManagement extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        dbHandler = new DatabaseHandler(this);
-//        facilityList = dbHandler.getAllFacility();
-//
-//        facilityAdapter = new FacilityAdapter(this, facilityList);
-//        FacilityContainer.setAdapter(facilityAdapter);
-//    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

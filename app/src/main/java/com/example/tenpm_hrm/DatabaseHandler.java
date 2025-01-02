@@ -40,7 +40,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             "CREATE TABLE NHANVIEN (" +
                     "MANV INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "HOTEN TEXT NOT NULL, " +
-                    "GIOITINH TEXT NOT NULL CHECK (GIOITINH IN ('Nam', 'Nu')), " +
+                    "GIOITINH TEXT NOT NULL CHECK (GIOITINH IN ('Nam', 'Nữ')), " +
                     "NGSINH TEXT NOT NULL, " +
                     "SDT TEXT NOT NULL UNIQUE, " +
                     "EMAIL TEXT NOT NULL UNIQUE, " +
@@ -290,6 +290,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             projectValues.put("NGAYBATDAU", "28/12/2024");
             projectValues.put("NGAYKETTHUC", "31/12/2024");
             projectValues.put("TRANGTHAI", "Đang thực hiện");
+            projectValues.put("TRANGTHAI", (i % 3 == 0) ? "Đang thực hiện" : (i % 3 == 1) ? "Hoàn thành" : "Bị hủy");
             projectValues.put("MOTA", "Mô tả dự án XYZ " + i);
             projectValues.put("MAPB", (i % 4) + 1);
 
@@ -303,13 +304,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private void addEmployeesToProject(int projectId, int index) {
         ContentValues employeeValues1 = new ContentValues();
-        employeeValues1.put("MANV", (index % 5) + 1);
+        employeeValues1.put("MANV", (index % 4) + 1);
         employeeValues1.put("MADA", projectId);
         employeeValues1.put("VAITRO", "Quản lý");
         employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
 
         ContentValues employeeValues2 = new ContentValues();
-        employeeValues2.put("MANV", ((index + 1) % 5) + 1);
+        employeeValues2.put("MANV", ((index + 1) % 4) + 1);
         employeeValues2.put("MADA", projectId);
         employeeValues2.put("VAITRO", "Thành viên");
         employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
@@ -324,7 +325,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 1
         ContentValues values1 = new ContentValues();
-        values1.put("HOTEN", "Nguyễn Văn A");
+        values1.put("HOTEN", "Mùa Đông Không Lạnh");
         values1.put("GIOITINH", "Nam");
         values1.put("NGSINH", "2004-02-15");
         values1.put("SDT", "123123123");
@@ -352,14 +353,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 2
         ContentValues values2 = new ContentValues();
-        values2.put("HOTEN", "Nguyễn Văn B");
-        values2.put("GIOITINH", "Nu");
+        values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
+        values2.put("GIOITINH", "Nữ");
         values2.put("NGSINH", "2000-05-20");
         values2.put("SDT", "321321321");
         values2.put("EMAIL", "nuhoang@gmail.com");
         values2.put("DIACHI", "Hồ Chí Minh");
         values2.put("CCCD", "001004075823");
-        values2.put("CAPBAC", "MANAGER");
+        values2.put("CAPBAC", "FRESHER");
         values2.put("MAPB", 2); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
 
         long rowId2 = db.insert("NHANVIEN", null, values2);
@@ -380,7 +381,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 3
         ContentValues values3 = new ContentValues();
-        values3.put("HOTEN", "Nguyê Văn C");
+        values3.put("HOTEN", "Mùa Thu Bình Yên");
         values3.put("GIOITINH", "Nam");
         values3.put("NGSINH", "1995-11-12");
         values3.put("SDT", "456456456");
@@ -408,8 +409,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 4
         ContentValues values4 = new ContentValues();
-        values4.put("HOTEN", "Nguyễn Văn Hòa");
-        values4.put("GIOITINH", "Nu");
+        values4.put("HOTEN", "Mùa Xuân Rực Rỡ");
+        values4.put("GIOITINH", "Nữ");
         values4.put("NGSINH", "1998-03-25");
         values4.put("SDT", "789789789");
         values4.put("EMAIL", "xuanro@gmail.com");
@@ -433,7 +434,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Log.e("DatabaseHandler", "Error inserting fourth admin account data");
             }
         }
-        db.close();
+//        db.close();
     }
 
 

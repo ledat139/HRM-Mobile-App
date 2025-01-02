@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.TENPM_HRM" >
         <activity
+            android:name="com.example.tenpm_hrm.ChangePassword"
+            android:exported="false" />
+        <activity
             android:name="com.example.tenpm_hrm.OTP"
             android:exported="false" />
         <activity

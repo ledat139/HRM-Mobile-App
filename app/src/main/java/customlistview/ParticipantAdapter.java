@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tenpm_hrm.DatabaseHandler;
 import com.example.tenpm_hrm.R;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -28,6 +29,7 @@ import models.Project_NhanVien;
 public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.ViewHolder> {
     private Context context;
     private List<Project_NhanVien> participantList;
+    private DatabaseHandler dbHandler;
 
     public ParticipantAdapter(Context context, List<Project_NhanVien> participantList) {
         this.participantList = participantList;
@@ -71,16 +73,14 @@ public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.
         Spinner inputParticipantID = dialogView.findViewById(R.id.inputParticipantID);
         TextInputEditText inputParticipantRole = dialogView.findViewById(R.id.inputParticipantRole);
         TextInputEditText inputParticipantJoiningDate = dialogView.findViewById(R.id.inputParticipantJoiningDate);
+        dbHandler = new DatabaseHandler(context);
 
         inputParticipantRole.setText(projectNhanVien.getVaiTro());
         inputParticipantJoiningDate.setText(projectNhanVien.getNgayTG());
 
         inputParticipantJoiningDate.setOnClickListener(view -> showDatePickerDialog(inputParticipantJoiningDate, projectNhanVien.getNgayTG()));
 
-        ArrayList<NhanVien> nhanVienList = new ArrayList<>();
-        nhanVienList.add(new NhanVien(1, "Trần Thị B", "Nữ", "1992-08-20", "0907654321", "tranthib@example.com", "Hà Nội", "123456789", "Nhân viên", 1));
-        nhanVienList.add(new NhanVien(2, "Phạm Minh C", "Nam", "1988-11-10", "0912345678", "phamminhc@example.com", "Hồ Chí Minh", "987654321", "Quản lý", 1));
-        nhanVienList.add(new NhanVien(3, "Lê Thị D", "Nữ", "1995-02-25", "0934567890", "lethid@example.com", "Đà Nẵng", "112233445", "Trưởng phòng", 1));
+        List<NhanVien> nhanVienList = dbHandler.getAllEmployes();
 
         ArrayList<String> tenNhanVienList = new ArrayList<>();
         for (NhanVien nhanVien : nhanVienList) {

@@ -117,7 +117,15 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
                 if (checkdate == true)
                 danhDauBtn.setVisibility(View.GONE);
                 else danhDauBtn.setVisibility(View.VISIBLE);
-                List<CustomAttendance> attendanceList = db.getAbsenseList(dateTemp);
+                List<CustomAttendance> attendanceList = new ArrayList<>();
+                List<CustomAttendance> absentList = db.getAbsenseList(dateTemp);
+                List<CustomAttendance> absentSavedList = db.getAttendanceList("Không phép", dateTemp);
+                for (CustomAttendance temp : absentList){
+                    attendanceList.add(temp);
+                }
+                for (CustomAttendance temp : absentSavedList){
+                    attendanceList.add(temp);
+                }
                 AttendanceAdapter adapter = new AttendanceAdapter(AttendanceManagement.this, android.R.layout.simple_list_item_1, attendanceList);
                 lvAttendance.setAdapter(adapter);
             }
@@ -228,8 +236,9 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
 
     @Override
     public void onClick(int position, String dayText) {
-        if(!dayText.equals("") && (Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
-                || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate)) ) )
+        if(!dayText.equals("") && Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
+                || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate))
+        || Integer.parseInt(yearFromDate(selectedDate)) < Integer.parseInt(yearFromDate(currentDate)))
         {
             checkdate = true;
             LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
