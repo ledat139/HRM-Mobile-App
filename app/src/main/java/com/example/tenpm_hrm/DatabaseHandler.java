@@ -324,7 +324,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 1
         ContentValues values1 = new ContentValues();
-        values1.put("HOTEN", "Mùa Đông Không Lạnh");
+        values1.put("HOTEN", "Nguyễn Văn A");
         values1.put("GIOITINH", "Nam");
         values1.put("NGSINH", "2004-02-15");
         values1.put("SDT", "123123123");
@@ -352,7 +352,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 2
         ContentValues values2 = new ContentValues();
-        values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
+        values2.put("HOTEN", "Nguyễn Văn B");
         values2.put("GIOITINH", "Nu");
         values2.put("NGSINH", "2000-05-20");
         values2.put("SDT", "321321321");
@@ -380,7 +380,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 3
         ContentValues values3 = new ContentValues();
-        values3.put("HOTEN", "Mùa Thu Bình Yên");
+        values3.put("HOTEN", "Nguyê Văn C");
         values3.put("GIOITINH", "Nam");
         values3.put("NGSINH", "1995-11-12");
         values3.put("SDT", "456456456");
@@ -408,7 +408,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         // Nhân viên 4
         ContentValues values4 = new ContentValues();
-        values4.put("HOTEN", "Mùa Xuân Rực Rỡ");
+        values4.put("HOTEN", "Nguyễn Văn Hòa");
         values4.put("GIOITINH", "Nu");
         values4.put("NGSINH", "1998-03-25");
         values4.put("SDT", "789789789");
