@@ -770,16 +770,29 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 "Yêu cầu họp nhóm"
         };
 
+        String[] contents = {
+                "Tôi cần hỗ trợ kỹ thuật cho máy tính không hoạt động.",
+                "Xin nghỉ phép từ ngày 10 đến 12 tháng tới.",
+                "Tôi muốn đề xuất tăng lương do hiệu suất làm việc tốt.",
+                "Xin vui lòng cung cấp tài liệu cho dự án mới.",
+                "Tôi muốn tham gia khóa học nâng cao kỹ năng lập trình.",
+                "Đề nghị cải thiện điều kiện làm việc tại văn phòng.",
+                "Tôi cần hỗ trợ cài đặt phần mềm mới cho dự án.",
+                "Xin thay đổi lịch làm việc để phù hợp với lịch học.",
+                "Tôi muốn đánh giá hiệu suất công việc của mình trong tháng qua.",
+                "Xin hãy tổ chức một buổi họp nhóm để thảo luận về dự án."
+        };
+
         for (int i = 1; i <= 100; i++) {
             int manv = (i % 5) + 1; // MANV từ 1 đến 5
             String chude = subjects[i % subjects.length]; // Chọn chủ đề từ mảng
-            String noidung = "Nội dung yêu cầu số " + i;
-
+            String noidung = contents[i % contents.length]; // Chọn nội dung từ mảng
             addRequest(manv, chude, noidung);
         }
 
         db.close();
     }
+
 
 
     public ArrayList<Request> getRequestsByNVId(int NVid) {
