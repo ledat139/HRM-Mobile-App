@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         dbHandler.add20Facilities();
         dbHandler.add20Projects();
         dbHandler.addAdminAccount();
+        dbHandler.addMultipleRequests();
 
         Intent intent = new Intent(MainActivity.this, Login.class);
         startActivity(intent);

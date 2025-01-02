@@ -156,36 +156,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         long rowId = db.insert("PHONGBAN", null, values);
     }
 
-    public void addFacilities() {
-        db = this.getWritableDatabase();
-        // Thêm phần tử 1
-        ContentValues values1 = new ContentValues();
-        values1.put("TENCSVC", "Máy tính xách tay");
-        values1.put("SOLUONG", 10);
-        values1.put("NGAYMUA", "27/12/2024");
-        values1.put("TRANGTHAI", "Sử dụng");
-        values1.put("MAPB", 1);
-        long rowId1 = db.insert("COSOVATCHAT", null, values1);
 
-        // Thêm phần tử 2
-        ContentValues values2 = new ContentValues();
-        values2.put("TENCSVC", "Máy chiếu");
-        values2.put("SOLUONG", 5);
-        values2.put("NGAYMUA", "27/12/2024");
-        values2.put("TRANGTHAI", "Bảo trì");
-        values2.put("MAPB", 2);
-        long rowId2 = db.insert("COSOVATCHAT", null, values2);
-
-        // Thêm phần tử 3
-        ContentValues values3 = new ContentValues();
-        values3.put("TENCSVC", "Điều hòa");
-        values3.put("SOLUONG", 3);
-        values3.put("NGAYMUA", "27/12/2024");
-        values3.put("TRANGTHAI", "Hư hỏng");
-        values3.put("MAPB", 3);
-        long rowId3 = db.insert("COSOVATCHAT", null, values3);
-        db.close();
-    }
 
     public void addDepartmentsData() {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -231,9 +202,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     public void add20Facilities() {
         db = this.getWritableDatabase();
-        for (int i = 1; i <= 20; i++) {
+        String[] facilityNames = {
+                "Thư viện", "Phòng máy tính", "Phòng thí nghiệm", "Sân thể thao",
+                "Phòng học", "Nhà ăn", "Ký túc xá", "Phòng hội thảo",
+                "Phòng y tế", "Sân chơi", "Trung tâm thể dục", "Phòng nghệ thuật",
+                "Phòng âm nhạc", "Phòng đa năng", "Phòng học nhóm", "Phòng nghiên cứu",
+                "Phòng giáo viên", "Bãi đỗ xe", "Nhà vệ sinh", "Khu vực bãi biển"
+        };
+
+        for (int i = 0; i < facilityNames.length; i++) {
             ContentValues values = new ContentValues();
-            values.put("TENCSVC", "Cơ sở vật chất " + i);
+            values.put("TENCSVC", facilityNames[i]);
             values.put("SOLUONG", (i % 10) + 1);
             values.put("NGAYMUA", "27/12/2024");
             values.put("TRANGTHAI", (i % 3 == 0) ? "Sử dụng" : (i % 3 == 1) ? "Bảo trì" : "Hư hỏng");
@@ -248,50 +227,60 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
 
-    public void addProjectDe() {
-        db = this.getWritableDatabase();
-        ContentValues projectValues = new ContentValues();
-        projectValues.put("TENDUAN", "Dự án XYZ");
-        projectValues.put("NGAYBATDAU", "28/12/2024");
-        projectValues.put("NGAYKETTHUC", "31/12/2024");
-        projectValues.put("TRANGTHAI", "Đang thực hiện");
-        projectValues.put("MOTA", "Mô tả dự án XYZ");
-        projectValues.put("MAPB", 1);
-        long projectId = db.insert("DUAN", null, projectValues);
 
-        if (projectId != -1) {
-            addEmployeeToProject((int) projectId);
-        }
-    }
-
-    private void addEmployeeToProject(int projectId) {
-        ContentValues employeeValues1 = new ContentValues();
-        employeeValues1.put("MANV", 1);
-        employeeValues1.put("MADA", projectId);
-        employeeValues1.put("VAITRO", "Quản lý");
-        employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
-
-        ContentValues employeeValues2 = new ContentValues();
-        employeeValues2.put("MANV", 2);
-        employeeValues2.put("MADA", projectId);
-        employeeValues2.put("VAITRO", "Thành viên");
-        employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
-
-        db.insert("NHANVIEN_DUAN", null, employeeValues1);
-        db.insert("NHANVIEN_DUAN", null, employeeValues2);
-    }
+//    public void addProjectDe() {
+//        db = this.getWritableDatabase();
+//        ContentValues projectValues = new ContentValues();
+//        projectValues.put("TENDUAN", "Dự án XYZ");
+//        projectValues.put("NGAYBATDAU", "28/12/2024");
+//        projectValues.put("NGAYKETTHUC", "31/12/2024");
+//        projectValues.put("TRANGTHAI", "Đang thực hiện");
+//        projectValues.put("MOTA", "Mô tả dự án XYZ");
+//        projectValues.put("MAPB", 1);
+//        long projectId = db.insert("DUAN", null, projectValues);
+//
+//        if (projectId != -1) {
+//            addEmployeeToProject((int) projectId);
+//        }
+//    }
+//
+//    private void addEmployeeToProject(int projectId) {
+//        ContentValues employeeValues1 = new ContentValues();
+//        employeeValues1.put("MANV", 1);
+//        employeeValues1.put("MADA", projectId);
+//        employeeValues1.put("VAITRO", "Quản lý");
+//        employeeValues1.put("NGAYTHAMGIA", "28/12/2024");
+//
+//        ContentValues employeeValues2 = new ContentValues();
+//        employeeValues2.put("MANV", 2);
+//        employeeValues2.put("MADA", projectId);
+//        employeeValues2.put("VAITRO", "Thành viên");
+//        employeeValues2.put("NGAYTHAMGIA", "28/12/2024");
+//
+//        db.insert("NHANVIEN_DUAN", null, employeeValues1);
+//        db.insert("NHANVIEN_DUAN", null, employeeValues2);
+//    }
 
     public void add20Projects() {
         db = this.getWritableDatabase();
+        String[] projectNames = {
+                "Xây dựng trường học", "Nâng cấp cơ sở hạ tầng", "Dự án bảo tồn môi trường",
+                "Phát triển công nghệ thông tin", "Xây dựng khu vui chơi",
+                "Dự án y tế cộng đồng", "Khôi phục di sản văn hóa", "Dự án giao thông",
+                "Nâng cấp hệ thống điện", "Dự án phát triển nông nghiệp",
+                "Xây dựng trung tâm thương mại", "Dự án du lịch sinh thái",
+                "Cải tạo đường phố", "Dự án nghiên cứu khoa học", "Xây dựng khu dân cư",
+                "Dự án an ninh mạng", "Phát triển năng lượng tái tạo",
+                "Xây dựng nhà ở xã hội", "Dự án thể thao cộng đồng", "Dự án khởi nghiệp"
+        };
 
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 0; i < projectNames.length; i++) {
             ContentValues projectValues = new ContentValues();
-            projectValues.put("TENDUAN", "Dự án XYZ " + i);
+            projectValues.put("TENDUAN", projectNames[i]);
             projectValues.put("NGAYBATDAU", "28/12/2024");
             projectValues.put("NGAYKETTHUC", "31/12/2024");
-            projectValues.put("TRANGTHAI", "Đang thực hiện");
             projectValues.put("TRANGTHAI", (i % 3 == 0) ? "Đang thực hiện" : (i % 3 == 1) ? "Hoàn thành" : "Bị hủy");
-            projectValues.put("MOTA", "Mô tả dự án XYZ " + i);
+            projectValues.put("MOTA", "Mô tả " + projectNames[i]);
             projectValues.put("MAPB", (i % 4) + 1);
 
             long projectId = db.insert("DUAN", null, projectValues);
@@ -300,7 +289,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 addEmployeesToProject((int) projectId, i);
             }
         }
+
+        db.close();
     }
+
 
     private void addEmployeesToProject(int projectId, int index) {
         ContentValues employeeValues1 = new ContentValues();
@@ -768,6 +760,27 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
         return false;
     }
+
+    public void addMultipleRequests() {
+        db = this.getWritableDatabase();
+        String[] subjects = {
+                "Yêu cầu hỗ trợ kỹ thuật", "Yêu cầu nghỉ phép", "Yêu cầu tăng lương",
+                "Yêu cầu tài liệu", "Yêu cầu tham gia khóa học", "Yêu cầu cải thiện điều kiện làm việc",
+                "Yêu cầu hỗ trợ phần mềm", "Yêu cầu thay đổi lịch làm việc", "Yêu cầu đánh giá hiệu suất",
+                "Yêu cầu họp nhóm"
+        };
+
+        for (int i = 1; i <= 100; i++) {
+            int manv = (i % 5) + 1; // MANV từ 1 đến 5
+            String chude = subjects[i % subjects.length]; // Chọn chủ đề từ mảng
+            String noidung = "Nội dung yêu cầu số " + i;
+
+            addRequest(manv, chude, noidung);
+        }
+
+        db.close();
+    }
+
 
     public ArrayList<Request> getRequestsByNVId(int NVid) {
         ArrayList<Request> requestList = new ArrayList<>();
