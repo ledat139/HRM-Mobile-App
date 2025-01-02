@@ -130,13 +130,19 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
         });
         setTvMonthYear();
         Attendance attendance = db.getAttendance(maNV, customDate(currentDate));
-        if (attendance.getStatus().equals("Không phép")) {
+        if (attendance.getStatus() != "") {
             workDay.setText(attendance.getWorkDate());
             checkInTime.setText(attendance.getCheckinTime());
             status.setText(attendance.getStatus());
             checkInBtn.setVisibility(View.GONE);
             absentBtn.setVisibility(View.GONE);
-            if (attendance.getStatus().equals("Không phép"))
+            if(attendance.getStatus().equals("Đúng giờ"))
+                status.setBackgroundResource(R.drawable.employee_type_shape);
+            else if(attendance.getStatus().equals("Đi trễ"))
+                status.setBackgroundResource(R.drawable.late);
+            else if(attendance.getStatus().equals("Xin nghỉ"))
+                status.setBackgroundResource(R.drawable.blue_bg);
+            else if(attendance.getStatus().equals("Không phép"))
                 status.setBackgroundResource(R.drawable.red_bg);
         }
     }
@@ -307,10 +313,9 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     public void onClick(int position, String dayText) {
         LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
         tvDateValue.setText(getDateValue(temp));
-        if( !dayText.equals("") && (Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
+        if( !dayText.equals("") && (Integer.parseInt(dayText) <= Integer.parseInt(dayFromdate(currentDate))
                 || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate)) ))
         {
-
             Toast.makeText(this, customDate(temp), Toast.LENGTH_SHORT).show();
             Attendance attendance = db.getAttendance(maNV, customDate(temp));
             if (attendance.getWorkDate() != null){
@@ -329,10 +334,10 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
                     status.setBackgroundResource(R.drawable.red_bg);
             }
         }
-        else if(!dayText.equals("") && Integer.parseInt(dayText) == Integer.parseInt(dayFromdate(currentDate))) {
-            workDay.setText(customDate(currentDate));
-            checkInTime.setText("");
-            status.setText("");
-        }
+//        else if(!dayText.equals("") && Integer.parseInt(dayText) == Integer.parseInt(dayFromdate(currentDate))) {
+//            workDay.setText(customDate(currentDate));
+//            checkInTime.setText("");
+//            status.setText("");
+//        }
     }
 }

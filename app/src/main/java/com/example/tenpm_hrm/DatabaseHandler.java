@@ -342,7 +342,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 accountValues.put("MANV", rowId);
                 accountValues.put("TENTK", "user" + (i + 1));
                 accountValues.put("MATKHAU", "password" + (i + 1));
-                accountValues.put("LOAITAIKHOAN", i % 2 == 0 ? "quản lý" : "nhân viên");
+                accountValues.put("LOAITAIKHOAN", (i == 0 || i == 1 || i == 10 || i == 14 || i == 18) ? "quản lý" : "nhân viên");
 
                 long accountRowId = db.insert("TAIKHOAN", null, accountValues);
                 if (accountRowId == -1) {
