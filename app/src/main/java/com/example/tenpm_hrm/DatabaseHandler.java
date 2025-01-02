@@ -319,124 +319,48 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.insert("NHANVIEN_DUAN", null, employeeValues2);
     }
 
-
     public void addAdminAccount() {
         db = this.getWritableDatabase();
 
-        // Nhân viên 1
-        ContentValues values1 = new ContentValues();
-        values1.put("HOTEN", "Mùa Đông Không Lạnh");
-        values1.put("GIOITINH", "Nam");
-        values1.put("NGSINH", "2004-02-15");
-        values1.put("SDT", "123123123");
-        values1.put("EMAIL", "lanhmdk@gmail.com");
-        values1.put("DIACHI", "Long Thành, Đồng Nai");
-        values1.put("CCCD", "001004075822");
-        values1.put("CAPBAC", "MANAGER");
-        values1.put("MAPB", 1);
+        String[] names = {
+                "Nguyễn Văn An", "Trần Thị Trang", "Lê Văn Cường", "Phạm Thị Dung",
+                "Hoàng Hữu Nam", "Nguyễn Xuân Diệu", "Đặng Thành Nam", "Nguyễn Mai Phuương",
+                "Đỗ Văn Hùng", "Ngô Thị Lan Anh", "Dương Hữu Đại", "Lý Thị Ngọc Ánh",
+                "Trịnh Hoàng Phúc", "Hồ Thị Quỳnh Anh", "Nguyễn Văn Sơn", "Trần Thị Trang",
+                "Phạm Văn Bình", "Lê Thị Hồng", "Nguyễn Văn Tài", "Trần Thị Hạnh",
+                "Lê Văn Hùng", "Nguyễn Thị Lan"
+        };
 
-        long rowId1 = db.insert("NHANVIEN", null, values1);
-        if (rowId1 == -1) {
-            Log.e("DatabaseHandler", "Error inserting first employee data");
-        } else {
-            ContentValues accountValues1 = new ContentValues();
-            accountValues1.put("MANV", rowId1);
-            accountValues1.put("TENTK", "admin");
-            accountValues1.put("MATKHAU", "admin");
-            accountValues1.put("LOAITAIKHOAN", "quản lý");
+        for (int i = 0; i < names.length; i++) {
+            ContentValues values = new ContentValues();
+            values.put("HOTEN", names[i]);
+            values.put("GIOITINH", i % 2 == 0 ? "Nam" : "Nữ");
+            values.put("NGSINH", "1990-01-01");
+            values.put("SDT", "012345678" + i);
+            values.put("EMAIL", "nhanvien" + i + "@example.com");
+            values.put("DIACHI", "Địa chỉ " + (i + 1));
+            values.put("CCCD", "00100407582" + i);
+            values.put("CAPBAC", (i == 0 || i == 1 || i == 10 || i == 14 || i == 18) ? "Quản lý" : "Nhân viên");
+            values.put("MAPB", (i < 10) ? 1 : (i < 14) ? 2 : (i < 18) ? 3 : 4);
+            long rowId = db.insert("NHANVIEN", null, values);
+            if (rowId == -1) {
+                Log.e("DatabaseHandler", "Error inserting employee " + (i + 1) + " data");
+            } else {
+                ContentValues accountValues = new ContentValues();
+                accountValues.put("MANV", rowId);
+                accountValues.put("TENTK", "user" + (i + 1));
+                accountValues.put("MATKHAU", "password" + (i + 1));
+                accountValues.put("LOAITAIKHOAN", i % 2 == 0 ? "quản lý" : "nhân viên");
 
-            long accountRowId1 = db.insert("TAIKHOAN", null, accountValues1);
-            if (accountRowId1 == -1) {
-                Log.e("DatabaseHandler", "Error inserting first admin account data");
+                long accountRowId = db.insert("TAIKHOAN", null, accountValues);
+                if (accountRowId == -1) {
+                    Log.e("DatabaseHandler", "Error inserting account for employee " + (i + 1));
+                }
             }
         }
 
-        // Nhân viên 2
-        ContentValues values2 = new ContentValues();
-        values2.put("HOTEN", "Mùa Hè Nóng Bỏng");
-        values2.put("GIOITINH", "Nữ");
-        values2.put("NGSINH", "2000-05-20");
-        values2.put("SDT", "321321321");
-        values2.put("EMAIL", "nuhoang@gmail.com");
-        values2.put("DIACHI", "Hồ Chí Minh");
-        values2.put("CCCD", "001004075823");
-        values2.put("CAPBAC", "FRESHER");
-        values2.put("MAPB", 2); // Đảm bảo MAPB đã tồn tại trong bảng PHONGBAN
-
-        long rowId2 = db.insert("NHANVIEN", null, values2);
-        if (rowId2 == -1) {
-            Log.e("DatabaseHandler", "Error inserting second employee data");
-        } else {
-            ContentValues accountValues2 = new ContentValues();
-            accountValues2.put("MANV", rowId2);
-            accountValues2.put("TENTK", "client");
-            accountValues2.put("MATKHAU", "client");
-            accountValues2.put("LOAITAIKHOAN", "nhân viên");
-
-            long accountRowId2 = db.insert("TAIKHOAN", null, accountValues2);
-            if (accountRowId2 == -1) {
-                Log.e("DatabaseHandler", "Error inserting second admin account data");
-            }
-        }
-
-        // Nhân viên 3
-        ContentValues values3 = new ContentValues();
-        values3.put("HOTEN", "Mùa Thu Bình Yên");
-        values3.put("GIOITINH", "Nam");
-        values3.put("NGSINH", "1995-11-12");
-        values3.put("SDT", "456456456");
-        values3.put("EMAIL", "thuquyen@gmail.com");
-        values3.put("DIACHI", "Hà Nội");
-        values3.put("CCCD", "001004075824");
-        values3.put("CAPBAC", "STAFF");
-        values3.put("MAPB", 3);
-
-        long rowId3 = db.insert("NHANVIEN", null, values3);
-        if (rowId3 == -1) {
-            Log.e("DatabaseHandler", "Error inserting third employee data");
-        } else {
-            ContentValues accountValues3 = new ContentValues();
-            accountValues3.put("MANV", rowId3);
-            accountValues3.put("TENTK", "staff1");
-            accountValues3.put("MATKHAU", "staff123");
-            accountValues3.put("LOAITAIKHOAN", "nhân viên");
-
-            long accountRowId3 = db.insert("TAIKHOAN", null, accountValues3);
-            if (accountRowId3 == -1) {
-                Log.e("DatabaseHandler", "Error inserting third admin account data");
-            }
-        }
-
-        // Nhân viên 4
-        ContentValues values4 = new ContentValues();
-        values4.put("HOTEN", "Mùa Xuân Rực Rỡ");
-        values4.put("GIOITINH", "Nữ");
-        values4.put("NGSINH", "1998-03-25");
-        values4.put("SDT", "789789789");
-        values4.put("EMAIL", "xuanro@gmail.com");
-        values4.put("DIACHI", "Đà Nẵng");
-        values4.put("CCCD", "001004075825");
-        values4.put("CAPBAC", "STAFF");
-        values4.put("MAPB", 4);
-
-        long rowId4 = db.insert("NHANVIEN", null, values4);
-        if (rowId4 == -1) {
-            Log.e("DatabaseHandler", "Error inserting fourth employee data");
-        } else {
-            ContentValues accountValues4 = new ContentValues();
-            accountValues4.put("MANV", rowId4);
-            accountValues4.put("TENTK", "staff2");
-            accountValues4.put("MATKHAU", "staff456");
-            accountValues4.put("LOAITAIKHOAN", "nhân viên");
-
-            long accountRowId4 = db.insert("TAIKHOAN", null, accountValues4);
-            if (accountRowId4 == -1) {
-                Log.e("DatabaseHandler", "Error inserting fourth admin account data");
-            }
-        }
-//        db.close();
+        db.close();
     }
-
 
     // ============Cơ sở vật chất===================
     public void addFacility(Facility facility) {
@@ -1156,7 +1080,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
 
-
+    public String getDepartmentNameById(String departmentId) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String departmentName = null;
+        Cursor cursor = db.rawQuery("SELECT TENPB FROM PHONGBAN WHERE MAPB = ?", new String[]{departmentId});
+        if (cursor.moveToFirst()) {
+            departmentName = cursor.getString(0);
+        }
+        cursor.close();
+        db.close();
+        return departmentName;
+    }
 
 
 //    update mk taikhoan

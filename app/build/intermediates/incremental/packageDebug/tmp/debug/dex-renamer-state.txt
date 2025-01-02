@@ -1,10 +1,10 @@
-#Wed Jan 01 22:18:16 ICT 2025
-base.0=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
-base.3=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.4=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.5=D\:\\thucHanhMobi\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Thu Jan 02 16:56:02 ICT 2025
+base.0=D\:\\Desktop\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\Desktop\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\Desktop\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.3=D\:\\Desktop\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.4=D\:\\Desktop\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.5=D\:\\Desktop\\HRM-Mobile-App\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=13/classes.dex
