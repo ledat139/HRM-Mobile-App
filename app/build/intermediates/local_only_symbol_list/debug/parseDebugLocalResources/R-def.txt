@@ -63,6 +63,7 @@ drawable list
 drawable logo
 drawable mail_img
 drawable management_img
+drawable manager
 drawable manager_type_shape
 drawable marketing
 drawable menu

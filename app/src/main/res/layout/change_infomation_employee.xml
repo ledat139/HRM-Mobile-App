@@ -147,7 +147,7 @@
                     android:id="@+id/Name"
                     android:layout_width="match_parent"
                     android:layout_height="49dp"
-                    android:inputType="text"
+                    android:inputType="text|textPersonName|textAutoComplete|textAutoCorrect|textCapSentences|textCapWords|textEnableTextConversionSuggestions|textImeMultiLine|textMultiLine"
                     android:textColor="@color/black"
                     android:textColorHint="#020202"
                     android:textColorLink="#070707"
@@ -452,6 +452,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/idDepartment"
                     android:textColor="@color/black"
+                    android:inputType="number"
                     android:textColorHint="#020202"
                     android:textColorLink="#070707"
                     android:textSize="14sp"></com.google.android.material.textfield.TextInputEditText>

@@ -104,6 +104,10 @@
         "source": "com.example.tenpm_hrm.app-main-36:/drawable/rb_7019.png"
     },
     {
+        "merged": "com.example.tenpm_hrm.app-debug-34:/drawable_manager.png.flat",
+        "source": "com.example.tenpm_hrm.app-main-36:/drawable/manager.png"
+    },
+    {
         "merged": "com.example.tenpm_hrm.app-debug-34:/drawable_avatar_shape.xml.flat",
         "source": "com.example.tenpm_hrm.app-main-36:/drawable/avatar_shape.xml"
     },
