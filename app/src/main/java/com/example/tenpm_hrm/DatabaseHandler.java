@@ -203,11 +203,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void add20Facilities() {
         db = this.getWritableDatabase();
         String[] facilityNames = {
-                "Thư viện", "Phòng máy tính", "Phòng thí nghiệm", "Sân thể thao",
-                "Phòng học", "Nhà ăn", "Ký túc xá", "Phòng hội thảo",
-                "Phòng y tế", "Sân chơi", "Trung tâm thể dục", "Phòng nghệ thuật",
-                "Phòng âm nhạc", "Phòng đa năng", "Phòng học nhóm", "Phòng nghiên cứu",
-                "Phòng giáo viên", "Bãi đỗ xe", "Nhà vệ sinh", "Khu vực bãi biển"
+               "Phòng máy tính", "Sân thể thao",
+                "Phòng họp", "Nhà ăn", "Ký túc xá", "Phòng hội thảo",
+                "Phòng y tế", "Sân chơi",
+               "Phòng đa năng", "Phòng họp nhóm",
+               "Bãi đỗ xe", "Nhà vệ sinh"
         };
 
         for (int i = 0; i < facilityNames.length; i++) {
@@ -264,14 +264,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void add20Projects() {
         db = this.getWritableDatabase();
         String[] projectNames = {
-                "Xây dựng trường học", "Nâng cấp cơ sở hạ tầng", "Dự án bảo tồn môi trường",
-                "Phát triển công nghệ thông tin", "Xây dựng khu vui chơi",
-                "Dự án y tế cộng đồng", "Khôi phục di sản văn hóa", "Dự án giao thông",
-                "Nâng cấp hệ thống điện", "Dự án phát triển nông nghiệp",
-                "Xây dựng trung tâm thương mại", "Dự án du lịch sinh thái",
-                "Cải tạo đường phố", "Dự án nghiên cứu khoa học", "Xây dựng khu dân cư",
-                "Dự án an ninh mạng", "Phát triển năng lượng tái tạo",
-                "Xây dựng nhà ở xã hội", "Dự án thể thao cộng đồng", "Dự án khởi nghiệp"
+                "Hệ thống quản lý khách hàng (CRM)",
+                "Ứng dụng chat bảo mật (Secure Chat App)",
+                "Website thương mại điện tử (E-commerce Website)",
+                "Nền tảng học trực tuyến (E-learning Platform)",
+                "Hệ thống quản lý kho (Warehouse Management System)",
+                "Ứng dụng ngân hàng trực tuyến (Online Banking App)",
+                "Phần mềm kế toán doanh nghiệp (Enterprise Accounting Software)"
         };
 
         for (int i = 0; i < projectNames.length; i++) {
@@ -322,7 +321,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values1.put("EMAIL", "tiendatcntt1309@gmail.com");
         values1.put("DIACHI", "Địa chỉ ");
         values1.put("CCCD", "00100407582");
-        values1.put("CAPBAC", "Quản lý");
+        values1.put("CAPBAC", "Nhân viên");
         values1.put("MAPB", 1);
         db.insert("NHANVIEN", null, values1);
 
