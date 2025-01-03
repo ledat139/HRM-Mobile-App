@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -58,10 +59,15 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     private FusedLocationProviderClient fusedLocationClient;
 //10.88543493112511, 106.780528692843
     //10.980899, 106.756021 - nhà
-    //10.869951, 106.803116 - UIT
-    // Tọa độ công ty (VD: vị trí công ty ở Hồ Chí Minh)
-    private static final double COMPANY_LATITUDE = 10.88543493112511; // Vĩ độ
-    private static final double COMPANY_LONGITUDE = 106.780528692843; // Kinh độ
+    //10.869951, 106.803116 -
+
+    // 37.422094, -122.083922
+    //    // Tọa độ công ty (VD: vị trí công ty ở Hồ Chí Minh)
+
+//    private static final double COMPANY_LATITUDE = 10.869951;
+//    private static final double COMPANY_LONGITUDE = 106.803116;
+    private static final double COMPANY_LATITUDE = 37.422094; // Vĩ độ
+    private static final double COMPANY_LONGITUDE = -122.083922; // Kinh độ
     private static final float COMPANY_RADIUS = 100; // Bán kính cho phép chấm công (100 mét)
 
     @Override
@@ -176,6 +182,8 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
                             Toast.makeText(AttendanceDetails.this,
                                     "Vị trí hiện tại: \nLatitude: " + latitude + "\nLongitude: " + longitude,
                                     Toast.LENGTH_SHORT).show();
+                            Log.d("la", String.valueOf(latitude));
+                            Log.d("long", String.valueOf(longitude));
                             checkAttendance(latitude, longitude);
                         } else {
                             Toast.makeText(AttendanceDetails.this, "Không thể lấy vị trí, thử lại!", Toast.LENGTH_SHORT).show();
