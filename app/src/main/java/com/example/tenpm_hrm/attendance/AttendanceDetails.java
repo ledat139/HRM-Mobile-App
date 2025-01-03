@@ -313,8 +313,7 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
     public void onClick(int position, String dayText) {
         LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
         tvDateValue.setText(getDateValue(temp));
-        if( !dayText.equals("") && (Integer.parseInt(dayText) <= Integer.parseInt(dayFromdate(currentDate))
-                || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate)) ))
+        if( !dayText.equals(""))
         {
             Toast.makeText(this, customDate(temp), Toast.LENGTH_SHORT).show();
             Attendance attendance = db.getAttendance(maNV, customDate(temp));
@@ -326,7 +325,7 @@ public class AttendanceDetails extends AppCompatActivity implements CalendarRecy
                 absentBtn.setVisibility(View.GONE);
                 if(attendance.getStatus().equals("Đúng giờ"))
                     status.setBackgroundResource(R.drawable.employee_type_shape);
-                else if(attendance.getStatus().equals("Đi trễ"))
+                else if(attendance.getStatus().equals("Trễ giờ"))
                     status.setBackgroundResource(R.drawable.late);
                 else if(attendance.getStatus().equals("Xin nghỉ"))
                     status.setBackgroundResource(R.drawable.blue_bg);

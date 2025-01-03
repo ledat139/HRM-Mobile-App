@@ -12,7 +12,6 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.tenpm_hrm.R;
 
 import java.time.LocalDate;
@@ -66,13 +65,42 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         currentDate = selectedDate;
         setTvMonthYear();
         dateTemp = customDate(selectedDate);
-        db.insertCheckIn(new Attendance(2, 2, "28/12/2024", "08:01", null, "Trễ giờ"));
-        db.insertCheckIn(new Attendance(2, 2, "18/12/2024", "08:01", null, "Đúng giờ"));
-        db.insertCheckIn(new Attendance(2, 1, "28/12/2024", "08:01", null, "Đúng giờ"));
-        db.insertCheckIn(new Attendance(2, 1, "28/12/2024", "08:01", null, "Đúng giờ"));
-        db.insertCheckIn(new Attendance(2, 1, "28/12/2024", "08:01", null, "Đúng giờ"));
-        db.insertCheckIn(new Attendance(2, 1, "28/12/2024", "08:01", null, "Đúng giờ"));
-        db.insertCheckIn(new Attendance(2, 1, "28/12/2024", "08:01", null, "Đúng giờ"));
+
+        for(int i = 20; i <= 31; i++){
+            if (i % 2 == 0){
+                db.insertCheckIn(new Attendance(2, 1, i + "/12/2024", "08:01", null, "Đúng giờ"));
+                db.insertCheckIn(new Attendance(2, 2, i + "/12/2024", "08:16", null, "Trễ giờ"));
+                db.insertCheckIn(new Attendance(2, 2, i + "/12/2024", "08:01", null, "Đúng giờ"));
+                db.insertCheckIn(new Attendance(2, 3, i + "/12/2024", "08:01", null, "Đúng giờ"));
+                db.insertCheckIn(new Attendance(2, 4, i + "/12/2024", "08:17", null, "Trễ giờ"));
+                db.insertCheckIn(new Attendance(2, 5, i + "/12/2024", "08:01", null, "Đúng giờ"));
+                db.insertCheckIn(new Attendance(2, 6, i + "/12/2024", "", null, "Xin nghỉ"));
+            }
+            else {
+                db.insertCheckIn(new Attendance(2, 1, i + "/12/2024", "08:16", null, "Trễ giờ"));
+                db.insertCheckIn(new Attendance(2, 8, i + "/12/2024", "08:20", null, "Trễ giờ"));
+                db.insertCheckIn(new Attendance(2, 9, i + "/12/2024", "08:01", null, "Đúng giờ"));
+                db.insertCheckIn(new Attendance(2, 12, i + "/12/2024", "", null, "Xin nghỉ"));
+                db.insertCheckIn(new Attendance(2, 14, i + "/12/2024", "08:17", null, "Trễ giờ"));
+                db.insertCheckIn(new Attendance(2, 13, i + "/12/2024", "08:01", null, "Đúng giờ"));
+            }
+        }
+
+
+
+        db.insertCheckIn(new Attendance(2, 1, "01/01/2025", "08:16", null, "Trễ giờ"));
+        db.insertCheckIn(new Attendance(2, 2, "01/01/2025", "08:01", null, "Đúng giờ"));
+        db.insertCheckIn(new Attendance(2, 3, "01/01/2025", "08:01", null, "Đúng giờ"));
+        db.insertCheckIn(new Attendance(2, 4, "02/01/2025", "08:17", null, "Trễ giờ"));
+        db.insertCheckIn(new Attendance(2, 5, "02/01/2025", "08:01", null, "Đúng giờ"));
+        db.insertCheckIn(new Attendance(2, 6, "02/01/2025", "", null, "Xin nghỉ"));
+//        db.insertCheckIn(new Attendance(2, 1, "02/01/2025", "08:01", null, "Đúng giờ"));
+        db.insertCheckIn(new Attendance(2, 8, "02/01/2025", "08:01", null, "Đúng giờ"));
+        db.insertCheckIn(new Attendance(2, 9, "02/01/2025", "08:20", null, "Trễ giờ"));
+        db.insertCheckIn(new Attendance(2, 7, "02/01/2025", "08:01", null, "Đúng giờ"));
+
+
+
 
         tvDateValue.setText(getDateValue(selectedDate));
 
@@ -236,14 +264,14 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
 
     @Override
     public void onClick(int position, String dayText) {
+        LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
+        dateTemp = customDate(temp);
         if(!dayText.equals("") && Integer.parseInt(dayText) < Integer.parseInt(dayFromdate(currentDate))
                 || Integer.parseInt(monthFromDate(selectedDate)) < Integer.parseInt(monthFromDate(currentDate))
         || Integer.parseInt(yearFromDate(selectedDate)) < Integer.parseInt(yearFromDate(currentDate)))
         {
             checkdate = true;
-            LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
 
-            dateTemp = customDate(temp);
             Toast.makeText(this, getDateValue(temp), Toast.LENGTH_SHORT).show();
             tvDateValue.setText(getDateValue(temp));
             status = "Đúng giờ";
@@ -254,9 +282,7 @@ public class AttendanceManagement extends AppCompatActivity implements CalendarR
         }
         else if(!dayText.equals("") && Integer.parseInt(dayText) == Integer.parseInt(dayFromdate(currentDate))) {
             checkdate = false;
-            LocalDate temp = LocalDate.of(Integer.parseInt(yearFromDate(selectedDate)), Integer.parseInt(monthFromDate(selectedDate)), Integer.parseInt(dayText));
 
-            dateTemp = customDate(temp);
             Toast.makeText(this, getDateValue(temp), Toast.LENGTH_SHORT).show();
             tvDateValue.setText(getDateValue(temp));
             status = "Đúng giờ";
